@@ -1,0 +1,23 @@
+﻿<Window
+        x:Class="ControleAmbientes.View.Initial"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControleAmbientes"
+        xmlns:UserControls="clr-namespace:ControleAmbientes.UserControls"
+        mc:Ignorable="d"
+        Height="800" Width="1280" ResizeMode="NoResize" ScrollViewer.VerticalScrollBarVisibility="Disabled" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <UserControls:MainMenu HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top"/>
+        <Label Content="Identificação do Usuário" HorizontalAlignment="Center" Margin="0,219,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="36" Foreground="#FF009688"/>
+        <Image Name="login" HorizontalAlignment="Center" Height="74" Margin="0,544,0,0" VerticalAlignment="Top" Width="264" Stretch="None" Source="/Img/btEnter.png" Cursor="Hand" ToolTip="Acessar a Aplicação" MouseUp="login_MouseUp"/>
+        <TextBox Name="txtLogin" HorizontalAlignment="Center" TextWrapping="NoWrap" VerticalAlignment="Top" Width="530" Height="62" FontFamily="Arial Rounded MT Bold" FontSize="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF009688" BorderBrush="#FF009688" BorderThickness="1,2,1,2" Margin="0,331,0,0"/>
+        <PasswordBox Name="txtPassword" HorizontalAlignment="Center" Margin="0,435,0,0" VerticalAlignment="Top" Width="530" Height="62" FontFamily="Arial Rounded MT Bold" FontSize="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF009688" BorderBrush="#FF009688" BorderThickness="1,2,1,2"/>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="375,296,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="22" Foreground="#FFD1D1D1"/>
+        <Label Content="Senha" HorizontalAlignment="Left" Margin="375,400,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="22" Foreground="#FFD1D1D1"/>
+        <Label Content="Resolução 1280 x 800" HorizontalAlignment="Center" Margin="0,755,0,0" VerticalAlignment="Center" FontFamily="Arial Rounded MT Bold" FontSize="14" Foreground="#FFD1D1D1" HorizontalContentAlignment="Center" FontWeight="Normal"/>
+        <Label Content="15/10/2021" HorizontalAlignment="Left" Margin="10,759,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FF4A86E8" HorizontalContentAlignment="Center" FontWeight="Normal"/>
+        <Label Content="21:30:56" HorizontalAlignment="Left" Margin="1185,759,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FF4A86E8" HorizontalContentAlignment="Center" FontWeight="Normal"/>
+    </Grid>
+</Window>

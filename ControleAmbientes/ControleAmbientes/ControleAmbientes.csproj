@@ -4,6 +4,78 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <StartupObject></StartupObject>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Img\btConfigColor.png" />
+    <None Remove="Img\btConfigGray.png" />
+    <None Remove="Img\btEnter.png" />
+    <None Remove="Img\btExitColor.png" />
+    <None Remove="Img\btOFF.png" />
+    <None Remove="Img\btON.png" />
+    <None Remove="Img\btReportColor.png" />
+    <None Remove="Img\btReportGray.png" />
+    <None Remove="Img\btSelectColor.png" />
+    <None Remove="Img\btSelectGray.png" />
+    <None Remove="Img\btUserColor.png" />
+    <None Remove="Img\btUserGray.png" />
+    <None Remove="Img\HeaderWhite.png" />
+    <None Remove="Img\HeaderYellow.png" />
+    <None Remove="Img\IconeMaster.png" />
+    <None Remove="Img\Logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Img\btConfigColor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\btConfigGray.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\btEnter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\btExitColor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\btOFF.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\btON.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\btReportColor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\btReportGray.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\btSelectColor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\btSelectGray.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\btUserColor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\btUserGray.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\HeaderWhite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\HeaderYellow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\IconeMaster.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\Logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
 </Project>
