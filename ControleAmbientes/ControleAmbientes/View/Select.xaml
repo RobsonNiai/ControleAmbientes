@@ -10,14 +10,50 @@
     <Grid>
 
         <UserControls:MainMenu HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top"/>
-        <Image x:Name="btC1L1" HorizontalAlignment="Left" Height="57" Margin="104,218,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btON.png"/>
-        <Image x:Name="btC1L2" HorizontalAlignment="Left" Height="57" Margin="104,279,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png"/>
-        <Image x:Name="btC1L3" HorizontalAlignment="Left" Height="56" Margin="104,0,0,0" VerticalAlignment="Center" Width="231" Stretch="None" Source="/Img/btOFF.png"/>
-        <Image x:Name="btC1L4" HorizontalAlignment="Left" Height="57" Margin="104,435,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btON.png"/>
-        <Image x:Name="btC1L5" HorizontalAlignment="Left" Height="57" Margin="104,496,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png"/>
-        <Image x:Name="btC1L6" HorizontalAlignment="Left" Height="56" Margin="104,557,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btON.png"/>
-        <Image x:Name="btC1L7" HorizontalAlignment="Left" Height="56" Margin="104,618,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png"/>
-        <Image x:Name="btC1L8" HorizontalAlignment="Left" Height="56" Margin="104,679,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btON.png"/>
+        <Image x:Name="btC1L1" HorizontalAlignment="Left" Height="58" Margin="202,190,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" MouseUp="btC1L1_MouseUp" Cursor="Hand" ToolTip="Hab/Des. Carga C1L1"/>
+        <Image x:Name="btC1L2" HorizontalAlignment="Left" Height="57" Margin="202,257,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C1L2" MouseUp="btC1L2_MouseUp"/>
+        <Image x:Name="btC1L3" HorizontalAlignment="Left" Height="56" Margin="202,324,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C1L3" MouseUp="btC1L3_MouseUp"/>
+        <Image x:Name="btC1L4" HorizontalAlignment="Left" Height="56" Margin="202,392,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C1L4" MouseUp="btC1L4_MouseUp"/>
+        <Image x:Name="btC1L5" HorizontalAlignment="Left" Height="57" Margin="202,458,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C1L5" MouseUp="btC1L5_MouseUp"/>
+        <Image x:Name="btC1L6" HorizontalAlignment="Left" Height="56" Margin="202,525,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C1L6" MouseUp="btC1L6_MouseUp"/>
+        <Image x:Name="btC1L7" HorizontalAlignment="Left" Height="56" Margin="202,592,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C1L7" MouseUp="btC1L7_MouseUp"/>
+        <Image x:Name="btC1L8" HorizontalAlignment="Left" Height="56" Margin="202,659,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C1L8" MouseUp="btC1L8_MouseUp"/>
+        <Image x:Name="btC2L1" HorizontalAlignment="Left" Height="58" Margin="457,190,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C2L1" MouseUp="btC2L1_MouseUp"/>
+        <Image x:Name="btC2L2" HorizontalAlignment="Left" Height="57" Margin="457,257,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C2L2" MouseUp="btC2L2_MouseUp"/>
+        <Image x:Name="btC2L3" HorizontalAlignment="Left" Height="56" Margin="457,324,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C2L3" MouseUp="btC2L3_MouseUp"/>
+        <Image x:Name="btC2L4" HorizontalAlignment="Left" Height="56" Margin="457,392,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C2L4" MouseUp="btC2L4_MouseUp"/>
+        <Image x:Name="btC2L5" HorizontalAlignment="Left" Height="57" Margin="457,458,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C2L5" MouseUp="btC2L5_MouseUp"/>
+        <Image x:Name="btC2L6" HorizontalAlignment="Left" Height="56" Margin="457,525,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C2L6" MouseUp="btC2L6_MouseUp"/>
+        <Image x:Name="btC2L7" HorizontalAlignment="Left" Height="56" Margin="457,592,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C2L7" MouseUp="btC2L7_MouseUp"/>
+        <Image x:Name="btC2L8" HorizontalAlignment="Left" Height="56" Margin="457,659,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C2L8" MouseUp="btC2L8_MouseUp"/>
+        <Image x:Name="btC3L1" HorizontalAlignment="Left" Height="58" Margin="712,190,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C3L1" MouseUp="btC3L1_MouseUp"/>
+        <Image x:Name="btC3L2" HorizontalAlignment="Left" Height="57" Margin="712,257,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C3L2" MouseUp="btC3L2_MouseUp"/>
+        <Image x:Name="btC3L3" HorizontalAlignment="Left" Height="56" Margin="712,324,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C3L3" MouseUp="btC3L3_MouseUp"/>
+        <Image x:Name="btC3L4" HorizontalAlignment="Left" Height="56" Margin="712,392,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C3L4" MouseUp="btC3L4_MouseUp"/>
+        <Image x:Name="btC3L5" HorizontalAlignment="Left" Height="57" Margin="712,458,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C3L5" MouseUp="btC3L5_MouseUp"/>
+        <Image x:Name="btC3L6" HorizontalAlignment="Left" Height="56" Margin="712,525,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C3L6" MouseUp="btC3L6_MouseUp"/>
+        <Image x:Name="btC3L7" HorizontalAlignment="Left" Height="56" Margin="712,592,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C3L7" MouseUp="btC3L7_MouseUp"/>
+        <Image x:Name="btC3L8" HorizontalAlignment="Left" Height="56" Margin="712,659,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C3L8" MouseUp="btC3L8_MouseUp"/>
+        <Image x:Name="btC4L1" HorizontalAlignment="Left" Height="58" Margin="967,190,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C4L1" MouseUp="btC4L1_MouseUp"/>
+        <Image x:Name="btC4L2" HorizontalAlignment="Left" Height="57" Margin="967,257,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C4L2" MouseUp="btC4L2_MouseUp"/>
+        <Image x:Name="btC4L3" HorizontalAlignment="Left" Height="56" Margin="967,324,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C4L3" MouseUp="btC4L3_MouseUp"/>
+        <Image x:Name="btC4L4" HorizontalAlignment="Left" Height="56" Margin="967,392,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C4L4" MouseUp="btC4L4_MouseUp"/>
+        <Image x:Name="btC4L5" HorizontalAlignment="Left" Height="57" Margin="967,458,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C4L5" MouseUp="btC4L5_MouseUp"/>
+        <Image x:Name="btC4L6" HorizontalAlignment="Left" Height="56" Margin="967,525,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C4L6" MouseUp="btC4L6_MouseUp"/>
+        <Image x:Name="btC4L7" HorizontalAlignment="Left" Height="56" Margin="967,592,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C4L7" MouseUp="btC4L7_MouseUp"/>
+        <Image x:Name="btC4L8" HorizontalAlignment="Left" Height="56" Margin="967,659,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C4L8" MouseUp="btC4L8_MouseUp"/>
+        <Label Content="Coluna 1" HorizontalAlignment="Left" Margin="253,134,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
+        <Label Content="Coluna 2" HorizontalAlignment="Left" Margin="508,134,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
+        <Label Content="Coluna 3" HorizontalAlignment="Left" Margin="763,134,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
+        <Label Content="Coluna 4" HorizontalAlignment="Left" Margin="1018,134,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
+        <Label Content="Linha 1" HorizontalAlignment="Left" Margin="76,193,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
+        <Label Content="Linha 2" HorizontalAlignment="Left" Margin="76,260,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
+        <Label Content="Linha 3" HorizontalAlignment="Left" Margin="76,327,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
+        <Label Content="Linha 4" HorizontalAlignment="Left" Margin="76,395,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
+        <Label Content="Linha 5" HorizontalAlignment="Left" Margin="76,462,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
+        <Label Content="Linha 6" HorizontalAlignment="Left" Margin="76,528,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
+        <Label Content="Linha 7" HorizontalAlignment="Left" Margin="76,595,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
+        <Label Content="Linha 8" HorizontalAlignment="Left" Margin="76,662,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
 
     </Grid>
 </Window>
