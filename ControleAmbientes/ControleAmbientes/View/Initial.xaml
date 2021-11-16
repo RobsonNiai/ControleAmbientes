@@ -17,7 +17,6 @@
         <Label Content="Login" HorizontalAlignment="Left" Margin="375,296,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="22" Foreground="#FFD1D1D1"/>
         <Label Content="Senha" HorizontalAlignment="Left" Margin="375,400,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="22" Foreground="#FFD1D1D1"/>
         <Label Content="Resolução 1280 x 800" HorizontalAlignment="Center" Margin="0,755,0,0" VerticalAlignment="Center" FontFamily="Arial Rounded MT Bold" FontSize="14" Foreground="#FFD1D1D1" HorizontalContentAlignment="Center" FontWeight="Normal"/>
-        <Label Content="15/10/2021" HorizontalAlignment="Left" Margin="10,759,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FF4A86E8" HorizontalContentAlignment="Center" FontWeight="Normal"/>
-        <Label Content="21:30:56" HorizontalAlignment="Left" Margin="1185,759,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FF4A86E8" HorizontalContentAlignment="Center" FontWeight="Normal"/>
+        <UserControls:CronoDateTime HorizontalAlignment="Left" Margin="0,764,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

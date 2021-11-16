@@ -10,6 +10,7 @@
     <Grid>
 
         <UserControls:MainMenu HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top"/>
+
         <Image x:Name="btC1L1" HorizontalAlignment="Left" Height="58" Margin="202,190,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" MouseUp="btC1L1_MouseUp" Cursor="Hand" ToolTip="Hab/Des. Carga C1L1"/>
         <Image x:Name="btC1L2" HorizontalAlignment="Left" Height="57" Margin="202,257,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C1L2" MouseUp="btC1L2_MouseUp"/>
         <Image x:Name="btC1L3" HorizontalAlignment="Left" Height="56" Margin="202,324,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C1L3" MouseUp="btC1L3_MouseUp"/>
@@ -42,6 +43,7 @@
         <Image x:Name="btC4L6" HorizontalAlignment="Left" Height="56" Margin="967,525,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C4L6" MouseUp="btC4L6_MouseUp"/>
         <Image x:Name="btC4L7" HorizontalAlignment="Left" Height="56" Margin="967,592,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C4L7" MouseUp="btC4L7_MouseUp"/>
         <Image x:Name="btC4L8" HorizontalAlignment="Left" Height="56" Margin="967,659,0,0" VerticalAlignment="Top" Width="231" Stretch="None" Source="/Img/btOFF.png" Cursor="Hand" ToolTip="Hab/Des. Carga C4L8" MouseUp="btC4L8_MouseUp"/>
+        
         <Label Content="Coluna 1" HorizontalAlignment="Left" Margin="253,134,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
         <Label Content="Coluna 2" HorizontalAlignment="Left" Margin="508,134,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
         <Label Content="Coluna 3" HorizontalAlignment="Left" Margin="763,134,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
@@ -54,6 +56,8 @@
         <Label Content="Linha 6" HorizontalAlignment="Left" Margin="76,528,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
         <Label Content="Linha 7" HorizontalAlignment="Left" Margin="76,595,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
         <Label Content="Linha 8" HorizontalAlignment="Left" Margin="76,662,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="#FF4A86E8" Height="50"/>
+        
+        <UserControls:CronoDateTime x:Name="cronoFooter" HorizontalAlignment="Left" Margin="0,764,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

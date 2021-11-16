@@ -11,6 +11,7 @@
 
         <UserControls:MainMenu HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top"/>
         <Label Content="Usuarios" HorizontalAlignment="Left" Margin="304,233,0,0" VerticalAlignment="Top"/>
+        <UserControls:CronoDateTime HorizontalAlignment="Left" Margin="0,764,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

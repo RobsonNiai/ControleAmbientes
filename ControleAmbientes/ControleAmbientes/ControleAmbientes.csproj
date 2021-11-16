@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Img\arduino.png" />
     <None Remove="Img\btConfigColor.png" />
     <None Remove="Img\btConfigGray.png" />
     <None Remove="Img\btEnter.png" />
@@ -25,9 +26,16 @@
     <None Remove="Img\HeaderYellow.png" />
     <None Remove="Img\IconeMaster.png" />
     <None Remove="Img\Logo.ico" />
+    <None Remove="Img\pointA.png" />
+    <None Remove="Img\pointB.png" />
+    <None Remove="Img\pointC.png" />
+    <None Remove="Img\pointD.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Img\arduino.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Img\btConfigColor.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -74,6 +82,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Img\Logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\pointA.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\pointB.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\pointC.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\pointD.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
