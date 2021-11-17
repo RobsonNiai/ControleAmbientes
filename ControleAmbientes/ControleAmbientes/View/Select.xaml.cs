@@ -19,56 +19,181 @@ namespace ControleAmbientes.View
         {
             InitializeComponent();
             timerUpdateValues.Interval = System.TimeSpan.FromMilliseconds(250);
-            timerUpdateValues.Tick += TimerUpdateValues_Tick; ;
+            timerUpdateValues.Tick += TimerUpdateValues_Tick;
             timerUpdateValues.Start();
         }
 
         private void TimerUpdateValues_Tick(object sender, EventArgs e)
         {
             update();
+
         }
 
         private void update()
         {
             //Bloco Botões Coluna 1
             btC1L1.Source = Class.Variables.btSelect[0] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[0] = !btC1L1.IsEnabled ? false : Class.Variables.btSelect[0];
+            btC1L1.IsEnabled = Class.Variables.enableButton.Contains("200") ? true : false;
+            btC1L1.Opacity = !btC1L1.IsEnabled ? 0.5 : 1.0;
+
             btC1L2.Source = Class.Variables.btSelect[1] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[1] = !btC1L2.IsEnabled ? false : Class.Variables.btSelect[1];
+            btC1L2.IsEnabled = Class.Variables.enableButton.Contains("201") ? true : false;
+            btC1L2.Opacity = !btC1L2.IsEnabled ? 0.5 : 1.0;
+
             btC1L3.Source = Class.Variables.btSelect[2] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[2] = !btC1L3.IsEnabled ? false : Class.Variables.btSelect[2];
+            btC1L3.IsEnabled = Class.Variables.enableButton.Contains("202") ? true : false;
+            btC1L3.Opacity = !btC1L3.IsEnabled ? 0.5 : 1.0;
+
             btC1L4.Source = Class.Variables.btSelect[3] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[3] = !btC1L4.IsEnabled ? false : Class.Variables.btSelect[3];
+            btC1L4.IsEnabled = Class.Variables.enableButton.Contains("203") ? true : false;
+            btC1L4.Opacity = !btC1L4.IsEnabled ? 0.5 : 1.0;
+
             btC1L5.Source = Class.Variables.btSelect[4] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[4] = !btC1L5.IsEnabled ? false : Class.Variables.btSelect[4];
+            btC1L5.IsEnabled = Class.Variables.enableButton.Contains("204") ? true : false;
+            btC1L5.Opacity = !btC1L5.IsEnabled ? 0.5 : 1.0;
+
             btC1L6.Source = Class.Variables.btSelect[5] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[5] = !btC1L6.IsEnabled ? false : Class.Variables.btSelect[5];
+            btC1L6.IsEnabled = Class.Variables.enableButton.Contains("205") ? true : false;
+            btC1L6.Opacity = !btC1L6.IsEnabled ? 0.5 : 1.0;
+
             btC1L7.Source = Class.Variables.btSelect[6] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[6] = !btC1L7.IsEnabled ? false : Class.Variables.btSelect[6];
+            btC1L7.IsEnabled = Class.Variables.enableButton.Contains("206") ? true : false;
+            btC1L7.Opacity = !btC1L7.IsEnabled ? 0.5 : 1.0;
+
             btC1L8.Source = Class.Variables.btSelect[7] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[7] = !btC1L8.IsEnabled ? false : Class.Variables.btSelect[7];
+            btC1L8.IsEnabled = Class.Variables.enableButton.Contains("207") ? true : false;
+            btC1L8.Opacity = !btC1L8.IsEnabled ? 0.5 : 1.0;
 
             //Bloco Botões Coluna 2
             btC2L1.Source = Class.Variables.btSelect[8] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[8] = !btC2L1.IsEnabled ? false : Class.Variables.btSelect[8];
+            btC2L1.IsEnabled = Class.Variables.enableButton.Contains("210") ? true : false;
+            btC2L1.Opacity = !btC2L1.IsEnabled ? 0.5 : 1.0;
+
             btC2L2.Source = Class.Variables.btSelect[9] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[9] = !btC2L2.IsEnabled ? false : Class.Variables.btSelect[9];
+            btC2L2.IsEnabled = Class.Variables.enableButton.Contains("211") ? true : false;
+            btC2L2.Opacity = !btC2L2.IsEnabled ? 0.5 : 1.0;
+
             btC2L3.Source = Class.Variables.btSelect[10] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[10] = !btC2L3.IsEnabled ? false : Class.Variables.btSelect[10];
+            btC2L3.IsEnabled = Class.Variables.enableButton.Contains("212") ? true : false;
+            btC2L3.Opacity = !btC2L3.IsEnabled ? 0.5 : 1.0;
+
             btC2L4.Source = Class.Variables.btSelect[11] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[11] = !btC2L4.IsEnabled ? false : Class.Variables.btSelect[11];
+            btC2L4.IsEnabled = Class.Variables.enableButton.Contains("213") ? true : false;
+            btC2L4.Opacity = !btC2L4.IsEnabled ? 0.5 : 1.0;
+
             btC2L5.Source = Class.Variables.btSelect[12] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[12] = !btC2L5.IsEnabled ? false : Class.Variables.btSelect[12];
+            btC2L5.IsEnabled = Class.Variables.enableButton.Contains("214") ? true : false;
+            btC2L5.Opacity = !btC2L5.IsEnabled ? 0.5 : 1.0;
+
             btC2L6.Source = Class.Variables.btSelect[13] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[13] = !btC2L6.IsEnabled ? false : Class.Variables.btSelect[13];
+            btC2L6.IsEnabled = Class.Variables.enableButton.Contains("215") ? true : false;
+            btC2L6.Opacity = !btC2L6.IsEnabled ? 0.5 : 1.0;
+
             btC2L7.Source = Class.Variables.btSelect[14] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[14] = !btC2L7.IsEnabled ? false : Class.Variables.btSelect[14];
+            btC2L7.IsEnabled = Class.Variables.enableButton.Contains("216") ? true : false;
+            btC2L7.Opacity = !btC2L7.IsEnabled ? 0.5 : 1.0;
+
             btC2L8.Source = Class.Variables.btSelect[15] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[15] = !btC2L8.IsEnabled ? false : Class.Variables.btSelect[15];
+            btC2L8.IsEnabled = Class.Variables.enableButton.Contains("217") ? true : false;
+            btC2L8.Opacity = !btC2L8.IsEnabled ? 0.5 : 1.0;
 
             //Bloco Botões Coluna 3
             btC3L1.Source = Class.Variables.btSelect[16] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[16] = !btC3L1.IsEnabled ? false : Class.Variables.btSelect[16];
+            btC3L1.IsEnabled = Class.Variables.enableButton.Contains("220") ? true : false;
+            btC3L1.Opacity = !btC3L1.IsEnabled ? 0.5 : 1.0;
+
             btC3L2.Source = Class.Variables.btSelect[17] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[17] = !btC3L2.IsEnabled ? false : Class.Variables.btSelect[17];
+            btC3L2.IsEnabled = Class.Variables.enableButton.Contains("221") ? true : false;
+            btC3L2.Opacity = !btC3L2.IsEnabled ? 0.5 : 1.0;
+
             btC3L3.Source = Class.Variables.btSelect[18] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[18] = !btC3L3.IsEnabled ? false : Class.Variables.btSelect[18];
+            btC3L3.IsEnabled = Class.Variables.enableButton.Contains("222") ? true : false;
+            btC3L3.Opacity = !btC3L3.IsEnabled ? 0.5 : 1.0;
+
             btC3L4.Source = Class.Variables.btSelect[19] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[19] = !btC3L4.IsEnabled ? false : Class.Variables.btSelect[19];
+            btC3L4.IsEnabled = Class.Variables.enableButton.Contains("223") ? true : false;
+            btC3L4.Opacity = !btC3L4.IsEnabled ? 0.5 : 1.0;
+
             btC3L5.Source = Class.Variables.btSelect[20] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[20] = !btC3L5.IsEnabled ? false : Class.Variables.btSelect[20];
+            btC3L5.IsEnabled = Class.Variables.enableButton.Contains("224") ? true : false;
+            btC3L5.Opacity = !btC3L5.IsEnabled ? 0.5 : 1.0;
+
             btC3L6.Source = Class.Variables.btSelect[21] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[21] = !btC3L6.IsEnabled ? false : Class.Variables.btSelect[21];
+            btC3L6.IsEnabled = Class.Variables.enableButton.Contains("225") ? true : false;
+            btC3L6.Opacity = !btC3L6.IsEnabled ? 0.5 : 1.0;
+
             btC3L7.Source = Class.Variables.btSelect[22] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[22] = !btC3L7.IsEnabled ? false : Class.Variables.btSelect[22];
+            btC3L7.IsEnabled = Class.Variables.enableButton.Contains("226") ? true : false;
+            btC3L7.Opacity = !btC3L7.IsEnabled ? 0.5 : 1.0;
+
             btC3L8.Source = Class.Variables.btSelect[23] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[23] = !btC3L8.IsEnabled ? false : Class.Variables.btSelect[23];
+            btC3L8.IsEnabled = Class.Variables.enableButton.Contains("227") ? true : false;
+            btC3L8.Opacity = !btC3L8.IsEnabled ? 0.5 : 1.0;
 
             //Bloco Botões Coluna 4
             btC4L1.Source = Class.Variables.btSelect[24] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[24] = !btC4L1.IsEnabled ? false : Class.Variables.btSelect[24];
+            btC4L1.IsEnabled = Class.Variables.enableButton.Contains("230") ? true : false;
+            btC4L1.Opacity = !btC4L1.IsEnabled ? 0.5 : 1.0;
+
             btC4L2.Source = Class.Variables.btSelect[25] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[25] = !btC4L2.IsEnabled ? false : Class.Variables.btSelect[25];
+            btC4L2.IsEnabled = Class.Variables.enableButton.Contains("231") ? true : false;
+            btC4L2.Opacity = !btC4L2.IsEnabled ? 0.5 : 1.0;
+
             btC4L3.Source = Class.Variables.btSelect[26] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[26] = !btC4L3.IsEnabled ? false : Class.Variables.btSelect[26];
+            btC4L3.IsEnabled = Class.Variables.enableButton.Contains("232") ? true : false;
+            btC4L3.Opacity = !btC4L3.IsEnabled ? 0.5 : 1.0;
+
             btC4L4.Source = Class.Variables.btSelect[27] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[27] = !btC4L4.IsEnabled ? false : Class.Variables.btSelect[27];
+            btC4L4.IsEnabled = Class.Variables.enableButton.Contains("233") ? true : false;
+            btC4L4.Opacity = !btC4L4.IsEnabled ? 0.5 : 1.0;
+
             btC4L5.Source = Class.Variables.btSelect[28] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[28] = !btC4L5.IsEnabled ? false : Class.Variables.btSelect[28];
+            btC4L5.IsEnabled = Class.Variables.enableButton.Contains("234") ? true : false;
+            btC4L5.Opacity = !btC4L5.IsEnabled ? 0.5 : 1.0;
+
             btC4L6.Source = Class.Variables.btSelect[29] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[29] = !btC4L6.IsEnabled ? false : Class.Variables.btSelect[29];
+            btC4L6.IsEnabled = Class.Variables.enableButton.Contains("235") ? true : false;
+            btC4L6.Opacity = !btC4L6.IsEnabled ? 0.5 : 1.0;
+
             btC4L7.Source = Class.Variables.btSelect[30] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[30] = !btC4L7.IsEnabled ? false : Class.Variables.btSelect[30];
+            btC4L7.IsEnabled = Class.Variables.enableButton.Contains("236") ? true : false;
+            btC4L7.Opacity = !btC4L7.IsEnabled ? 0.5 : 1.0;
+
             btC4L8.Source = Class.Variables.btSelect[31] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
+            Class.Variables.btSelect[31] = !btC4L8.IsEnabled ? false : Class.Variables.btSelect[31];
+            btC4L8.IsEnabled = Class.Variables.enableButton.Contains("237") ? true : false;
+            btC4L8.Opacity = !btC4L8.IsEnabled ? 0.5 : 1.0;
         }
 
         #region Botões Coluna 1

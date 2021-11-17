@@ -1,7 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 using System.Windows.Threading;
 
 namespace ControleAmbientes.View
@@ -16,7 +15,7 @@ namespace ControleAmbientes.View
         public Configuration()
         {
             InitializeComponent();
-            timerUpdateValues.Interval = System.TimeSpan.FromMilliseconds(250);
+            timerUpdateValues.Interval = System.TimeSpan.FromMilliseconds(500);
             timerUpdateValues.Tick += TimerUpdateValues_Tick;
             timerUpdateValues.Start();
         }
@@ -26,9 +25,10 @@ namespace ControleAmbientes.View
             UpdateCombosTextsBlock_A();
             UpdateCombosTextsBlock_B();
             UpdateCombosTextsBlock_C();
+            UpdateCombosTextsBlock_D();
         }
 
-        #region Bloco IP do Arduino 
+        #region Block IP Arduino 
 
         private void txtFirstOcteto_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         { 
@@ -109,7 +109,7 @@ namespace ControleAmbientes.View
 
         #endregion
 
-        #region Bloco A - Watts
+        #region Block A - Watts
         private void txtWats_A0_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
             var textBox = sender as TextBox;
@@ -161,7 +161,7 @@ namespace ControleAmbientes.View
 
         #endregion
 
-        #region Bloco B - Watts
+        #region Block B - Watts
         private void txtWats_A8_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
             var textBox = sender as TextBox;
@@ -213,7 +213,7 @@ namespace ControleAmbientes.View
 
         #endregion
 
-        #region Bloco C - Watts
+        #region Block C - Watts
         private void txtWats_2_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
             var textBox = sender as TextBox;
@@ -265,7 +265,7 @@ namespace ControleAmbientes.View
 
         #endregion
 
-        #region Bloco D - Watts
+        #region Block D - Watts
         private void txtWats_22_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
         {
             var textBox = sender as TextBox;
@@ -625,5 +625,598 @@ namespace ControleAmbientes.View
             txtWats_9.Text = comboType9.SelectedIndex.Equals(2) ? txtWats_9.Text : null;
         }
 
+        private void UpdateCombosTextsBlock_D()
+        {
+            #region 22 a 31
+
+            comboCol22.IsEnabled = !comboType22.SelectedIndex.Equals(0) ? true : false;
+            comboCol22.SelectedIndex = comboType22.SelectedIndex.Equals(0) ? -1 : comboCol22.SelectedIndex;
+            comboRow22.IsEnabled = !comboType22.SelectedIndex.Equals(0) ? true : false;
+            comboRow22.SelectedIndex = comboType22.SelectedIndex.Equals(0) ? -1 : comboRow22.SelectedIndex;
+            txtWats_22.IsEnabled = comboType22.SelectedIndex.Equals(2) ? true : false;
+            txtWats_22.Text = comboType22.SelectedIndex.Equals(2) ? txtWats_22.Text : null;
+
+            comboCol23.IsEnabled = !comboType23.SelectedIndex.Equals(0) ? true : false;
+            comboCol23.SelectedIndex = comboType23.SelectedIndex.Equals(0) ? -1 : comboCol23.SelectedIndex;
+            comboRow23.IsEnabled = !comboType23.SelectedIndex.Equals(0) ? true : false;
+            comboRow23.SelectedIndex = comboType23.SelectedIndex.Equals(0) ? -1 : comboRow23.SelectedIndex;
+            txtWats_23.IsEnabled = comboType23.SelectedIndex.Equals(2) ? true : false;
+            txtWats_23.Text = comboType23.SelectedIndex.Equals(2) ? txtWats_23.Text : null;
+
+            comboCol24.IsEnabled = !comboType24.SelectedIndex.Equals(0) ? true : false;
+            comboCol24.SelectedIndex = comboType24.SelectedIndex.Equals(0) ? -1 : comboCol24.SelectedIndex;
+            comboRow24.IsEnabled = !comboType24.SelectedIndex.Equals(0) ? true : false;
+            comboRow24.SelectedIndex = comboType24.SelectedIndex.Equals(0) ? -1 : comboRow24.SelectedIndex;
+            txtWats_24.IsEnabled = comboType24.SelectedIndex.Equals(2) ? true : false;
+            txtWats_24.Text = comboType24.SelectedIndex.Equals(2) ? txtWats_24.Text : null;
+
+            comboCol25.IsEnabled = !comboType25.SelectedIndex.Equals(0) ? true : false;
+            comboCol25.SelectedIndex = comboType25.SelectedIndex.Equals(0) ? -1 : comboCol25.SelectedIndex;
+            comboRow25.IsEnabled = !comboType25.SelectedIndex.Equals(0) ? true : false;
+            comboRow25.SelectedIndex = comboType25.SelectedIndex.Equals(0) ? -1 : comboRow25.SelectedIndex;
+            txtWats_25.IsEnabled = comboType25.SelectedIndex.Equals(2) ? true : false;
+            txtWats_25.Text = comboType25.SelectedIndex.Equals(2) ? txtWats_25.Text : null;
+
+            comboCol26.IsEnabled = !comboType26.SelectedIndex.Equals(0) ? true : false;
+            comboCol26.SelectedIndex = comboType26.SelectedIndex.Equals(0) ? -1 : comboCol26.SelectedIndex;
+            comboRow26.IsEnabled = !comboType26.SelectedIndex.Equals(0) ? true : false;
+            comboRow26.SelectedIndex = comboType26.SelectedIndex.Equals(0) ? -1 : comboRow26.SelectedIndex;
+            txtWats_26.IsEnabled = comboType26.SelectedIndex.Equals(2) ? true : false;
+            txtWats_26.Text = comboType26.SelectedIndex.Equals(2) ? txtWats_26.Text : null;
+
+            comboCol27.IsEnabled = !comboType27.SelectedIndex.Equals(0) ? true : false;
+            comboCol27.SelectedIndex = comboType27.SelectedIndex.Equals(0) ? -1 : comboCol27.SelectedIndex;
+            comboRow27.IsEnabled = !comboType27.SelectedIndex.Equals(0) ? true : false;
+            comboRow27.SelectedIndex = comboType27.SelectedIndex.Equals(0) ? -1 : comboRow27.SelectedIndex;
+            txtWats_27.IsEnabled = comboType27.SelectedIndex.Equals(2) ? true : false;
+            txtWats_27.Text = comboType27.SelectedIndex.Equals(2) ? txtWats_27.Text : null;
+
+            comboCol28.IsEnabled = !comboType28.SelectedIndex.Equals(0) ? true : false;
+            comboCol28.SelectedIndex = comboType28.SelectedIndex.Equals(0) ? -1 : comboCol28.SelectedIndex;
+            comboRow28.IsEnabled = !comboType28.SelectedIndex.Equals(0) ? true : false;
+            comboRow28.SelectedIndex = comboType28.SelectedIndex.Equals(0) ? -1 : comboRow28.SelectedIndex;
+            txtWats_28.IsEnabled = comboType28.SelectedIndex.Equals(2) ? true : false;
+            txtWats_28.Text = comboType28.SelectedIndex.Equals(2) ? txtWats_28.Text : null;
+
+            comboCol29.IsEnabled = !comboType29.SelectedIndex.Equals(0) ? true : false;
+            comboCol29.SelectedIndex = comboType29.SelectedIndex.Equals(0) ? -1 : comboCol29.SelectedIndex;
+            comboRow29.IsEnabled = !comboType29.SelectedIndex.Equals(0) ? true : false;
+            comboRow29.SelectedIndex = comboType29.SelectedIndex.Equals(0) ? -1 : comboRow29.SelectedIndex;
+            txtWats_29.IsEnabled = comboType29.SelectedIndex.Equals(2) ? true : false;
+            txtWats_29.Text = comboType29.SelectedIndex.Equals(2) ? txtWats_29.Text : null;
+
+            comboCol30.IsEnabled = !comboType30.SelectedIndex.Equals(0) ? true : false;
+            comboCol30.SelectedIndex = comboType30.SelectedIndex.Equals(0) ? -1 : comboCol30.SelectedIndex;
+            comboRow30.IsEnabled = !comboType30.SelectedIndex.Equals(0) ? true : false;
+            comboRow30.SelectedIndex = comboType30.SelectedIndex.Equals(0) ? -1 : comboRow30.SelectedIndex;
+            txtWats_30.IsEnabled = comboType30.SelectedIndex.Equals(2) ? true : false;
+            txtWats_30.Text = comboType30.SelectedIndex.Equals(2) ? txtWats_30.Text : null;
+
+            comboCol31.IsEnabled = !comboType31.SelectedIndex.Equals(0) ? true : false;
+            comboCol31.SelectedIndex = comboType31.SelectedIndex.Equals(0) ? -1 : comboCol31.SelectedIndex;
+            comboRow31.IsEnabled = !comboType31.SelectedIndex.Equals(0) ? true : false;
+            comboRow31.SelectedIndex = comboType31.SelectedIndex.Equals(0) ? -1 : comboRow31.SelectedIndex;
+            txtWats_31.IsEnabled = comboType31.SelectedIndex.Equals(2) ? true : false;
+            txtWats_31.Text = comboType31.SelectedIndex.Equals(2) ? txtWats_31.Text : null;
+
+            #endregion
+
+            #region 32 a 41
+
+            comboCol32.IsEnabled = !comboType32.SelectedIndex.Equals(0) ? true : false;
+            comboCol32.SelectedIndex = comboType32.SelectedIndex.Equals(0) ? -1 : comboCol32.SelectedIndex;
+            comboRow32.IsEnabled = !comboType32.SelectedIndex.Equals(0) ? true : false;
+            comboRow32.SelectedIndex = comboType32.SelectedIndex.Equals(0) ? -1 : comboRow32.SelectedIndex;
+            txtWats_32.IsEnabled = comboType32.SelectedIndex.Equals(2) ? true : false;
+            txtWats_32.Text = comboType32.SelectedIndex.Equals(2) ? txtWats_32.Text : null;
+
+            comboCol33.IsEnabled = !comboType33.SelectedIndex.Equals(0) ? true : false;
+            comboCol33.SelectedIndex = comboType33.SelectedIndex.Equals(0) ? -1 : comboCol33.SelectedIndex;
+            comboRow33.IsEnabled = !comboType33.SelectedIndex.Equals(0) ? true : false;
+            comboRow33.SelectedIndex = comboType33.SelectedIndex.Equals(0) ? -1 : comboRow33.SelectedIndex;
+            txtWats_33.IsEnabled = comboType33.SelectedIndex.Equals(2) ? true : false;
+            txtWats_33.Text = comboType33.SelectedIndex.Equals(2) ? txtWats_33.Text : null;
+
+            comboCol34.IsEnabled = !comboType34.SelectedIndex.Equals(0) ? true : false;
+            comboCol34.SelectedIndex = comboType34.SelectedIndex.Equals(0) ? -1 : comboCol34.SelectedIndex;
+            comboRow34.IsEnabled = !comboType34.SelectedIndex.Equals(0) ? true : false;
+            comboRow34.SelectedIndex = comboType34.SelectedIndex.Equals(0) ? -1 : comboRow34.SelectedIndex;
+            txtWats_34.IsEnabled = comboType34.SelectedIndex.Equals(2) ? true : false;
+            txtWats_34.Text = comboType34.SelectedIndex.Equals(2) ? txtWats_34.Text : null;
+
+            comboCol35.IsEnabled = !comboType35.SelectedIndex.Equals(0) ? true : false;
+            comboCol35.SelectedIndex = comboType35.SelectedIndex.Equals(0) ? -1 : comboCol35.SelectedIndex;
+            comboRow35.IsEnabled = !comboType35.SelectedIndex.Equals(0) ? true : false;
+            comboRow35.SelectedIndex = comboType35.SelectedIndex.Equals(0) ? -1 : comboRow35.SelectedIndex;
+            txtWats_35.IsEnabled = comboType35.SelectedIndex.Equals(2) ? true : false;
+            txtWats_35.Text = comboType35.SelectedIndex.Equals(2) ? txtWats_35.Text : null;
+
+            comboCol36.IsEnabled = !comboType36.SelectedIndex.Equals(0) ? true : false;
+            comboCol36.SelectedIndex = comboType36.SelectedIndex.Equals(0) ? -1 : comboCol36.SelectedIndex;
+            comboRow36.IsEnabled = !comboType36.SelectedIndex.Equals(0) ? true : false;
+            comboRow36.SelectedIndex = comboType36.SelectedIndex.Equals(0) ? -1 : comboRow36.SelectedIndex;
+            txtWats_36.IsEnabled = comboType36.SelectedIndex.Equals(2) ? true : false;
+            txtWats_36.Text = comboType36.SelectedIndex.Equals(2) ? txtWats_36.Text : null;
+
+            comboCol37.IsEnabled = !comboType37.SelectedIndex.Equals(0) ? true : false;
+            comboCol37.SelectedIndex = comboType37.SelectedIndex.Equals(0) ? -1 : comboCol37.SelectedIndex;
+            comboRow37.IsEnabled = !comboType37.SelectedIndex.Equals(0) ? true : false;
+            comboRow37.SelectedIndex = comboType37.SelectedIndex.Equals(0) ? -1 : comboRow37.SelectedIndex;
+            txtWats_37.IsEnabled = comboType37.SelectedIndex.Equals(2) ? true : false;
+            txtWats_37.Text = comboType37.SelectedIndex.Equals(2) ? txtWats_37.Text : null;
+
+            comboCol38.IsEnabled = !comboType38.SelectedIndex.Equals(0) ? true : false;
+            comboCol38.SelectedIndex = comboType38.SelectedIndex.Equals(0) ? -1 : comboCol38.SelectedIndex;
+            comboRow38.IsEnabled = !comboType38.SelectedIndex.Equals(0) ? true : false;
+            comboRow38.SelectedIndex = comboType38.SelectedIndex.Equals(0) ? -1 : comboRow38.SelectedIndex;
+            txtWats_38.IsEnabled = comboType38.SelectedIndex.Equals(2) ? true : false;
+            txtWats_38.Text = comboType38.SelectedIndex.Equals(2) ? txtWats_38.Text : null;
+
+            comboCol39.IsEnabled = !comboType39.SelectedIndex.Equals(0) ? true : false;
+            comboCol39.SelectedIndex = comboType39.SelectedIndex.Equals(0) ? -1 : comboCol39.SelectedIndex;
+            comboRow39.IsEnabled = !comboType39.SelectedIndex.Equals(0) ? true : false;
+            comboRow39.SelectedIndex = comboType39.SelectedIndex.Equals(0) ? -1 : comboRow39.SelectedIndex;
+            txtWats_39.IsEnabled = comboType39.SelectedIndex.Equals(2) ? true : false;
+            txtWats_39.Text = comboType39.SelectedIndex.Equals(2) ? txtWats_39.Text : null;
+
+            comboCol40.IsEnabled = !comboType40.SelectedIndex.Equals(0) ? true : false;
+            comboCol40.SelectedIndex = comboType40.SelectedIndex.Equals(0) ? -1 : comboCol40.SelectedIndex;
+            comboRow40.IsEnabled = !comboType40.SelectedIndex.Equals(0) ? true : false;
+            comboRow40.SelectedIndex = comboType40.SelectedIndex.Equals(0) ? -1 : comboRow40.SelectedIndex;
+            txtWats_40.IsEnabled = comboType40.SelectedIndex.Equals(2) ? true : false;
+            txtWats_40.Text = comboType40.SelectedIndex.Equals(2) ? txtWats_40.Text : null;
+
+            comboCol41.IsEnabled = !comboType41.SelectedIndex.Equals(0) ? true : false;
+            comboCol41.SelectedIndex = comboType41.SelectedIndex.Equals(0) ? -1 : comboCol41.SelectedIndex;
+            comboRow41.IsEnabled = !comboType41.SelectedIndex.Equals(0) ? true : false;
+            comboRow41.SelectedIndex = comboType41.SelectedIndex.Equals(0) ? -1 : comboRow41.SelectedIndex;
+            txtWats_41.IsEnabled = comboType41.SelectedIndex.Equals(2) ? true : false;
+            txtWats_41.Text = comboType41.SelectedIndex.Equals(2) ? txtWats_41.Text : null;
+
+            #endregion
+
+            #region 42 a 51
+
+            comboCol42.IsEnabled = !comboType42.SelectedIndex.Equals(0) ? true : false;
+            comboCol42.SelectedIndex = comboType42.SelectedIndex.Equals(0) ? -1 : comboCol42.SelectedIndex;
+            comboRow42.IsEnabled = !comboType42.SelectedIndex.Equals(0) ? true : false;
+            comboRow42.SelectedIndex = comboType42.SelectedIndex.Equals(0) ? -1 : comboRow42.SelectedIndex;
+            txtWats_42.IsEnabled = comboType42.SelectedIndex.Equals(2) ? true : false;
+            txtWats_42.Text = comboType42.SelectedIndex.Equals(2) ? txtWats_42.Text : null;
+
+            comboCol43.IsEnabled = !comboType43.SelectedIndex.Equals(0) ? true : false;
+            comboCol43.SelectedIndex = comboType43.SelectedIndex.Equals(0) ? -1 : comboCol43.SelectedIndex;
+            comboRow43.IsEnabled = !comboType43.SelectedIndex.Equals(0) ? true : false;
+            comboRow43.SelectedIndex = comboType43.SelectedIndex.Equals(0) ? -1 : comboRow43.SelectedIndex;
+            txtWats_43.IsEnabled = comboType43.SelectedIndex.Equals(2) ? true : false;
+            txtWats_43.Text = comboType43.SelectedIndex.Equals(2) ? txtWats_43.Text : null;
+
+            comboCol44.IsEnabled = !comboType44.SelectedIndex.Equals(0) ? true : false;
+            comboCol44.SelectedIndex = comboType44.SelectedIndex.Equals(0) ? -1 : comboCol44.SelectedIndex;
+            comboRow44.IsEnabled = !comboType44.SelectedIndex.Equals(0) ? true : false;
+            comboRow44.SelectedIndex = comboType44.SelectedIndex.Equals(0) ? -1 : comboRow44.SelectedIndex;
+            txtWats_44.IsEnabled = comboType44.SelectedIndex.Equals(2) ? true : false;
+            txtWats_44.Text = comboType44.SelectedIndex.Equals(2) ? txtWats_44.Text : null;
+
+            comboCol45.IsEnabled = !comboType45.SelectedIndex.Equals(0) ? true : false;
+            comboCol45.SelectedIndex = comboType45.SelectedIndex.Equals(0) ? -1 : comboCol45.SelectedIndex;
+            comboRow45.IsEnabled = !comboType45.SelectedIndex.Equals(0) ? true : false;
+            comboRow45.SelectedIndex = comboType45.SelectedIndex.Equals(0) ? -1 : comboRow45.SelectedIndex;
+            txtWats_45.IsEnabled = comboType45.SelectedIndex.Equals(2) ? true : false;
+            txtWats_45.Text = comboType45.SelectedIndex.Equals(2) ? txtWats_45.Text : null;
+
+            comboCol46.IsEnabled = !comboType46.SelectedIndex.Equals(0) ? true : false;
+            comboCol46.SelectedIndex = comboType46.SelectedIndex.Equals(0) ? -1 : comboCol46.SelectedIndex;
+            comboRow46.IsEnabled = !comboType46.SelectedIndex.Equals(0) ? true : false;
+            comboRow46.SelectedIndex = comboType46.SelectedIndex.Equals(0) ? -1 : comboRow46.SelectedIndex;
+            txtWats_46.IsEnabled = comboType46.SelectedIndex.Equals(2) ? true : false;
+            txtWats_46.Text = comboType46.SelectedIndex.Equals(2) ? txtWats_46.Text : null;
+
+            comboCol47.IsEnabled = !comboType47.SelectedIndex.Equals(0) ? true : false;
+            comboCol47.SelectedIndex = comboType47.SelectedIndex.Equals(0) ? -1 : comboCol47.SelectedIndex;
+            comboRow47.IsEnabled = !comboType47.SelectedIndex.Equals(0) ? true : false;
+            comboRow47.SelectedIndex = comboType47.SelectedIndex.Equals(0) ? -1 : comboRow47.SelectedIndex;
+            txtWats_47.IsEnabled = comboType47.SelectedIndex.Equals(2) ? true : false;
+            txtWats_47.Text = comboType47.SelectedIndex.Equals(2) ? txtWats_47.Text : null;
+
+            comboCol48.IsEnabled = !comboType48.SelectedIndex.Equals(0) ? true : false;
+            comboCol48.SelectedIndex = comboType48.SelectedIndex.Equals(0) ? -1 : comboCol48.SelectedIndex;
+            comboRow48.IsEnabled = !comboType48.SelectedIndex.Equals(0) ? true : false;
+            comboRow48.SelectedIndex = comboType48.SelectedIndex.Equals(0) ? -1 : comboRow48.SelectedIndex;
+            txtWats_48.IsEnabled = comboType48.SelectedIndex.Equals(2) ? true : false;
+            txtWats_48.Text = comboType48.SelectedIndex.Equals(2) ? txtWats_48.Text : null;
+
+            comboCol49.IsEnabled = !comboType49.SelectedIndex.Equals(0) ? true : false;
+            comboCol49.SelectedIndex = comboType49.SelectedIndex.Equals(0) ? -1 : comboCol49.SelectedIndex;
+            comboRow49.IsEnabled = !comboType49.SelectedIndex.Equals(0) ? true : false;
+            comboRow49.SelectedIndex = comboType49.SelectedIndex.Equals(0) ? -1 : comboRow49.SelectedIndex;
+            txtWats_49.IsEnabled = comboType49.SelectedIndex.Equals(2) ? true : false;
+            txtWats_49.Text = comboType49.SelectedIndex.Equals(2) ? txtWats_49.Text : null;
+
+            comboCol50.IsEnabled = !comboType50.SelectedIndex.Equals(0) ? true : false;
+            comboCol50.SelectedIndex = comboType50.SelectedIndex.Equals(0) ? -1 : comboCol50.SelectedIndex;
+            comboRow50.IsEnabled = !comboType50.SelectedIndex.Equals(0) ? true : false;
+            comboRow50.SelectedIndex = comboType50.SelectedIndex.Equals(0) ? -1 : comboRow50.SelectedIndex;
+            txtWats_50.IsEnabled = comboType50.SelectedIndex.Equals(2) ? true : false;
+            txtWats_50.Text = comboType50.SelectedIndex.Equals(2) ? txtWats_50.Text : null;
+
+            comboCol51.IsEnabled = !comboType51.SelectedIndex.Equals(0) ? true : false;
+            comboCol51.SelectedIndex = comboType51.SelectedIndex.Equals(0) ? -1 : comboCol51.SelectedIndex;
+            comboRow51.IsEnabled = !comboType51.SelectedIndex.Equals(0) ? true : false;
+            comboRow51.SelectedIndex = comboType51.SelectedIndex.Equals(0) ? -1 : comboRow51.SelectedIndex;
+            txtWats_51.IsEnabled = comboType51.SelectedIndex.Equals(2) ? true : false;
+            txtWats_51.Text = comboType51.SelectedIndex.Equals(2) ? txtWats_51.Text : null;
+
+            #endregion
+
+        }
+
+        private void btReset_Click(object sender, RoutedEventArgs e)
+        {
+            if(MessageBox.Show("Deseja resetar todos os campos?", "! ! ! Atenção ! ! !", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                #region Block A
+                comboTypeA0.SelectedIndex = 0;
+                comboTypeA1.SelectedIndex = 0;
+                comboTypeA2.SelectedIndex = 0;
+                comboTypeA3.SelectedIndex = 0;
+                comboTypeA4.SelectedIndex = 0;
+                comboTypeA5.SelectedIndex = 0;
+                comboTypeA6.SelectedIndex = 0;
+                comboTypeA7.SelectedIndex = 0;
+                #endregion
+
+                #region Block B
+                comboTypeA8.SelectedIndex = 0;
+                comboTypeA9.SelectedIndex = 0;
+                comboTypeA10.SelectedIndex = 0;
+                comboTypeA11.SelectedIndex = 0;
+                comboTypeA12.SelectedIndex = 0;
+                comboTypeA13.SelectedIndex = 0;
+                comboTypeA14.SelectedIndex = 0;
+                comboTypeA15.SelectedIndex = 0;
+                #endregion
+
+                #region Block C
+                comboType2.SelectedIndex = 0;
+                comboType3.SelectedIndex = 0;
+                comboType4.SelectedIndex = 0;
+                comboType5.SelectedIndex = 0;
+                comboType6.SelectedIndex = 0;
+                comboType7.SelectedIndex = 0;
+                comboType8.SelectedIndex = 0;
+                comboType9.SelectedIndex = 0;
+                #endregion
+
+                #region Block D
+                comboType22.SelectedIndex = 0;
+                comboType23.SelectedIndex = 0;
+                comboType24.SelectedIndex = 0;
+                comboType25.SelectedIndex = 0;
+                comboType26.SelectedIndex = 0;
+                comboType27.SelectedIndex = 0;
+                comboType28.SelectedIndex = 0;
+                comboType29.SelectedIndex = 0;
+                comboType30.SelectedIndex = 0;
+                comboType31.SelectedIndex = 0;
+                comboType32.SelectedIndex = 0;
+                comboType33.SelectedIndex = 0;
+                comboType34.SelectedIndex = 0;
+                comboType35.SelectedIndex = 0;
+                comboType36.SelectedIndex = 0;
+                comboType37.SelectedIndex = 0;
+                comboType38.SelectedIndex = 0;
+                comboType39.SelectedIndex = 0;
+                comboType40.SelectedIndex = 0;
+                comboType41.SelectedIndex = 0;
+                comboType42.SelectedIndex = 0;
+                comboType43.SelectedIndex = 0;
+                comboType44.SelectedIndex = 0;
+                comboType45.SelectedIndex = 0;
+                comboType46.SelectedIndex = 0;
+                comboType47.SelectedIndex = 0;
+                comboType48.SelectedIndex = 0;
+                comboType49.SelectedIndex = 0;
+                comboType50.SelectedIndex = 0;
+                comboType51.SelectedIndex = 0;
+                #endregion
+            }
+        }
+
+        private void btSalveData_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Definir esses dados como padrão?", "! ! ! Atenção ! ! !", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                saveData();
+                enableButtonSelect();
+
+                Class.Variables.enableButton.Clear();
+                Class.Variables.enableButton.AddRange(Class.Variables.enableButtonSelect);
+            }
+                
+        }
+
+        private void btUploadData_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btSendArduino_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void saveData()
+        {
+            #region Block A
+
+            Class.Variables.typeIO_DB[0] = comboTypeA0.SelectedIndex;
+            Class.Variables.typeIO_DB[1] = comboTypeA1.SelectedIndex;
+            Class.Variables.typeIO_DB[2] = comboTypeA2.SelectedIndex;
+            Class.Variables.typeIO_DB[3] = comboTypeA3.SelectedIndex;
+            Class.Variables.typeIO_DB[4] = comboTypeA4.SelectedIndex;
+            Class.Variables.typeIO_DB[5] = comboTypeA5.SelectedIndex;
+            Class.Variables.typeIO_DB[6] = comboTypeA6.SelectedIndex;
+            Class.Variables.typeIO_DB[7] = comboTypeA7.SelectedIndex;
+
+            Class.Variables.actionCol_DB[0] = comboColA0.SelectedIndex;
+            Class.Variables.actionCol_DB[1] = comboColA1.SelectedIndex;
+            Class.Variables.actionCol_DB[2] = comboColA2.SelectedIndex;
+            Class.Variables.actionCol_DB[3] = comboColA3.SelectedIndex;
+            Class.Variables.actionCol_DB[4] = comboColA4.SelectedIndex;
+            Class.Variables.actionCol_DB[5] = comboColA5.SelectedIndex;
+            Class.Variables.actionCol_DB[6] = comboColA6.SelectedIndex;
+            Class.Variables.actionCol_DB[7] = comboColA7.SelectedIndex;
+
+            Class.Variables.actionRow_DB[0] = comboRowA0.SelectedIndex;
+            Class.Variables.actionRow_DB[1] = comboRowA1.SelectedIndex;
+            Class.Variables.actionRow_DB[2] = comboRowA2.SelectedIndex;
+            Class.Variables.actionRow_DB[3] = comboRowA3.SelectedIndex;
+            Class.Variables.actionRow_DB[4] = comboRowA4.SelectedIndex;
+            Class.Variables.actionRow_DB[5] = comboRowA5.SelectedIndex;
+            Class.Variables.actionRow_DB[6] = comboRowA6.SelectedIndex;
+            Class.Variables.actionRow_DB[7] = comboRowA7.SelectedIndex;
+
+            #endregion
+
+            #region Block B
+
+            Class.Variables.typeIO_DB[8] = comboTypeA8.SelectedIndex;
+            Class.Variables.typeIO_DB[9] = comboTypeA9.SelectedIndex;
+            Class.Variables.typeIO_DB[10] = comboTypeA10.SelectedIndex;
+            Class.Variables.typeIO_DB[11] = comboTypeA11.SelectedIndex;
+            Class.Variables.typeIO_DB[12] = comboTypeA12.SelectedIndex;
+            Class.Variables.typeIO_DB[13] = comboTypeA13.SelectedIndex;
+            Class.Variables.typeIO_DB[14] = comboTypeA14.SelectedIndex;
+            Class.Variables.typeIO_DB[15] = comboTypeA15.SelectedIndex;
+
+            Class.Variables.actionCol_DB[8] = comboColA8.SelectedIndex;
+            Class.Variables.actionCol_DB[9] = comboColA9.SelectedIndex;
+            Class.Variables.actionCol_DB[10] = comboColA10.SelectedIndex;
+            Class.Variables.actionCol_DB[11] = comboColA11.SelectedIndex;
+            Class.Variables.actionCol_DB[12] = comboColA12.SelectedIndex;
+            Class.Variables.actionCol_DB[13] = comboColA13.SelectedIndex;
+            Class.Variables.actionCol_DB[14] = comboColA14.SelectedIndex;
+            Class.Variables.actionCol_DB[15] = comboColA15.SelectedIndex;
+
+            Class.Variables.actionRow_DB[8] = comboRowA8.SelectedIndex;
+            Class.Variables.actionRow_DB[9] = comboRowA9.SelectedIndex;
+            Class.Variables.actionRow_DB[10] = comboRowA10.SelectedIndex;
+            Class.Variables.actionRow_DB[11] = comboRowA11.SelectedIndex;
+            Class.Variables.actionRow_DB[12] = comboRowA12.SelectedIndex;
+            Class.Variables.actionRow_DB[13] = comboRowA13.SelectedIndex;
+            Class.Variables.actionRow_DB[14] = comboRowA14.SelectedIndex;
+            Class.Variables.actionRow_DB[15] = comboRowA15.SelectedIndex;
+
+            #endregion
+
+            #region Block C
+
+            Class.Variables.typeIO_DB[16] = comboType2.SelectedIndex;
+            Class.Variables.typeIO_DB[17] = comboType3.SelectedIndex;
+            Class.Variables.typeIO_DB[18] = comboType4.SelectedIndex;
+            Class.Variables.typeIO_DB[19] = comboType5.SelectedIndex;
+            Class.Variables.typeIO_DB[20] = comboType6.SelectedIndex;
+            Class.Variables.typeIO_DB[21] = comboType7.SelectedIndex;
+            Class.Variables.typeIO_DB[22] = comboType8.SelectedIndex;
+            Class.Variables.typeIO_DB[23] = comboType9.SelectedIndex;
+
+            Class.Variables.actionCol_DB[16] = comboCol2.SelectedIndex;
+            Class.Variables.actionCol_DB[17] = comboCol3.SelectedIndex;
+            Class.Variables.actionCol_DB[18] = comboCol4.SelectedIndex;
+            Class.Variables.actionCol_DB[19] = comboCol5.SelectedIndex;
+            Class.Variables.actionCol_DB[20] = comboCol6.SelectedIndex;
+            Class.Variables.actionCol_DB[21] = comboCol7.SelectedIndex;
+            Class.Variables.actionCol_DB[22] = comboCol8.SelectedIndex;
+            Class.Variables.actionCol_DB[23] = comboCol9.SelectedIndex;
+
+            Class.Variables.actionRow_DB[16] = comboRow2.SelectedIndex;
+            Class.Variables.actionRow_DB[17] = comboRow3.SelectedIndex;
+            Class.Variables.actionRow_DB[18] = comboRow4.SelectedIndex;
+            Class.Variables.actionRow_DB[19] = comboRow5.SelectedIndex;
+            Class.Variables.actionRow_DB[20] = comboRow6.SelectedIndex;
+            Class.Variables.actionRow_DB[21] = comboRow7.SelectedIndex;
+            Class.Variables.actionRow_DB[22] = comboRow8.SelectedIndex;
+            Class.Variables.actionRow_DB[23] = comboRow9.SelectedIndex;
+
+            #endregion
+
+            #region Block D
+
+            #region 22-31
+
+            Class.Variables.typeIO_DB[24] = comboType22.SelectedIndex;
+            Class.Variables.typeIO_DB[25] = comboType23.SelectedIndex;
+            Class.Variables.typeIO_DB[26] = comboType24.SelectedIndex;
+            Class.Variables.typeIO_DB[27] = comboType25.SelectedIndex;
+            Class.Variables.typeIO_DB[28] = comboType26.SelectedIndex;
+            Class.Variables.typeIO_DB[29] = comboType27.SelectedIndex;
+            Class.Variables.typeIO_DB[30] = comboType28.SelectedIndex;
+            Class.Variables.typeIO_DB[31] = comboType29.SelectedIndex;
+            Class.Variables.typeIO_DB[32] = comboType30.SelectedIndex;
+            Class.Variables.typeIO_DB[33] = comboType31.SelectedIndex;
+
+            Class.Variables.actionCol_DB[24] = comboCol22.SelectedIndex;
+            Class.Variables.actionCol_DB[25] = comboCol23.SelectedIndex;
+            Class.Variables.actionCol_DB[26] = comboCol24.SelectedIndex;
+            Class.Variables.actionCol_DB[27] = comboCol25.SelectedIndex;
+            Class.Variables.actionCol_DB[28] = comboCol26.SelectedIndex;
+            Class.Variables.actionCol_DB[29] = comboCol27.SelectedIndex;
+            Class.Variables.actionCol_DB[30] = comboCol28.SelectedIndex;
+            Class.Variables.actionCol_DB[31] = comboCol29.SelectedIndex;
+            Class.Variables.actionCol_DB[32] = comboCol30.SelectedIndex;
+            Class.Variables.actionCol_DB[33] = comboCol31.SelectedIndex;
+
+            Class.Variables.actionRow_DB[24] = comboRow22.SelectedIndex;
+            Class.Variables.actionRow_DB[25] = comboRow23.SelectedIndex;
+            Class.Variables.actionRow_DB[26] = comboRow24.SelectedIndex;
+            Class.Variables.actionRow_DB[27] = comboRow25.SelectedIndex;
+            Class.Variables.actionRow_DB[28] = comboRow26.SelectedIndex;
+            Class.Variables.actionRow_DB[29] = comboRow27.SelectedIndex;
+            Class.Variables.actionRow_DB[30] = comboRow28.SelectedIndex;
+            Class.Variables.actionRow_DB[31] = comboRow29.SelectedIndex;
+            Class.Variables.actionRow_DB[32] = comboRow30.SelectedIndex;
+            Class.Variables.actionRow_DB[33] = comboRow31.SelectedIndex;
+
+            #endregion
+
+            #region 32-41
+
+            Class.Variables.typeIO_DB[34] = comboType32.SelectedIndex;
+            Class.Variables.typeIO_DB[35] = comboType33.SelectedIndex;
+            Class.Variables.typeIO_DB[36] = comboType34.SelectedIndex;
+            Class.Variables.typeIO_DB[37] = comboType35.SelectedIndex;
+            Class.Variables.typeIO_DB[38] = comboType36.SelectedIndex;
+            Class.Variables.typeIO_DB[39] = comboType37.SelectedIndex;
+            Class.Variables.typeIO_DB[40] = comboType38.SelectedIndex;
+            Class.Variables.typeIO_DB[41] = comboType39.SelectedIndex;
+            Class.Variables.typeIO_DB[42] = comboType40.SelectedIndex;
+            Class.Variables.typeIO_DB[43] = comboType41.SelectedIndex;
+
+            Class.Variables.actionCol_DB[34] = comboCol32.SelectedIndex;
+            Class.Variables.actionCol_DB[35] = comboCol33.SelectedIndex;
+            Class.Variables.actionCol_DB[36] = comboCol34.SelectedIndex;
+            Class.Variables.actionCol_DB[37] = comboCol35.SelectedIndex;
+            Class.Variables.actionCol_DB[38] = comboCol36.SelectedIndex;
+            Class.Variables.actionCol_DB[39] = comboCol37.SelectedIndex;
+            Class.Variables.actionCol_DB[30] = comboCol38.SelectedIndex;
+            Class.Variables.actionCol_DB[31] = comboCol39.SelectedIndex;
+            Class.Variables.actionCol_DB[32] = comboCol40.SelectedIndex;
+            Class.Variables.actionCol_DB[33] = comboCol41.SelectedIndex;
+
+            Class.Variables.actionRow_DB[34] = comboRow32.SelectedIndex;
+            Class.Variables.actionRow_DB[35] = comboRow33.SelectedIndex;
+            Class.Variables.actionRow_DB[36] = comboRow34.SelectedIndex;
+            Class.Variables.actionRow_DB[37] = comboRow35.SelectedIndex;
+            Class.Variables.actionRow_DB[38] = comboRow36.SelectedIndex;
+            Class.Variables.actionRow_DB[39] = comboRow37.SelectedIndex;
+            Class.Variables.actionRow_DB[40] = comboRow38.SelectedIndex;
+            Class.Variables.actionRow_DB[41] = comboRow39.SelectedIndex;
+            Class.Variables.actionRow_DB[42] = comboRow40.SelectedIndex;
+            Class.Variables.actionRow_DB[43] = comboRow41.SelectedIndex;
+
+            #endregion
+
+            #region 42-51
+
+            Class.Variables.typeIO_DB[44] = comboType42.SelectedIndex;
+            Class.Variables.typeIO_DB[45] = comboType43.SelectedIndex;
+            Class.Variables.typeIO_DB[46] = comboType44.SelectedIndex;
+            Class.Variables.typeIO_DB[47] = comboType45.SelectedIndex;
+            Class.Variables.typeIO_DB[48] = comboType46.SelectedIndex;
+            Class.Variables.typeIO_DB[49] = comboType47.SelectedIndex;
+            Class.Variables.typeIO_DB[50] = comboType48.SelectedIndex;
+            Class.Variables.typeIO_DB[51] = comboType49.SelectedIndex;
+            Class.Variables.typeIO_DB[52] = comboType50.SelectedIndex;
+            Class.Variables.typeIO_DB[53] = comboType51.SelectedIndex;
+
+            Class.Variables.actionCol_DB[44] = comboCol42.SelectedIndex;
+            Class.Variables.actionCol_DB[45] = comboCol43.SelectedIndex;
+            Class.Variables.actionCol_DB[46] = comboCol44.SelectedIndex;
+            Class.Variables.actionCol_DB[47] = comboCol45.SelectedIndex;
+            Class.Variables.actionCol_DB[48] = comboCol46.SelectedIndex;
+            Class.Variables.actionCol_DB[49] = comboCol47.SelectedIndex;
+            Class.Variables.actionCol_DB[50] = comboCol48.SelectedIndex;
+            Class.Variables.actionCol_DB[51] = comboCol49.SelectedIndex;
+            Class.Variables.actionCol_DB[52] = comboCol50.SelectedIndex;
+            Class.Variables.actionCol_DB[53] = comboCol51.SelectedIndex;
+
+            Class.Variables.actionRow_DB[44] = comboRow42.SelectedIndex;
+            Class.Variables.actionRow_DB[45] = comboRow43.SelectedIndex;
+            Class.Variables.actionRow_DB[46] = comboRow44.SelectedIndex;
+            Class.Variables.actionRow_DB[47] = comboRow45.SelectedIndex;
+            Class.Variables.actionRow_DB[48] = comboRow46.SelectedIndex;
+            Class.Variables.actionRow_DB[49] = comboRow47.SelectedIndex;
+            Class.Variables.actionRow_DB[50] = comboRow48.SelectedIndex;
+            Class.Variables.actionRow_DB[51] = comboRow49.SelectedIndex;
+            Class.Variables.actionRow_DB[52] = comboRow50.SelectedIndex;
+            Class.Variables.actionRow_DB[53] = comboRow51.SelectedIndex;
+
+            #endregion
+
+            #endregion
+        }
+
+        private void enableButtonSelect()
+        {
+            try
+            {
+                Class.Variables.enableButtonSelect[0] = comboTypeA0.SelectedIndex.ToString() + comboColA0.SelectedIndex.ToString() + comboRowA0.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[1] = comboTypeA1.SelectedIndex.ToString() + comboColA1.SelectedIndex.ToString() + comboRowA1.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[2] = comboTypeA2.SelectedIndex.ToString() + comboColA2.SelectedIndex.ToString() + comboRowA2.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[3] = comboTypeA3.SelectedIndex.ToString() + comboColA3.SelectedIndex.ToString() + comboRowA3.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[4] = comboTypeA4.SelectedIndex.ToString() + comboColA4.SelectedIndex.ToString() + comboRowA4.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[5] = comboTypeA5.SelectedIndex.ToString() + comboColA5.SelectedIndex.ToString() + comboRowA5.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[6] = comboTypeA6.SelectedIndex.ToString() + comboColA6.SelectedIndex.ToString() + comboRowA6.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[7] = comboTypeA7.SelectedIndex.ToString() + comboColA7.SelectedIndex.ToString() + comboRowA7.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[8] = comboTypeA8.SelectedIndex.ToString() + comboColA8.SelectedIndex.ToString() + comboRowA8.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[9] = comboTypeA9.SelectedIndex.ToString() + comboColA9.SelectedIndex.ToString() + comboRowA9.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[10] = comboTypeA10.SelectedIndex.ToString() + comboColA10.SelectedIndex.ToString() + comboRowA10.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[11] = comboTypeA11.SelectedIndex.ToString() + comboColA11.SelectedIndex.ToString() + comboRowA11.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[12] = comboTypeA12.SelectedIndex.ToString() + comboColA12.SelectedIndex.ToString() + comboRowA12.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[13] = comboTypeA13.SelectedIndex.ToString() + comboColA13.SelectedIndex.ToString() + comboRowA13.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[14] = comboTypeA14.SelectedIndex.ToString() + comboColA14.SelectedIndex.ToString() + comboRowA14.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[15] = comboTypeA15.SelectedIndex.ToString() + comboColA15.SelectedIndex.ToString() + comboRowA15.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[16] = comboType2.SelectedIndex.ToString() + comboCol2.SelectedIndex.ToString() + comboRow2.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[17] = comboType3.SelectedIndex.ToString() + comboCol3.SelectedIndex.ToString() + comboRow3.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[18] = comboType4.SelectedIndex.ToString() + comboCol4.SelectedIndex.ToString() + comboRow4.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[19] = comboType5.SelectedIndex.ToString() + comboCol5.SelectedIndex.ToString() + comboRow5.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[20] = comboType6.SelectedIndex.ToString() + comboCol6.SelectedIndex.ToString() + comboRow6.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[21] = comboType7.SelectedIndex.ToString() + comboCol7.SelectedIndex.ToString() + comboRow7.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[22] = comboType8.SelectedIndex.ToString() + comboCol8.SelectedIndex.ToString() + comboRow8.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[23] = comboType9.SelectedIndex.ToString() + comboCol9.SelectedIndex.ToString() + comboRow9.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[24] = comboType22.SelectedIndex.ToString() + comboCol22.SelectedIndex.ToString() + comboRow22.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[25] = comboType23.SelectedIndex.ToString() + comboCol23.SelectedIndex.ToString() + comboRow23.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[26] = comboType24.SelectedIndex.ToString() + comboCol24.SelectedIndex.ToString() + comboRow24.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[27] = comboType25.SelectedIndex.ToString() + comboCol25.SelectedIndex.ToString() + comboRow25.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[28] = comboType26.SelectedIndex.ToString() + comboCol26.SelectedIndex.ToString() + comboRow26.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[29] = comboType27.SelectedIndex.ToString() + comboCol27.SelectedIndex.ToString() + comboRow27.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[30] = comboType28.SelectedIndex.ToString() + comboCol28.SelectedIndex.ToString() + comboRow28.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[31] = comboType29.SelectedIndex.ToString() + comboCol29.SelectedIndex.ToString() + comboRow29.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[32] = comboType30.SelectedIndex.ToString() + comboCol30.SelectedIndex.ToString() + comboRow30.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[33] = comboType31.SelectedIndex.ToString() + comboCol31.SelectedIndex.ToString() + comboRow31.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[34] = comboType32.SelectedIndex.ToString() + comboCol32.SelectedIndex.ToString() + comboRow32.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[35] = comboType33.SelectedIndex.ToString() + comboCol33.SelectedIndex.ToString() + comboRow33.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[36] = comboType34.SelectedIndex.ToString() + comboCol34.SelectedIndex.ToString() + comboRow34.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[37] = comboType35.SelectedIndex.ToString() + comboCol35.SelectedIndex.ToString() + comboRow35.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[38] = comboType36.SelectedIndex.ToString() + comboCol36.SelectedIndex.ToString() + comboRow36.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[39] = comboType37.SelectedIndex.ToString() + comboCol37.SelectedIndex.ToString() + comboRow37.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[40] = comboType38.SelectedIndex.ToString() + comboCol38.SelectedIndex.ToString() + comboRow38.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[41] = comboType39.SelectedIndex.ToString() + comboCol39.SelectedIndex.ToString() + comboRow39.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[42] = comboType40.SelectedIndex.ToString() + comboCol40.SelectedIndex.ToString() + comboRow40.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[43] = comboType41.SelectedIndex.ToString() + comboCol41.SelectedIndex.ToString() + comboRow41.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[44] = comboType42.SelectedIndex.ToString() + comboCol42.SelectedIndex.ToString() + comboRow42.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[45] = comboType43.SelectedIndex.ToString() + comboCol43.SelectedIndex.ToString() + comboRow43.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[46] = comboType44.SelectedIndex.ToString() + comboCol44.SelectedIndex.ToString() + comboRow44.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[47] = comboType45.SelectedIndex.ToString() + comboCol45.SelectedIndex.ToString() + comboRow45.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[48] = comboType46.SelectedIndex.ToString() + comboCol46.SelectedIndex.ToString() + comboRow46.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[49] = comboType47.SelectedIndex.ToString() + comboCol47.SelectedIndex.ToString() + comboRow47.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[50] = comboType48.SelectedIndex.ToString() + comboCol48.SelectedIndex.ToString() + comboRow48.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[51] = comboType49.SelectedIndex.ToString() + comboCol49.SelectedIndex.ToString() + comboRow49.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[52] = comboType50.SelectedIndex.ToString() + comboCol50.SelectedIndex.ToString() + comboRow50.SelectedIndex.ToString();
+                Class.Variables.enableButtonSelect[53] = comboType51.SelectedIndex.ToString() + comboCol51.SelectedIndex.ToString() + comboRow51.SelectedIndex.ToString();
+            }
+            catch {; }
+
+        }
     }
 }

@@ -74,7 +74,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -118,7 +118,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -162,7 +162,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -206,7 +206,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -250,7 +250,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -294,7 +294,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -338,7 +338,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -382,7 +382,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -447,7 +447,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -491,7 +491,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -535,7 +535,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -579,7 +579,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -623,7 +623,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -667,7 +667,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -711,7 +711,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -755,7 +755,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -820,7 +820,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -864,7 +864,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -908,7 +908,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -952,7 +952,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -996,7 +996,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1040,7 +1040,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1084,7 +1084,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1128,7 +1128,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1193,7 +1193,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1237,7 +1237,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1281,7 +1281,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1325,7 +1325,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1369,7 +1369,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1413,7 +1413,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1457,7 +1457,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1501,7 +1501,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1545,7 +1545,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1589,7 +1589,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1653,7 +1653,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1697,7 +1697,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1741,7 +1741,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1785,7 +1785,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1829,7 +1829,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1873,7 +1873,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1917,7 +1917,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -1961,7 +1961,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -2005,7 +2005,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -2049,7 +2049,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -2109,7 +2109,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -2153,7 +2153,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -2197,7 +2197,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -2241,7 +2241,7 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
@@ -2285,51 +2285,9 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ComboBox x:Name="comboType45_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="------" Cursor="Hand"/>
-                <ListBoxItem Content="Entrada" Foreground="#FF4A86E8" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="Saida" Foreground="#FF009688" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-            </ComboBox>
-            <ComboBox x:Name="comboCol45_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="C1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="C2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="C3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="C4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            </ComboBox>
-            <ComboBox x:Name="comboRow45_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="L1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="L2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            </ComboBox>
         </ComboBox>
         <TextBox x:Name="txtWats_46" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="1141,564,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_46_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
@@ -2371,51 +2329,9 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ComboBox x:Name="comboType45_Copy1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="------" Cursor="Hand"/>
-                <ListBoxItem Content="Entrada" Foreground="#FF4A86E8" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="Saida" Foreground="#FF009688" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-            </ComboBox>
-            <ComboBox x:Name="comboCol45_Copy1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="C1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="C2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="C3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="C4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            </ComboBox>
-            <ComboBox x:Name="comboRow45_Copy1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="L1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="L2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            </ComboBox>
+            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>          
         </ComboBox>
         <TextBox x:Name="txtWats_47" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="1141,592,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_47_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
@@ -2457,51 +2373,9 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ComboBox x:Name="comboType45_Copy2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="------" Cursor="Hand"/>
-                <ListBoxItem Content="Entrada" Foreground="#FF4A86E8" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="Saida" Foreground="#FF009688" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-            </ComboBox>
-            <ComboBox x:Name="comboCol45_Copy2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="C1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="C2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="C3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="C4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            </ComboBox>
-            <ComboBox x:Name="comboRow45_Copy2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="L1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="L2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            </ComboBox>
+            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>            
         </ComboBox>
         <TextBox x:Name="txtWats_48" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="1141,621,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_48_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
@@ -2543,51 +2417,9 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ComboBox x:Name="comboType45_Copy3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="------" Cursor="Hand"/>
-                <ListBoxItem Content="Entrada" Foreground="#FF4A86E8" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="Saida" Foreground="#FF009688" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-            </ComboBox>
-            <ComboBox x:Name="comboCol45_Copy3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="C1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="C2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="C3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="C4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            </ComboBox>
-            <ComboBox x:Name="comboRow45_Copy3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="L1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="L2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            </ComboBox>
+            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>            
         </ComboBox>
         <TextBox x:Name="txtWats_49" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="1141,649,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_49_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
@@ -2631,49 +2463,7 @@
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ComboBox x:Name="comboType45_Copy4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="------" Cursor="Hand"/>
-                <ListBoxItem Content="Entrada" Foreground="#FF4A86E8" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="Saida" Foreground="#FF009688" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-            </ComboBox>
-            <ComboBox x:Name="comboCol45_Copy4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="C1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="C2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="C3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="C4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            </ComboBox>
-            <ComboBox x:Name="comboRow45_Copy4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="L1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="L2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            </ComboBox>
+            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>            
         </ComboBox>
         <TextBox x:Name="txtWats_50" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="1141,677,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_50_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
@@ -2715,51 +2505,9 @@
             <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ComboBox x:Name="comboType45_Copy5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="------" Cursor="Hand"/>
-                <ListBoxItem Content="Entrada" Foreground="#FF4A86E8" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="Saida" Foreground="#FF009688" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-            </ComboBox>
-            <ComboBox x:Name="comboCol45_Copy5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="C1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="C2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="C3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="C4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            </ComboBox>
-            <ComboBox x:Name="comboRow45_Copy5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand">
-                <ComboBox.Background>
-                    <LinearGradientBrush EndPoint="0,1">
-                        <GradientStop Color="LightGray"/>
-                        <GradientStop Color="LightGray" Offset="1"/>
-                        <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                    </LinearGradientBrush>
-                </ComboBox.Background>
-                <ListBoxItem Content="L1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-                <ListBoxItem Content="L2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-                <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            </ComboBox>
+            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>            
         </ComboBox>
         <TextBox x:Name="txtWats_51" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="1141,705,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_51_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
@@ -2769,7 +2517,7 @@
         <TextBox x:Name="txtFourthOcteto" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="50" Height="18" FontFamily="Arial Rounded MT Bold" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF009688" BorderBrush="#FF009688" BorderThickness="1,2,1,2" Margin="188,716,0,0" PreviewTextInput="txtFourthOcteto_PreviewTextInput" TextChanged="txtFourthOcteto_TextChanged"/>
         <Label Content="IP Arduino" HorizontalAlignment="Left" Margin="24,687,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="16" Foreground="#FF009688" HorizontalContentAlignment="Center" FontWeight="Normal"/>
         <UserControls:CronoDateTime HorizontalAlignment="Left" Margin="0,764,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btUploadData" Content="Upload Dados" HorizontalAlignment="Left" Margin="774,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
+        <Button x:Name="btUploadData" Content="Upload Dados" HorizontalAlignment="Left" Margin="774,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black" Click="btUploadData_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF1FF63" Offset="0"/>
@@ -2778,7 +2526,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btSendArduino" Content="Enviar Arduino" HorizontalAlignment="Left" Margin="632,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
+        <Button x:Name="btSendArduino" Content="Enviar Arduino" HorizontalAlignment="Left" Margin="632,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black" Click="btSendArduino_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF639CFF" Offset="0"/>
@@ -2787,7 +2535,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btReset" Content="Reset Dados" HorizontalAlignment="Left" Margin="490,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
+        <Button x:Name="btReset" Content="Reset Dados" HorizontalAlignment="Left" Margin="490,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black" Click="btReset_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFFB163" Offset="0.006"/>
@@ -2796,7 +2544,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btSalveData" Content="Salvar Banco" HorizontalAlignment="Left" Margin="917,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
+        <Button x:Name="btSalveData" Content="Salvar Banco" HorizontalAlignment="Left" Margin="917,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black" Click="btSalveData_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF78FF63" Offset="0"/>
@@ -2806,8 +2554,6 @@
             </Button.Background>
         </Button>
 
-
-
-
     </Grid>
+    
 </Window>
