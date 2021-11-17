@@ -168,7 +168,7 @@
         </ComboBox>
         <TextBox x:Name="txtWats_A2" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="500,190,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_A2_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
-        <ComboBox x:Name="comboTypeA2_Copy" HorizontalAlignment="Left" Margin="333,218,0,0" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand" ToolTip="Selecione a Função">
+        <ComboBox x:Name="comboTypeA3" HorizontalAlignment="Left" Margin="333,218,0,0" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand" ToolTip="Selecione a Função">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -180,7 +180,7 @@
             <ListBoxItem Content="Entrada" Foreground="#FF4A86E8" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
             <ListBoxItem Content="Saida" Foreground="#FF009688" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
         </ComboBox>
-        <ComboBox x:Name="comboColA2_Copy" HorizontalAlignment="Left" Margin="410,218,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Coluna">
+        <ComboBox x:Name="comboColA3" HorizontalAlignment="Left" Margin="410,218,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Coluna">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -193,7 +193,7 @@
             <ListBoxItem Content="C3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="C4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
-        <ComboBox x:Name="comboRowA2_Copy" HorizontalAlignment="Left" Margin="453,218,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Linha">
+        <ComboBox x:Name="comboRowA3" HorizontalAlignment="Left" Margin="453,218,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Linha">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -212,7 +212,7 @@
         </ComboBox>
         <TextBox x:Name="txtWats_A3" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="500,218,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_A3_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
-        <ComboBox x:Name="comboTypeA2_Copy1" HorizontalAlignment="Left" Margin="333,246,0,0" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand" ToolTip="Selecione a Função">
+        <ComboBox x:Name="comboTypeA4" HorizontalAlignment="Left" Margin="333,246,0,0" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand" ToolTip="Selecione a Função">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -224,7 +224,7 @@
             <ListBoxItem Content="Entrada" Foreground="#FF4A86E8" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
             <ListBoxItem Content="Saida" Foreground="#FF009688" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
         </ComboBox>
-        <ComboBox x:Name="comboColA2_Copy1" HorizontalAlignment="Left" Margin="410,246,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Coluna">
+        <ComboBox x:Name="comboColA4" HorizontalAlignment="Left" Margin="410,246,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Coluna">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -237,7 +237,7 @@
             <ListBoxItem Content="C3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="C4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
-        <ComboBox x:Name="comboRowA2_Copy1" HorizontalAlignment="Left" Margin="453,246,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Linha">
+        <ComboBox x:Name="comboRowA4" HorizontalAlignment="Left" Margin="453,246,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Linha">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -256,7 +256,7 @@
         </ComboBox>
         <TextBox x:Name="txtWats_A4" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="500,246,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_A4_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
-        <ComboBox x:Name="comboTypeA2_Copy2" HorizontalAlignment="Left" Margin="333,274,0,0" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand" ToolTip="Selecione a Função">
+        <ComboBox x:Name="comboTypeA5" HorizontalAlignment="Left" Margin="333,274,0,0" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand" ToolTip="Selecione a Função">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -268,7 +268,7 @@
             <ListBoxItem Content="Entrada" Foreground="#FF4A86E8" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
             <ListBoxItem Content="Saida" Foreground="#FF009688" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
         </ComboBox>
-        <ComboBox x:Name="comboColA2_Copy2" HorizontalAlignment="Left" Margin="410,274,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Coluna">
+        <ComboBox x:Name="comboColA5" HorizontalAlignment="Left" Margin="410,274,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Coluna">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -281,7 +281,7 @@
             <ListBoxItem Content="C3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="C4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
-        <ComboBox x:Name="comboRowA2_Copy2" HorizontalAlignment="Left" Margin="453,274,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Linha">
+        <ComboBox x:Name="comboRowA5" HorizontalAlignment="Left" Margin="453,274,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Linha">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -300,7 +300,7 @@
         </ComboBox>
         <TextBox x:Name="txtWats_A5" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="500,274,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_A5_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
-        <ComboBox x:Name="comboTypeA2_Copy3" HorizontalAlignment="Left" Margin="333,302,0,0" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand" ToolTip="Selecione a Função">
+        <ComboBox x:Name="comboTypeA6" HorizontalAlignment="Left" Margin="333,302,0,0" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand" ToolTip="Selecione a Função">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -312,7 +312,7 @@
             <ListBoxItem Content="Entrada" Foreground="#FF4A86E8" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
             <ListBoxItem Content="Saida" Foreground="#FF009688" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
         </ComboBox>
-        <ComboBox x:Name="comboColA2_Copy3" HorizontalAlignment="Left" Margin="410,302,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Coluna">
+        <ComboBox x:Name="comboColA6" HorizontalAlignment="Left" Margin="410,302,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Coluna">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -325,7 +325,7 @@
             <ListBoxItem Content="C3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="C4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
-        <ComboBox x:Name="comboRowA2_Copy3" HorizontalAlignment="Left" Margin="453,302,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Linha">
+        <ComboBox x:Name="comboRowA6" HorizontalAlignment="Left" Margin="453,302,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Linha">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -344,7 +344,7 @@
         </ComboBox>
         <TextBox x:Name="txtWats_A6" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="500,302,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_A6_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
-        <ComboBox x:Name="comboTypeA2_Copy4" HorizontalAlignment="Left" Margin="333,330,0,0" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand" ToolTip="Selecione a Função">
+        <ComboBox x:Name="comboTypeA7" HorizontalAlignment="Left" Margin="333,330,0,0" VerticalAlignment="Top" Width="72" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" SelectedIndex="0" Cursor="Hand" ToolTip="Selecione a Função">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -356,7 +356,7 @@
             <ListBoxItem Content="Entrada" Foreground="#FF4A86E8" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
             <ListBoxItem Content="Saida" Foreground="#FF009688" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
         </ComboBox>
-        <ComboBox x:Name="comboColA2_Copy4" HorizontalAlignment="Left" Margin="410,330,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Coluna">
+        <ComboBox x:Name="comboColA7" HorizontalAlignment="Left" Margin="410,330,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Coluna">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -369,7 +369,7 @@
             <ListBoxItem Content="C3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="C4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
-        <ComboBox x:Name="comboRowA2_Copy4" HorizontalAlignment="Left" Margin="453,330,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Linha">
+        <ComboBox x:Name="comboRowA7" HorizontalAlignment="Left" Margin="453,330,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" ToolTip="Selecione a Linha">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="LightGray"/>
@@ -2769,7 +2769,7 @@
         <TextBox x:Name="txtFourthOcteto" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="50" Height="18" FontFamily="Arial Rounded MT Bold" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF009688" BorderBrush="#FF009688" BorderThickness="1,2,1,2" Margin="188,716,0,0" PreviewTextInput="txtFourthOcteto_PreviewTextInput" TextChanged="txtFourthOcteto_TextChanged"/>
         <Label Content="IP Arduino" HorizontalAlignment="Left" Margin="24,687,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="16" Foreground="#FF009688" HorizontalContentAlignment="Center" FontWeight="Normal"/>
         <UserControls:CronoDateTime HorizontalAlignment="Left" Margin="0,764,0,0" VerticalAlignment="Top"/>
-        <Button Content="Upload Dados" HorizontalAlignment="Left" Margin="774,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
+        <Button x:Name="btUploadData" Content="Upload Dados" HorizontalAlignment="Left" Margin="774,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFF1FF63" Offset="0"/>
@@ -2778,7 +2778,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Enviar Arduino" HorizontalAlignment="Left" Margin="632,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
+        <Button x:Name="btSendArduino" Content="Enviar Arduino" HorizontalAlignment="Left" Margin="632,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF639CFF" Offset="0"/>
@@ -2787,7 +2787,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Reset Dados" HorizontalAlignment="Left" Margin="490,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
+        <Button x:Name="btReset" Content="Reset Dados" HorizontalAlignment="Left" Margin="490,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFFB163" Offset="0.006"/>
@@ -2796,7 +2796,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Salvar Banco" HorizontalAlignment="Left" Margin="917,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
+        <Button x:Name="btSalveData" Content="Salvar Banco" HorizontalAlignment="Left" Margin="917,754,0,10" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF78FF63" Offset="0"/>
