@@ -22,7 +22,7 @@
                 <BlurEffect/>
             </Border.Effect>
         </Border>
-        <Image HorizontalAlignment="Left" Height="24" Margin="278,80,0,0" VerticalAlignment="Top" Width="24" Source="/Img/pointA.png" Stretch="UniformToFill"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="272,78,0,0" VerticalAlignment="Top" Width="24" Source="/Img/pointA.png" Stretch="UniformToFill"/>
         <Label Content="IO" HorizontalAlignment="Left" Margin="299,103,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FFFF9900" Height="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Label Content="Tipo" HorizontalAlignment="Left" Margin="333,103,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FFFF9900" Height="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="72"/>
         <Label Content="Ação" HorizontalAlignment="Left" Margin="410,103,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FFFF9900" Height="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="85"/>
@@ -394,7 +394,7 @@
                 <BlurEffect/>
             </Border.Effect>
         </Border>
-        <Image HorizontalAlignment="Left" Height="24" Margin="604,80,0,0" VerticalAlignment="Top" Width="24" Source="/Img/pointB.png" Stretch="UniformToFill"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="604,78,0,0" VerticalAlignment="Top" Width="24" Source="/Img/pointB.png" Stretch="UniformToFill"/>
         <Label Content="IO" HorizontalAlignment="Left" Margin="634,103,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FF009688" Height="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Label Content="Tipo" HorizontalAlignment="Left" Margin="671,103,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FF009688" Height="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="72"/>
         <Label Content="Ação" HorizontalAlignment="Left" Margin="748,103,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FF009688" Height="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="85"/>
@@ -767,7 +767,7 @@
                 <BlurEffect/>
             </Border.Effect>
         </Border>
-        <Image HorizontalAlignment="Left" Height="25" Margin="937,80,0,0" VerticalAlignment="Top" Width="25" Source="/Img/pointC.png" Stretch="UniformToFill"/>
+        <Image HorizontalAlignment="Left" Height="25" Margin="939,80,0,0" VerticalAlignment="Top" Width="25" Source="/Img/pointC.png" Stretch="UniformToFill"/>
         <Label Content="IO" HorizontalAlignment="Left" Margin="964,103,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FF607D8B" Height="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Label Content="Tipo" HorizontalAlignment="Left" Margin="1001,103,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FF607D8B" Height="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="72"/>
         <Label Content="Ação" HorizontalAlignment="Left" Margin="1078,103,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FF607D8B" Height="28" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="85"/>
@@ -2331,7 +2331,7 @@
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>          
+            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
         <TextBox x:Name="txtWats_47" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="1141,592,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_47_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
@@ -2375,7 +2375,7 @@
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>            
+            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
         <TextBox x:Name="txtWats_48" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="1141,621,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_48_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
@@ -2419,7 +2419,7 @@
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>            
+            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
         <TextBox x:Name="txtWats_49" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="1141,649,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_49_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
@@ -2463,7 +2463,7 @@
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>            
+            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
         <TextBox x:Name="txtWats_50" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="1141,677,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_50_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
@@ -2507,7 +2507,7 @@
             <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
             <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>            
+            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
         </ComboBox>
         <TextBox x:Name="txtWats_51" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="61" Height="22" FontFamily="Segoe UI" FontSize="12" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" BorderBrush="#FFACACAC" BorderThickness="0,1,0,1" Margin="1141,705,0,0" Background="#FFF0F0F0" FontWeight="Bold" PreviewTextInput="txtWats_51_PreviewTextInput" ToolTip="Informe a Potênicia de Consumo"/>
 
@@ -2553,7 +2553,24 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <ComboBox x:Name="comboRow2_Copy" HorizontalAlignment="Left" Margin="1121,134,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand" ToolTip="Selecione a Linha">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="LightGray"/>
+                    <GradientStop Color="LightGray" Offset="1"/>
+                    <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ListBoxItem Content="L1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
+            <ListBoxItem Content="L2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
+        </ComboBox>
 
     </Grid>
-    
+
 </Window>
