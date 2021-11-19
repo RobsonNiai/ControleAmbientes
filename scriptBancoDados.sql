@@ -247,3 +247,6 @@ create table controleambientesdb.config(
     n_txtWats_51Config SMALLINT not null,
     primary key (n_IdUnicoConfig)
 );
+
+/* Inseri usuário padrão na aplicação */
+insert Into controleambientesdb.users(c_EmailUsers, c_NameUsers, c_LogginUsers, c_PasswUsers, d_DataUsers) Values ('adm@adm.com.br', 'adm', 'adm', md5('adm'), time_format("YYYY-MM-DD hh:mm:ss"));  

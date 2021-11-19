@@ -74,9 +74,7 @@ namespace ControleAmbientes.UserControls
             if (Class.Variables.userLoggin)
             {
                 Views.viewUsers.Visibility = Visibility.Visible;
-                Views.viewSelect.Visibility = Visibility.Hidden;
-                Views.viewConfiguration.Visibility = Visibility.Hidden;
-                Views.viewReports.Visibility = Visibility.Hidden;
+                Views.viewUsers.ShowDialog();
             }
         }
 

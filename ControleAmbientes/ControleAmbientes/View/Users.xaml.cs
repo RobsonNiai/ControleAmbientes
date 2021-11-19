@@ -11,5 +11,10 @@ namespace ControleAmbientes.View
         {
             InitializeComponent();
         }
+
+        private void Label_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+        }
     }
 }
