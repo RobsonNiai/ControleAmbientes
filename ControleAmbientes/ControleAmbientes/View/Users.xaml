@@ -9,5 +9,24 @@
          Height="500" Width="800" ResizeMode="NoResize" ScrollViewer.VerticalScrollBarVisibility="Disabled" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid Height="500" Width="800" Background="AliceBlue" Margin="2,1,2,1">
         <Label Content="X" HorizontalAlignment="Left" Margin="768,0,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="LightCoral" MouseUp="Label_MouseUp" Cursor="Hand" ToolTip="Clique para fechar."/>
+        <Button x:Name="btDelete" Content="Excluir" HorizontalAlignment="Left" Margin="490,444,0,20" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFB163" Offset="0.006"/>
+                    <GradientStop Color="#FFFFB163" Offset="1"/>
+                    <GradientStop Color="#7FEC0000" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btSalve" Content="Salvar" HorizontalAlignment="Left" Margin="633,444,0,20" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF78FF63" Offset="0"/>
+                    <GradientStop Color="#FF78FF63" Offset="1"/>
+                    <GradientStop Color="#7F34D604" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Controle de Usuários" HorizontalAlignment="Left" Margin="228,21,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="22" Foreground="Magenta" Height="43" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="318"/>
     </Grid>
 </Window>

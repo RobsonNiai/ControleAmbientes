@@ -932,6 +932,94 @@ namespace ControleAmbientes.View
 
                 Class.Variables.enableButton.Clear();
                 Class.Variables.enableButton.AddRange(Class.Variables.enableButtonSelect);
+
+                string ip_Arduino = txtFirstOcteto.Text + "." + txtSecondOcteto.Text + "." + txtThirdOcteto.Text + "." + txtFourthOcteto.Text;
+                int[] comboType = new int[54];
+                int[] comboCol = new int[54];
+                int[] comboRow = new int[54];
+                int[] watts = new int[54];
+
+                //Block Combo Type
+                comboType[0] = comboTypeA0.SelectedIndex; comboType[1] = comboTypeA1.SelectedIndex; comboType[2] = comboTypeA2.SelectedIndex; comboType[3] = comboTypeA3.SelectedIndex;
+                comboType[4] = comboTypeA4.SelectedIndex; comboType[5] = comboTypeA5.SelectedIndex; comboType[6] = comboTypeA6.SelectedIndex; comboType[7] = comboTypeA7.SelectedIndex;
+                comboType[8] = comboTypeA8.SelectedIndex; comboType[9] = comboTypeA9.SelectedIndex; comboType[10] = comboTypeA10.SelectedIndex; comboType[11] = comboTypeA11.SelectedIndex;
+                comboType[12] = comboTypeA0.SelectedIndex; comboType[13] = comboTypeA0.SelectedIndex; comboType[14] = comboTypeA14.SelectedIndex; comboType[15] = comboTypeA15.SelectedIndex;
+                comboType[16] = comboType2.SelectedIndex; comboType[17] = comboType3.SelectedIndex; comboType[18] = comboType4.SelectedIndex; comboType[19] = comboType5.SelectedIndex;
+                comboType[20] = comboType6.SelectedIndex; comboType[21] = comboType7.SelectedIndex; comboType[22] = comboType8.SelectedIndex; comboType[23] = comboType9.SelectedIndex;
+                comboType[24] = comboType22.SelectedIndex; comboType[25] = comboType23.SelectedIndex; comboType[26] = comboType24.SelectedIndex; comboType[27] = comboType25.SelectedIndex;
+                comboType[28] = comboType26.SelectedIndex; comboType[29] = comboType27.SelectedIndex; comboType[30] = comboType28.SelectedIndex; comboType[31] = comboType29.SelectedIndex;
+                comboType[32] = comboType30.SelectedIndex; comboType[33] = comboType31.SelectedIndex; comboType[34] = comboType32.SelectedIndex; comboType[35] = comboType33.SelectedIndex;
+                comboType[36] = comboType34.SelectedIndex; comboType[37] = comboType35.SelectedIndex; comboType[38] = comboType36.SelectedIndex; comboType[39] = comboType37.SelectedIndex;
+                comboType[40] = comboType38.SelectedIndex; comboType[41] = comboType39.SelectedIndex; comboType[42] = comboType40.SelectedIndex; comboType[43] = comboType41.SelectedIndex;
+                comboType[44] = comboType42.SelectedIndex; comboType[45] = comboType43.SelectedIndex; comboType[46] = comboType44.SelectedIndex; comboType[47] = comboType45.SelectedIndex;
+                comboType[48] = comboType46.SelectedIndex; comboType[49] = comboType47.SelectedIndex; comboType[50] = comboType48.SelectedIndex; comboType[51] = comboType49.SelectedIndex;
+                comboType[52] = comboType50.SelectedIndex; comboType[53] = comboType51.SelectedIndex;
+
+                //Block Combo Column
+                comboCol[0] = comboColA0.SelectedIndex; comboCol[1] = comboColA1.SelectedIndex; comboCol[2] = comboColA2.SelectedIndex; comboCol[3] = comboColA3.SelectedIndex;
+                comboCol[4] = comboColA4.SelectedIndex; comboCol[5] = comboColA5.SelectedIndex; comboCol[6] = comboColA6.SelectedIndex; comboCol[6] = comboColA7.SelectedIndex;
+                comboCol[8] = comboColA8.SelectedIndex; comboCol[9] = comboColA9.SelectedIndex; comboCol[10] = comboColA10.SelectedIndex; comboCol[11] = comboColA11.SelectedIndex;
+                comboCol[12] = comboColA12.SelectedIndex; comboCol[13] = comboColA13.SelectedIndex; comboCol[14] = comboColA14.SelectedIndex; comboCol[15] = comboColA15.SelectedIndex;
+                comboCol[16] = comboCol2.SelectedIndex; comboCol[17] = comboCol3.SelectedIndex; comboCol[18] = comboCol4.SelectedIndex; comboCol[19] = comboCol5.SelectedIndex;
+                comboCol[20] = comboCol6.SelectedIndex; comboCol[21] = comboCol7.SelectedIndex; comboCol[22] = comboCol8.SelectedIndex; comboCol[23] = comboCol9.SelectedIndex;
+                comboCol[24] = comboCol22.SelectedIndex; comboCol[25] = comboCol23.SelectedIndex; comboCol[26] = comboCol24.SelectedIndex; comboCol[27] = comboCol25.SelectedIndex;
+                comboCol[28] = comboCol26.SelectedIndex; comboCol[29] = comboCol27.SelectedIndex; comboCol[30] = comboCol28.SelectedIndex; comboCol[31] = comboCol29.SelectedIndex;
+                comboCol[32] = comboCol30.SelectedIndex; comboCol[33] = comboCol31.SelectedIndex; comboCol[34] = comboCol32.SelectedIndex; comboCol[35] = comboCol33.SelectedIndex;
+                comboCol[36] = comboCol34.SelectedIndex; comboCol[37] = comboCol35.SelectedIndex; comboCol[38] = comboCol36.SelectedIndex; comboCol[39] = comboCol37.SelectedIndex;
+                comboCol[40] = comboCol38.SelectedIndex; comboCol[41] = comboCol39.SelectedIndex; comboCol[42] = comboCol40.SelectedIndex; comboCol[43] = comboCol41.SelectedIndex;
+                comboCol[44] = comboCol42.SelectedIndex; comboCol[45] = comboCol43.SelectedIndex; comboCol[46] = comboCol44.SelectedIndex; comboCol[47] = comboCol45.SelectedIndex;
+                comboCol[48] = comboCol46.SelectedIndex; comboCol[49] = comboCol47.SelectedIndex; comboCol[50] = comboCol48.SelectedIndex; comboCol[51] = comboCol49.SelectedIndex;
+                comboCol[52] = comboCol50.SelectedIndex; comboCol[53] = comboCol51.SelectedIndex;
+
+                //Block Combo Row
+                comboRow[0] = comboRowA0.SelectedIndex; comboRow[1] = comboRowA1.SelectedIndex; comboRow[2] = comboRowA2.SelectedIndex; comboRow[3] = comboRowA3.SelectedIndex;
+                comboRow[4] = comboRowA4.SelectedIndex; comboRow[5] = comboRowA5.SelectedIndex; comboRow[6] = comboRowA6.SelectedIndex; comboRow[7] = comboRowA7.SelectedIndex;
+                comboRow[8] = comboRowA8.SelectedIndex; comboRow[9] = comboRowA9.SelectedIndex; comboRow[10] = comboRowA10.SelectedIndex; comboRow[11] = comboRowA11.SelectedIndex;
+                comboRow[12] = comboRowA12.SelectedIndex; comboRow[13] = comboRowA13.SelectedIndex; comboRow[14] = comboRowA14.SelectedIndex; comboRow[15] = comboRowA15.SelectedIndex;
+                comboRow[16] = comboRow2.SelectedIndex; comboRow[17] = comboRow3.SelectedIndex; comboRow[18] = comboRow4.SelectedIndex; comboRow[19] = comboRow5.SelectedIndex;
+                comboRow[20] = comboRow6.SelectedIndex; comboRow[21] = comboRow7.SelectedIndex; comboRow[22] = comboRow8.SelectedIndex; comboRow[23] = comboRow9.SelectedIndex;
+                comboRow[24] = comboRow22.SelectedIndex; comboRow[25] = comboRow23.SelectedIndex; comboRow[26] = comboRow24.SelectedIndex; comboRow[27] = comboRow25.SelectedIndex;
+                comboRow[28] = comboRow26.SelectedIndex; comboRow[29] = comboRow27.SelectedIndex; comboRow[30] = comboRow28.SelectedIndex; comboRow[31] = comboRow29.SelectedIndex;
+                comboRow[32] = comboRow30.SelectedIndex; comboRow[33] = comboRow31.SelectedIndex; comboRow[34] = comboRow32.SelectedIndex; comboRow[35] = comboRow33.SelectedIndex;
+                comboRow[36] = comboRow34.SelectedIndex; comboRow[37] = comboRow35.SelectedIndex; comboRow[38] = comboRow36.SelectedIndex; comboRow[39] = comboRow37.SelectedIndex;
+                comboRow[40] = comboRow38.SelectedIndex; comboRow[41] = comboRow39.SelectedIndex; comboRow[42] = comboRow40.SelectedIndex; comboRow[43] = comboRow41.SelectedIndex;
+                comboRow[44] = comboRow42.SelectedIndex; comboRow[45] = comboRow43.SelectedIndex; comboRow[46] = comboRow44.SelectedIndex; comboRow[47] = comboRow45.SelectedIndex;
+                comboRow[48] = comboRow46.SelectedIndex; comboRow[49] = comboRow47.SelectedIndex; comboRow[50] = comboRow48.SelectedIndex; comboRow[51] = comboRow49.SelectedIndex;
+                comboRow[52] = comboRow50.SelectedIndex; comboRow[53] = comboRow51.SelectedIndex;
+
+                //Block Watts
+                watts[0] = !txtWats_A0.Text.Equals("") ? int.Parse(txtWats_A0.Text) : watts[0]; watts[1] = !txtWats_A1.Text.Equals("") ? int.Parse(txtWats_A1.Text) : watts[1];
+                watts[2] = !txtWats_A2.Text.Equals("") ? int.Parse(txtWats_A2.Text) : watts[2]; watts[3] = !txtWats_A3.Text.Equals("") ? int.Parse(txtWats_A3.Text) : watts[3];
+                watts[4] = !txtWats_A4.Text.Equals("") ? int.Parse(txtWats_A4.Text) : watts[4]; watts[5] = !txtWats_A5.Text.Equals("") ? int.Parse(txtWats_A5.Text) : watts[5];
+                watts[6] = !txtWats_A6.Text.Equals("") ? int.Parse(txtWats_A6.Text) : watts[6]; watts[7] = !txtWats_A7.Text.Equals("") ? int.Parse(txtWats_A7.Text) : watts[7];
+                watts[8] = !txtWats_A8.Text.Equals("") ? int.Parse(txtWats_A8.Text) : watts[8]; watts[9] = !txtWats_A9.Text.Equals("") ? int.Parse(txtWats_A9.Text) : watts[9];
+                watts[10] = !txtWats_A10.Text.Equals("") ? int.Parse(txtWats_A10.Text) : watts[10]; watts[11] = !txtWats_A11.Text.Equals("") ? int.Parse(txtWats_A11.Text) : watts[11];
+                watts[12] = !txtWats_A12.Text.Equals("") ? int.Parse(txtWats_A12.Text) : watts[12]; watts[13] = !txtWats_A13.Text.Equals("") ? int.Parse(txtWats_A13.Text) : watts[13];
+                watts[14] = !txtWats_A14.Text.Equals("") ? int.Parse(txtWats_A14.Text) : watts[14]; watts[15] = !txtWats_A15.Text.Equals("") ? int.Parse(txtWats_A15.Text) : watts[15];
+                watts[16] = !txtWats_2.Text.Equals("") ? int.Parse(txtWats_2.Text) : watts[16]; watts[17] = !txtWats_3.Text.Equals("") ? int.Parse(txtWats_3.Text) : watts[17];
+                watts[18] = !txtWats_4.Text.Equals("") ? int.Parse(txtWats_4.Text) : watts[18]; watts[19] = !txtWats_5.Text.Equals("") ? int.Parse(txtWats_5.Text) : watts[19];
+                watts[20] = !txtWats_6.Text.Equals("") ? int.Parse(txtWats_6.Text) : watts[20]; watts[21] = !txtWats_7.Text.Equals("") ? int.Parse(txtWats_7.Text) : watts[21];
+                watts[22] = !txtWats_8.Text.Equals("") ? int.Parse(txtWats_8.Text) : watts[22]; watts[23] = !txtWats_9.Text.Equals("") ? int.Parse(txtWats_9.Text) : watts[23];
+                watts[24] = !txtWats_22.Text.Equals("") ? int.Parse(txtWats_22.Text) : watts[24]; watts[25] = !txtWats_23.Text.Equals("") ? int.Parse(txtWats_23.Text) : watts[25];
+                watts[26] = !txtWats_24.Text.Equals("") ? int.Parse(txtWats_24.Text) : watts[26]; watts[27] = !txtWats_25.Text.Equals("") ? int.Parse(txtWats_25.Text) : watts[27];
+                watts[28] = !txtWats_26.Text.Equals("") ? int.Parse(txtWats_26.Text) : watts[28]; watts[29] = !txtWats_27.Text.Equals("") ? int.Parse(txtWats_27.Text) : watts[29];
+                watts[30] = !txtWats_28.Text.Equals("") ? int.Parse(txtWats_28.Text) : watts[30]; watts[31] = !txtWats_29.Text.Equals("") ? int.Parse(txtWats_29.Text) : watts[31];
+                watts[32] = !txtWats_30.Text.Equals("") ? int.Parse(txtWats_30.Text) : watts[32]; watts[33] = !txtWats_31.Text.Equals("") ? int.Parse(txtWats_31.Text) : watts[33];
+                watts[34] = !txtWats_32.Text.Equals("") ? int.Parse(txtWats_32.Text) : watts[34]; watts[35] = !txtWats_33.Text.Equals("") ? int.Parse(txtWats_33.Text) : watts[35];
+                watts[36] = !txtWats_34.Text.Equals("") ? int.Parse(txtWats_34.Text) : watts[36]; watts[37] = !txtWats_35.Text.Equals("") ? int.Parse(txtWats_35.Text) : watts[37];
+                watts[38] = !txtWats_36.Text.Equals("") ? int.Parse(txtWats_36.Text) : watts[38]; watts[39] = !txtWats_37.Text.Equals("") ? int.Parse(txtWats_37.Text) : watts[39];
+                watts[40] = !txtWats_38.Text.Equals("") ? int.Parse(txtWats_38.Text) : watts[40]; watts[41] = !txtWats_39.Text.Equals("") ? int.Parse(txtWats_39.Text) : watts[41];
+                watts[42] = !txtWats_40.Text.Equals("") ? int.Parse(txtWats_40.Text) : watts[42]; watts[43] = !txtWats_41.Text.Equals("") ? int.Parse(txtWats_41.Text) : watts[43];
+                watts[44] = !txtWats_42.Text.Equals("") ? int.Parse(txtWats_42.Text) : watts[44]; watts[45] = !txtWats_43.Text.Equals("") ? int.Parse(txtWats_43.Text) : watts[45];
+                watts[46] = !txtWats_44.Text.Equals("") ? int.Parse(txtWats_44.Text) : watts[46]; watts[47] = !txtWats_45.Text.Equals("") ? int.Parse(txtWats_45.Text) : watts[47];
+                watts[48] = !txtWats_46.Text.Equals("") ? int.Parse(txtWats_46.Text) : watts[48]; watts[49] = !txtWats_47.Text.Equals("") ? int.Parse(txtWats_47.Text) : watts[49];
+                watts[50] = !txtWats_48.Text.Equals("") ? int.Parse(txtWats_48.Text) : watts[50]; watts[51] = !txtWats_49.Text.Equals("") ? int.Parse(txtWats_49.Text) : watts[51];
+                watts[52] = !txtWats_50.Text.Equals("") ? int.Parse(txtWats_50.Text) : watts[52]; watts[53] = !txtWats_51.Text.Equals("") ? int.Parse(txtWats_51.Text) : watts[53];
+
+
+                Class.CRUD crud = new Class.CRUD();
+                crud.SaveConfig(1, System.DateTime.Now, ip_Arduino, comboType, comboCol, comboRow, watts);
+
             }
                 
         }
