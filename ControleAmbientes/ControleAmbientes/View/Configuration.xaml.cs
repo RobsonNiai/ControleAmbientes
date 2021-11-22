@@ -1026,7 +1026,13 @@ namespace ControleAmbientes.View
 
         private void btUploadData_Click(object sender, RoutedEventArgs e)
         {
+            int[] comboType = new int[54];
+            int[] comboCol = new int[54];
+            int[] comboRow = new int[54];
+            int[] watts = new int[54];
 
+            Class.CRUD crud = new Class.CRUD();
+            crud.UpdateConfig(comboType);
         }
 
         private void btSendArduino_Click(object sender, RoutedEventArgs e)
