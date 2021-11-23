@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace ControleAmbientes.Class
 {
@@ -13,6 +14,8 @@ namespace ControleAmbientes.Class
         static public int[] actionRow_DB = new int[54];
         static public int[] watts_DB = new int[54];
         static public string[] enableButtonSelect = new string[54];
+        static public string c_IpArduinoConfig = "192.168.1.1";
+        static public DateTime d_DateTime = new DateTime();
 
         public static List<string> enableButton = new List<string>(54);
 

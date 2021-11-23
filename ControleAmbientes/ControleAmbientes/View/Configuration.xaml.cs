@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
@@ -11,6 +12,7 @@ namespace ControleAmbientes.View
     public partial class Configuration : Window
     {
         DispatcherTimer timerUpdateValues = new DispatcherTimer();
+        Class.CRUD crud = new Class.CRUD();
 
         public Configuration()
         {
@@ -934,6 +936,7 @@ namespace ControleAmbientes.View
                 Class.Variables.enableButton.AddRange(Class.Variables.enableButtonSelect);
 
                 string ip_Arduino = txtFirstOcteto.Text + "." + txtSecondOcteto.Text + "." + txtThirdOcteto.Text + "." + txtFourthOcteto.Text;
+
                 int[] comboType = new int[54];
                 int[] comboCol = new int[54];
                 int[] comboRow = new int[54];
@@ -943,7 +946,7 @@ namespace ControleAmbientes.View
                 comboType[0] = comboTypeA0.SelectedIndex; comboType[1] = comboTypeA1.SelectedIndex; comboType[2] = comboTypeA2.SelectedIndex; comboType[3] = comboTypeA3.SelectedIndex;
                 comboType[4] = comboTypeA4.SelectedIndex; comboType[5] = comboTypeA5.SelectedIndex; comboType[6] = comboTypeA6.SelectedIndex; comboType[7] = comboTypeA7.SelectedIndex;
                 comboType[8] = comboTypeA8.SelectedIndex; comboType[9] = comboTypeA9.SelectedIndex; comboType[10] = comboTypeA10.SelectedIndex; comboType[11] = comboTypeA11.SelectedIndex;
-                comboType[12] = comboTypeA0.SelectedIndex; comboType[13] = comboTypeA0.SelectedIndex; comboType[14] = comboTypeA14.SelectedIndex; comboType[15] = comboTypeA15.SelectedIndex;
+                comboType[12] = comboTypeA12.SelectedIndex; comboType[13] = comboTypeA13.SelectedIndex; comboType[14] = comboTypeA14.SelectedIndex; comboType[15] = comboTypeA15.SelectedIndex;
                 comboType[16] = comboType2.SelectedIndex; comboType[17] = comboType3.SelectedIndex; comboType[18] = comboType4.SelectedIndex; comboType[19] = comboType5.SelectedIndex;
                 comboType[20] = comboType6.SelectedIndex; comboType[21] = comboType7.SelectedIndex; comboType[22] = comboType8.SelectedIndex; comboType[23] = comboType9.SelectedIndex;
                 comboType[24] = comboType22.SelectedIndex; comboType[25] = comboType23.SelectedIndex; comboType[26] = comboType24.SelectedIndex; comboType[27] = comboType25.SelectedIndex;
@@ -957,7 +960,7 @@ namespace ControleAmbientes.View
 
                 //Block Combo Column
                 comboCol[0] = comboColA0.SelectedIndex; comboCol[1] = comboColA1.SelectedIndex; comboCol[2] = comboColA2.SelectedIndex; comboCol[3] = comboColA3.SelectedIndex;
-                comboCol[4] = comboColA4.SelectedIndex; comboCol[5] = comboColA5.SelectedIndex; comboCol[6] = comboColA6.SelectedIndex; comboCol[6] = comboColA7.SelectedIndex;
+                comboCol[4] = comboColA4.SelectedIndex; comboCol[5] = comboColA5.SelectedIndex; comboCol[6] = comboColA6.SelectedIndex; comboCol[7] = comboColA7.SelectedIndex;
                 comboCol[8] = comboColA8.SelectedIndex; comboCol[9] = comboColA9.SelectedIndex; comboCol[10] = comboColA10.SelectedIndex; comboCol[11] = comboColA11.SelectedIndex;
                 comboCol[12] = comboColA12.SelectedIndex; comboCol[13] = comboColA13.SelectedIndex; comboCol[14] = comboColA14.SelectedIndex; comboCol[15] = comboColA15.SelectedIndex;
                 comboCol[16] = comboCol2.SelectedIndex; comboCol[17] = comboCol3.SelectedIndex; comboCol[18] = comboCol4.SelectedIndex; comboCol[19] = comboCol5.SelectedIndex;
@@ -1016,9 +1019,14 @@ namespace ControleAmbientes.View
                 watts[50] = !txtWats_48.Text.Equals("") ? int.Parse(txtWats_48.Text) : watts[50]; watts[51] = !txtWats_49.Text.Equals("") ? int.Parse(txtWats_49.Text) : watts[51];
                 watts[52] = !txtWats_50.Text.Equals("") ? int.Parse(txtWats_50.Text) : watts[52]; watts[53] = !txtWats_51.Text.Equals("") ? int.Parse(txtWats_51.Text) : watts[53];
 
+                Class.Variables.typeIO_DB = comboType;
+                Class.Variables.actionCol_DB = comboCol;
+                Class.Variables.actionRow_DB = comboRow;
+                Class.Variables.watts_DB = watts;
 
-                Class.CRUD crud = new Class.CRUD();
-                crud.SaveConfig(1, System.DateTime.Now, ip_Arduino, comboType, comboCol, comboRow, watts);
+                Class.Variables.d_DateTime = System.DateTime.Now;
+
+                crud.SaveConfig(1, Class.Variables.d_DateTime, ip_Arduino, Class.Variables.typeIO_DB, Class.Variables.actionCol_DB, Class.Variables.actionRow_DB, Class.Variables.watts_DB);
 
             }
                 
@@ -1026,13 +1034,10 @@ namespace ControleAmbientes.View
 
         private void btUploadData_Click(object sender, RoutedEventArgs e)
         {
-            int[] comboType = new int[54];
-            int[] comboCol = new int[54];
-            int[] comboRow = new int[54];
-            int[] watts = new int[54];
+            crud.UpdateConfig(ref Class.Variables.d_DateTime, ref Class.Variables.c_IpArduinoConfig, ref Class.Variables.typeIO_DB, ref Class.Variables.actionCol_DB, ref Class.Variables.actionRow_DB, ref Class.Variables.watts_DB);
 
-            Class.CRUD crud = new Class.CRUD();
-            crud.UpdateConfig(comboType);
+            updateScreenConfig();
+            
         }
 
         private void btSendArduino_Click(object sender, RoutedEventArgs e)
@@ -1250,6 +1255,88 @@ namespace ControleAmbientes.View
             #endregion
         }
 
+        /// <summary>
+        /// Método privado atualiza campos da tela configurações com base
+        /// na classe variaveis que manipula os dados de forma estática 
+        /// servindo como memória de acesso global.
+        /// </summary>
+        private void updateScreenConfig()
+        {
+            string[] ip = Class.Variables.c_IpArduinoConfig.Split(".");
+
+            txtFirstOcteto.Text = ip[0];
+            txtSecondOcteto.Text = ip[1];
+            txtThirdOcteto.Text = ip[2];
+            txtFourthOcteto.Text = ip[3];
+
+            comboTypeA0.SelectedIndex = Class.Variables.typeIO_DB[0]; comboTypeA1.SelectedIndex = Class.Variables.typeIO_DB[1]; comboTypeA2.SelectedIndex = Class.Variables.typeIO_DB[2]; comboTypeA3.SelectedIndex = Class.Variables.typeIO_DB[3];
+            comboTypeA4.SelectedIndex = Class.Variables.typeIO_DB[4]; comboTypeA5.SelectedIndex = Class.Variables.typeIO_DB[5]; comboTypeA6.SelectedIndex = Class.Variables.typeIO_DB[6]; comboTypeA7.SelectedIndex = Class.Variables.typeIO_DB[7];
+            comboTypeA8.SelectedIndex = Class.Variables.typeIO_DB[8]; comboTypeA9.SelectedIndex = Class.Variables.typeIO_DB[9]; comboTypeA10.SelectedIndex = Class.Variables.typeIO_DB[10]; comboTypeA11.SelectedIndex = Class.Variables.typeIO_DB[11];
+            comboTypeA12.SelectedIndex = Class.Variables.typeIO_DB[12]; comboTypeA13.SelectedIndex = Class.Variables.typeIO_DB[13]; comboTypeA14.SelectedIndex = Class.Variables.typeIO_DB[14]; comboTypeA15.SelectedIndex = Class.Variables.typeIO_DB[15];
+            comboType2.SelectedIndex = Class.Variables.typeIO_DB[16]; comboType3.SelectedIndex = Class.Variables.typeIO_DB[17]; comboType4.SelectedIndex = Class.Variables.typeIO_DB[18]; comboType5.SelectedIndex = Class.Variables.typeIO_DB[19];
+            comboType6.SelectedIndex = Class.Variables.typeIO_DB[20]; comboType7.SelectedIndex = Class.Variables.typeIO_DB[21]; comboType8.SelectedIndex = Class.Variables.typeIO_DB[22]; comboType9.SelectedIndex = Class.Variables.typeIO_DB[23];
+            comboType22.SelectedIndex = Class.Variables.typeIO_DB[24]; comboType23.SelectedIndex = Class.Variables.typeIO_DB[25]; comboType24.SelectedIndex = Class.Variables.typeIO_DB[26]; comboType25.SelectedIndex = Class.Variables.typeIO_DB[27];
+            comboType26.SelectedIndex = Class.Variables.typeIO_DB[28]; comboType27.SelectedIndex = Class.Variables.typeIO_DB[29]; comboType28.SelectedIndex = Class.Variables.typeIO_DB[30]; comboType29.SelectedIndex = Class.Variables.typeIO_DB[31];
+            comboType30.SelectedIndex = Class.Variables.typeIO_DB[32]; comboType31.SelectedIndex = Class.Variables.typeIO_DB[33]; comboType32.SelectedIndex = Class.Variables.typeIO_DB[34]; comboType33.SelectedIndex = Class.Variables.typeIO_DB[35];
+            comboType34.SelectedIndex = Class.Variables.typeIO_DB[36]; comboType35.SelectedIndex = Class.Variables.typeIO_DB[37]; comboType36.SelectedIndex = Class.Variables.typeIO_DB[38]; comboType37.SelectedIndex = Class.Variables.typeIO_DB[39];
+            comboType38.SelectedIndex = Class.Variables.typeIO_DB[40]; comboType39.SelectedIndex = Class.Variables.typeIO_DB[41]; comboType40.SelectedIndex = Class.Variables.typeIO_DB[42]; comboType41.SelectedIndex = Class.Variables.typeIO_DB[43];
+            comboType42.SelectedIndex = Class.Variables.typeIO_DB[44]; comboType43.SelectedIndex = Class.Variables.typeIO_DB[45]; comboType44.SelectedIndex = Class.Variables.typeIO_DB[46]; comboType45.SelectedIndex = Class.Variables.typeIO_DB[47];
+            comboType46.SelectedIndex = Class.Variables.typeIO_DB[48]; comboType47.SelectedIndex = Class.Variables.typeIO_DB[49]; comboType48.SelectedIndex = Class.Variables.typeIO_DB[50]; comboType49.SelectedIndex = Class.Variables.typeIO_DB[51];
+            comboType50.SelectedIndex = Class.Variables.typeIO_DB[52]; comboType51.SelectedIndex = Class.Variables.typeIO_DB[53];
+
+            comboColA0.SelectedIndex = Class.Variables.actionCol_DB[0]; comboColA1.SelectedIndex = Class.Variables.actionCol_DB[1]; comboColA2.SelectedIndex = Class.Variables.actionCol_DB[2]; comboColA3.SelectedIndex = Class.Variables.actionCol_DB[3];
+            comboColA4.SelectedIndex = Class.Variables.actionCol_DB[4]; comboColA5.SelectedIndex = Class.Variables.actionCol_DB[5]; comboColA6.SelectedIndex = Class.Variables.actionCol_DB[6]; comboColA7.SelectedIndex = Class.Variables.actionCol_DB[7];
+            comboColA8.SelectedIndex = Class.Variables.actionCol_DB[8]; comboColA9.SelectedIndex = Class.Variables.actionCol_DB[9]; comboColA10.SelectedIndex = Class.Variables.actionCol_DB[10]; comboColA11.SelectedIndex = Class.Variables.actionCol_DB[11];
+            comboColA12.SelectedIndex = Class.Variables.actionCol_DB[12]; comboColA13.SelectedIndex = Class.Variables.actionCol_DB[13]; comboColA14.SelectedIndex = Class.Variables.actionCol_DB[14]; comboColA15.SelectedIndex = Class.Variables.actionCol_DB[15];
+            comboCol2.SelectedIndex = Class.Variables.actionCol_DB[16]; comboCol3.SelectedIndex = Class.Variables.actionCol_DB[17]; comboCol4.SelectedIndex = Class.Variables.actionCol_DB[18]; comboCol5.SelectedIndex = Class.Variables.actionCol_DB[19];
+            comboCol6.SelectedIndex = Class.Variables.actionCol_DB[20]; comboCol7.SelectedIndex = Class.Variables.actionCol_DB[21]; comboCol8.SelectedIndex = Class.Variables.actionCol_DB[22]; comboCol9.SelectedIndex = Class.Variables.actionCol_DB[23];
+            comboCol22.SelectedIndex = Class.Variables.actionCol_DB[24]; comboCol23.SelectedIndex = Class.Variables.actionCol_DB[25]; comboCol24.SelectedIndex = Class.Variables.actionCol_DB[26]; comboCol25.SelectedIndex = Class.Variables.actionCol_DB[27];
+            comboCol26.SelectedIndex = Class.Variables.actionCol_DB[28]; comboCol27.SelectedIndex = Class.Variables.actionCol_DB[29]; comboCol28.SelectedIndex = Class.Variables.actionCol_DB[30]; comboCol29.SelectedIndex = Class.Variables.actionCol_DB[31];
+            comboCol30.SelectedIndex = Class.Variables.actionCol_DB[32]; comboCol31.SelectedIndex = Class.Variables.actionCol_DB[33]; comboCol32.SelectedIndex = Class.Variables.actionCol_DB[34]; comboCol33.SelectedIndex = Class.Variables.actionCol_DB[35];
+            comboCol34.SelectedIndex = Class.Variables.actionCol_DB[36]; comboCol35.SelectedIndex = Class.Variables.actionCol_DB[37]; comboCol36.SelectedIndex = Class.Variables.actionCol_DB[38]; comboCol37.SelectedIndex = Class.Variables.actionCol_DB[39];
+            comboCol38.SelectedIndex = Class.Variables.actionCol_DB[40]; comboCol39.SelectedIndex = Class.Variables.actionCol_DB[41]; comboCol40.SelectedIndex = Class.Variables.actionCol_DB[42]; comboCol41.SelectedIndex = Class.Variables.actionCol_DB[43];
+            comboCol42.SelectedIndex = Class.Variables.actionCol_DB[44]; comboCol43.SelectedIndex = Class.Variables.actionCol_DB[45]; comboCol44.SelectedIndex = Class.Variables.actionCol_DB[46]; comboCol45.SelectedIndex = Class.Variables.actionCol_DB[47];
+            comboCol46.SelectedIndex = Class.Variables.actionCol_DB[48]; comboCol47.SelectedIndex = Class.Variables.actionCol_DB[49]; comboCol48.SelectedIndex = Class.Variables.actionCol_DB[50]; comboCol49.SelectedIndex = Class.Variables.actionCol_DB[51];
+            comboCol50.SelectedIndex = Class.Variables.actionCol_DB[52]; comboCol51.SelectedIndex = Class.Variables.actionCol_DB[53];
+            
+            comboRowA0.SelectedIndex = Class.Variables.actionRow_DB[0]; comboRowA1.SelectedIndex = Class.Variables.actionRow_DB[1]; comboRowA2.SelectedIndex = Class.Variables.actionRow_DB[2]; comboRowA3.SelectedIndex = Class.Variables.actionRow_DB[3];
+            comboRowA4.SelectedIndex = Class.Variables.actionRow_DB[4]; comboRowA5.SelectedIndex = Class.Variables.actionRow_DB[5]; comboRowA6.SelectedIndex = Class.Variables.actionRow_DB[6]; comboRowA7.SelectedIndex = Class.Variables.actionRow_DB[7];
+            comboRowA8.SelectedIndex = Class.Variables.actionRow_DB[8]; comboRowA9.SelectedIndex = Class.Variables.actionRow_DB[9]; comboRowA10.SelectedIndex = Class.Variables.actionRow_DB[10]; comboRowA11.SelectedIndex = Class.Variables.actionRow_DB[11];
+            comboRowA12.SelectedIndex = Class.Variables.actionRow_DB[12]; comboRowA13.SelectedIndex = Class.Variables.actionRow_DB[13]; comboRowA14.SelectedIndex = Class.Variables.actionRow_DB[14]; comboRowA15.SelectedIndex = Class.Variables.actionRow_DB[15];
+            comboRow2.SelectedIndex = Class.Variables.actionRow_DB[16]; comboRow3.SelectedIndex = Class.Variables.actionRow_DB[17]; comboRow4.SelectedIndex = Class.Variables.actionRow_DB[18]; comboRow5.SelectedIndex = Class.Variables.actionRow_DB[19];
+            comboRow6.SelectedIndex = Class.Variables.actionRow_DB[20]; comboRow7.SelectedIndex = Class.Variables.actionRow_DB[21]; comboRow8.SelectedIndex = Class.Variables.actionRow_DB[22]; comboRow9.SelectedIndex = Class.Variables.actionRow_DB[23];
+            comboRow22.SelectedIndex = Class.Variables.actionRow_DB[24]; comboRow23.SelectedIndex = Class.Variables.actionRow_DB[25]; comboRow24.SelectedIndex = Class.Variables.actionRow_DB[26]; comboRow25.SelectedIndex = Class.Variables.actionRow_DB[27];
+            comboRow26.SelectedIndex = Class.Variables.actionRow_DB[28]; comboRow27.SelectedIndex = Class.Variables.actionRow_DB[29]; comboRow28.SelectedIndex = Class.Variables.actionRow_DB[30]; comboRow29.SelectedIndex = Class.Variables.actionRow_DB[31];
+            comboRow30.SelectedIndex = Class.Variables.actionRow_DB[32]; comboRow31.SelectedIndex = Class.Variables.actionRow_DB[33]; comboRow32.SelectedIndex = Class.Variables.actionRow_DB[34]; comboRow33.SelectedIndex = Class.Variables.actionRow_DB[35];
+            comboRow34.SelectedIndex = Class.Variables.actionRow_DB[36]; comboRow35.SelectedIndex = Class.Variables.actionRow_DB[37]; comboRow36.SelectedIndex = Class.Variables.actionRow_DB[38]; comboRow37.SelectedIndex = Class.Variables.actionRow_DB[39];
+            comboRow38.SelectedIndex = Class.Variables.actionRow_DB[40]; comboRow39.SelectedIndex = Class.Variables.actionRow_DB[41]; comboRow40.SelectedIndex = Class.Variables.actionRow_DB[42]; comboRow41.SelectedIndex = Class.Variables.actionRow_DB[43];
+            comboRow42.SelectedIndex = Class.Variables.actionRow_DB[44]; comboRow43.SelectedIndex = Class.Variables.actionRow_DB[45]; comboRow44.SelectedIndex = Class.Variables.actionRow_DB[46]; comboRow45.SelectedIndex = Class.Variables.actionRow_DB[47];
+            comboRow46.SelectedIndex = Class.Variables.actionRow_DB[48]; comboRow47.SelectedIndex = Class.Variables.actionRow_DB[49]; comboRow48.SelectedIndex = Class.Variables.actionRow_DB[50]; comboRow49.SelectedIndex = Class.Variables.actionRow_DB[51];
+            comboRow50.SelectedIndex = Class.Variables.actionRow_DB[52]; comboRow51.SelectedIndex = Class.Variables.actionRow_DB[53];
+
+            txtWats_A0.Text = Class.Variables.watts_DB[0].ToString(); txtWats_A1.Text = Class.Variables.watts_DB[1].ToString(); txtWats_A2.Text = Class.Variables.watts_DB[2].ToString(); txtWats_A3.Text = Class.Variables.watts_DB[3].ToString();
+            txtWats_A4.Text = Class.Variables.watts_DB[4].ToString(); txtWats_A5.Text = Class.Variables.watts_DB[5].ToString(); txtWats_A6.Text = Class.Variables.watts_DB[6].ToString(); txtWats_A7.Text = Class.Variables.watts_DB[7].ToString();
+            txtWats_A8.Text = Class.Variables.watts_DB[8].ToString(); txtWats_A9.Text = Class.Variables.watts_DB[9].ToString(); txtWats_A10.Text = Class.Variables.watts_DB[10].ToString(); txtWats_A11.Text = Class.Variables.watts_DB[11].ToString();
+            txtWats_A12.Text = Class.Variables.watts_DB[12].ToString(); txtWats_A13.Text = Class.Variables.watts_DB[13].ToString(); txtWats_A14.Text = Class.Variables.watts_DB[14].ToString(); txtWats_A15.Text = Class.Variables.watts_DB[15].ToString();
+            txtWats_2.Text = Class.Variables.watts_DB[16].ToString(); txtWats_3.Text = Class.Variables.watts_DB[17].ToString(); txtWats_4.Text = Class.Variables.watts_DB[18].ToString(); txtWats_5.Text = Class.Variables.watts_DB[19].ToString();
+            txtWats_6.Text = Class.Variables.watts_DB[20].ToString(); txtWats_7.Text = Class.Variables.watts_DB[21].ToString(); txtWats_8.Text = Class.Variables.watts_DB[22].ToString(); txtWats_9.Text = Class.Variables.watts_DB[23].ToString();
+            txtWats_22.Text = Class.Variables.watts_DB[24].ToString(); txtWats_23.Text = Class.Variables.watts_DB[25].ToString(); txtWats_24.Text = Class.Variables.watts_DB[26].ToString(); txtWats_25.Text = Class.Variables.watts_DB[27].ToString();
+            txtWats_26.Text = Class.Variables.watts_DB[28].ToString(); txtWats_27.Text = Class.Variables.watts_DB[29].ToString(); txtWats_28.Text = Class.Variables.watts_DB[30].ToString(); txtWats_29.Text = Class.Variables.watts_DB[31].ToString();
+            txtWats_30.Text = Class.Variables.watts_DB[32].ToString(); txtWats_31.Text = Class.Variables.watts_DB[33].ToString(); txtWats_32.Text = Class.Variables.watts_DB[34].ToString(); txtWats_33.Text = Class.Variables.watts_DB[35].ToString();
+            txtWats_34.Text = Class.Variables.watts_DB[36].ToString(); txtWats_35.Text = Class.Variables.watts_DB[37].ToString(); txtWats_36.Text = Class.Variables.watts_DB[38].ToString(); txtWats_37.Text = Class.Variables.watts_DB[39].ToString();
+            txtWats_38.Text = Class.Variables.watts_DB[40].ToString(); txtWats_39.Text = Class.Variables.watts_DB[41].ToString(); txtWats_40.Text = Class.Variables.watts_DB[42].ToString(); txtWats_41.Text = Class.Variables.watts_DB[43].ToString();
+            txtWats_42.Text = Class.Variables.watts_DB[44].ToString(); txtWats_43.Text = Class.Variables.watts_DB[45].ToString(); txtWats_44.Text = Class.Variables.watts_DB[46].ToString(); txtWats_45.Text = Class.Variables.watts_DB[47].ToString();
+            txtWats_46.Text = Class.Variables.watts_DB[48].ToString(); txtWats_47.Text = Class.Variables.watts_DB[49].ToString(); txtWats_48.Text = Class.Variables.watts_DB[50].ToString(); txtWats_49.Text = Class.Variables.watts_DB[51].ToString();
+            txtWats_50.Text = Class.Variables.watts_DB[52].ToString(); txtWats_51.Text = Class.Variables.watts_DB[53].ToString();
+
+        }
+
+        /// <summary>
+        /// Método privado utilizado para atualizar tela de botões, com base
+        /// nas seleções dos combobox eu concateno formando um numero único 
+        /// para identificar quais botões serão habilitados em função de saidas
+        /// casdastradas.
+        /// </summary>
         private void enableButtonSelect()
         {
             try
@@ -1312,5 +1399,6 @@ namespace ControleAmbientes.View
             catch {; }
 
         }
+
     }
 }

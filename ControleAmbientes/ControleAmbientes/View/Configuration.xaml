@@ -2553,23 +2553,6 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <ComboBox x:Name="comboRow2_Copy" HorizontalAlignment="Left" Margin="1121,134,0,0" VerticalAlignment="Top" Width="42" Foreground="Black" BorderThickness="0,1,0,1" ScrollViewer.VerticalScrollBarVisibility="Disabled" AutomationProperties.IsOffscreenBehavior="Default" FontWeight="Bold" Cursor="Hand" ToolTip="Selecione a Linha">
-            <ComboBox.Background>
-                <LinearGradientBrush EndPoint="0,1">
-                    <GradientStop Color="LightGray"/>
-                    <GradientStop Color="LightGray" Offset="1"/>
-                    <GradientStop Color="#FFF0F0F0" Offset="0.5"/>
-                </LinearGradientBrush>
-            </ComboBox.Background>
-            <ListBoxItem Content="L1" Foreground="#FF9900FF" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Cursor="Hand"/>
-            <ListBoxItem Content="L2" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L3" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L4" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L5" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L6" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L7" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-            <ListBoxItem Content="L8" Cursor="Hand" FontWeight="Bold" Foreground="#FF9900FF"/>
-        </ComboBox>
 
     </Grid>
 
