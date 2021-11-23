@@ -7,7 +7,7 @@
         xmlns:UserControls="clr-namespace:ControleAmbientes.UserControls" x:Class="ControleAmbientes.View.Configuration"
         mc:Ignorable="d"
          Height="800" Width="1280" ResizeMode="NoResize" ScrollViewer.VerticalScrollBarVisibility="Disabled" WindowStyle="None" WindowStartupLocation="CenterScreen">
-    <Grid>
+    <Grid IsVisibleChanged="Grid_IsVisibleChanged">
 
         <UserControls:MainMenu HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top"/>
         <Image HorizontalAlignment="Left" Height="466" Margin="20,206,0,0" VerticalAlignment="Top" Width="230" Stretch="None" Source="/Img/arduino.png" IsEnabled="False"/>

@@ -18,7 +18,7 @@ namespace ControleAmbientes.View
         public Select()
         {
             InitializeComponent();
-            timerUpdateValues.Interval = System.TimeSpan.FromMilliseconds(250);
+            timerUpdateValues.Interval = System.TimeSpan.FromMilliseconds(500);
             timerUpdateValues.Tick += TimerUpdateValues_Tick;
             timerUpdateValues.Start();
         }
@@ -26,7 +26,24 @@ namespace ControleAmbientes.View
         private void TimerUpdateValues_Tick(object sender, EventArgs e)
         {
             update();
+        }
 
+        private void Grid_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            //Consulta configuração de dados no banco
+            Class.Views.viewConfiguration.updateConfig();
+
+            //Update variaveis globais estaticas
+            Class.Views.viewConfiguration.updateGlobalVar();
+
+            //Atualiza variaveis globais seletoras
+            Class.Views.viewConfiguration.enableButtonSelect();
+
+            //Limpa os dados da Lista utilizada
+            Class.Variables.enableButton.Clear();
+
+            //Adicona valores novos a Lista Limpa 
+            Class.Variables.enableButton.AddRange(Class.Variables.enableButtonSelect);
         }
 
         private void update()
@@ -226,19 +243,16 @@ namespace ControleAmbientes.View
         private void btC1L6_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Class.Variables.btSelect[5] = !Class.Variables.btSelect[5];
-            btC1L6.Source = Class.Variables.btSelect[5] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
         }
 
         private void btC1L7_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Class.Variables.btSelect[6] = !Class.Variables.btSelect[6];
-            btC1L7.Source = Class.Variables.btSelect[6] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
         }
 
         private void btC1L8_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Class.Variables.btSelect[7] = !Class.Variables.btSelect[7];
-            btC1L8.Source = Class.Variables.btSelect[7] ? new BitmapImage(fileUriOn) : new BitmapImage(fileUriOFF);
         }
 
 
@@ -373,6 +387,7 @@ namespace ControleAmbientes.View
         {
             Class.Variables.btSelect[31] = !Class.Variables.btSelect[31];
         }
+
 
         #endregion
 
