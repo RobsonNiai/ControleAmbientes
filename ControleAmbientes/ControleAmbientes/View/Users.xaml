@@ -8,8 +8,29 @@
         mc:Ignorable="d"
          Height="500" Width="800" ResizeMode="NoResize" ScrollViewer.VerticalScrollBarVisibility="Disabled" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid Height="500" Width="800" Background="AliceBlue" Margin="2,1,2,1">
-        <Label Content="X" HorizontalAlignment="Left" Margin="768,0,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="LightCoral" MouseUp="Label_MouseUp" Cursor="Hand" ToolTip="Clique para fechar."/>
-        <Button x:Name="btDelete" Content="Excluir" HorizontalAlignment="Left" Margin="490,444,0,20" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
+        <Label Content="Controle de Usuários" HorizontalAlignment="Left" Margin="228,4,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="22" Foreground="Magenta" Height="38" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="318"/>
+
+        <Label Content="X" HorizontalAlignment="Left" Margin="764,0,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="red" MouseUp="Label_MouseUp" Cursor="Hand" ToolTip="Clique para fechar." Height="42" Width="31"/>
+
+        <Label Content="Nome" HorizontalAlignment="Left" Margin="35,56,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="Magenta"/>
+        <TextBox x:Name="txtLogin_Copy1" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="352" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Magenta" BorderBrush="Magenta" BorderThickness="1,2,1,2" Margin="35,91,0,0"/>
+
+        <Label Content="Email" HorizontalAlignment="Left" Margin="35,130,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="Magenta"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="352" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Magenta" BorderBrush="Magenta" BorderThickness="1,2,1,2" Margin="35,165,0,0"/>
+
+        <Label Content="Login" HorizontalAlignment="Left" Margin="35,205,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="Magenta"/>
+        <TextBox x:Name="txtLogin" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="352" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Magenta" BorderBrush="Magenta" BorderThickness="1,2,1,2" Margin="35,240,0,0"/>
+
+        <Label Content="Senha" HorizontalAlignment="Left" Margin="35,280,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="Magenta"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="35,315,0,0" VerticalAlignment="Top" Width="352" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Magenta" BorderBrush="Magenta" BorderThickness="1,2,1,2"/>
+
+        <Label Content="Confirmar Senha" HorizontalAlignment="Left" Margin="35,355,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="Magenta"/>
+        <PasswordBox x:Name="txtPasswordConfirma" HorizontalAlignment="Left" Margin="35,390,0,0" VerticalAlignment="Top" Width="352" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Magenta" BorderBrush="Magenta" BorderThickness="1,2,1,2"/>
+
+        <DataGrid x:Name="dataGridUsers" HorizontalAlignment="Left" Height="339" Margin="422,87,0,0" VerticalAlignment="Top" Width="349"/>
+        <Label Content="Usuários Cadastrados" HorizontalAlignment="Left" Margin="422,52,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="Magenta"/>
+
+        <Button x:Name="btDelete" Content="Excluir" HorizontalAlignment="Left" Margin="35,447,0,17" Width="170" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black" Click="btDelete_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFFB163" Offset="0.006"/>
@@ -18,7 +39,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btSalve" Content="Salvar" HorizontalAlignment="Left" Margin="633,444,0,20" Width="138" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
+        <Button x:Name="btSalve" Content="Salvar" HorizontalAlignment="Left" Margin="211,447,0,17" Width="176" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black" Click="btSalve_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF78FF63" Offset="0"/>
@@ -27,6 +48,15 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label Content="Controle de Usuários" HorizontalAlignment="Left" Margin="228,21,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="22" Foreground="Magenta" Height="43" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="318"/>
+        <Button x:Name="btLoad" Content="Editar Usuário Selecionado" HorizontalAlignment="Left" Margin="422,447,0,17" Width="349" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF63DCFF" Offset="0"/>
+                    <GradientStop Color="#FF63DCFF" Offset="1"/>
+                    <GradientStop Color="#7F0477D6" Offset="0.506"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
     </Grid>
 </Window>

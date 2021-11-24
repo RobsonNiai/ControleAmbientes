@@ -23,6 +23,28 @@ namespace ControleAmbientes.View
             timerUpdateValues.Start();
         }
 
+        /// <summary>
+        /// Metodo atualiza dados quando 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Grid_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            updateConfig();
+
+            //Update variaveis globais estaticas
+            updateGlobalVar();
+
+            //Atualiza variaveis globais seletoras
+            enableButtonSelect();
+
+            //Limpa os dados da Lista utilizada
+            Class.Variables.enableButton.Clear();
+
+            //Adicona valores novos a Lista Limpa 
+            Class.Variables.enableButton.AddRange(Class.Variables.enableButtonSelect);
+        }
+
         private void TimerUpdateValues_Tick(object sender, System.EventArgs e)
         {
             UpdateCombosTextsBlock_A();
@@ -1384,21 +1406,5 @@ namespace ControleAmbientes.View
 
         }
 
-        private void Grid_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-            updateConfig();
-
-            //Update variaveis globais estaticas
-            updateGlobalVar();
-
-            //Atualiza variaveis globais seletoras
-            enableButtonSelect();
-
-            //Limpa os dados da Lista utilizada
-            Class.Variables.enableButton.Clear();
-
-            //Adicona valores novos a Lista Limpa 
-            Class.Variables.enableButton.AddRange(Class.Variables.enableButtonSelect);
-        }
     }
 }

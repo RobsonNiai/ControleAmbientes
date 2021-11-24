@@ -16,5 +16,19 @@ namespace ControleAmbientes.View
         {
             this.Visibility = Visibility.Hidden;
         }
+
+        private void btDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btSalve_Click(object sender, RoutedEventArgs e)
+        {
+            if (!txtPassword.Password.Equals(txtPasswordConfirma.Password) || txtPassword.Password.Equals("") || txtPasswordConfirma.Password.Equals(""))
+            {
+                MessageBox.Show("Falha no cadastro da Senha", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+        }
     }
 }
