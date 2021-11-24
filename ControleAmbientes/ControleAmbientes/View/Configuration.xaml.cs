@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
@@ -939,6 +940,30 @@ namespace ControleAmbientes.View
                 //Atualiza variaveis globais seletoras
                 enableButtonSelect();
 
+                //Lista que faz uma pre verificação de dados em conflito
+                List<String> verifyValue = new List<String>(54);
+                verifyValue.Clear(); verifyValue.AddRange(Class.Variables.enableButtonSelect);
+
+                //Código de proteção que interrompe o ciclo de salvamento por inconsistência
+                for (int z = 0 ; z < 54 ; z++)
+                {
+                    int count = 0;
+
+                    for (int y = 0 ; y < 54 ; y++){
+
+                        count = (verifyValue[z].Equals(verifyValue[y]) && !verifyValue[z].Equals("0-1-1")) ? count + 1 : count;
+                    }
+
+                    if(count > 1) 
+                    {
+                        string mensagem = "! ! ! Dados em conflito ! ! ! \n NÃO podemos ter 2 IO Tipo Saída. \n Com o mesmo tipo de ação.";
+
+                        MessageBox.Show(mensagem, "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
+
+                }
+
                 //Limpa os dados da Lista utilizada
                 Class.Variables.enableButton.Clear();
 
@@ -953,6 +978,8 @@ namespace ControleAmbientes.View
                 //Salva dados no banco, aqui eu utilizo apenas 1 registro pois não quero ter mais de uma configuração, mas poderia ter controle de alterações apenas
                 //mudando o valor 1 para uma valor sequencial.
                 crud.SaveConfig(1, Class.Variables.d_DateTime, ip_Arduino, Class.Variables.typeIO_DB, Class.Variables.actionCol_DB, Class.Variables.actionRow_DB, Class.Variables.watts_DB);
+
+                MessageBox.Show("Dados Salvos com Sucesso", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Information);
 
             }
                 

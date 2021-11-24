@@ -7,6 +7,8 @@ namespace ControleAmbientes.View
     /// </summary>
     public partial class Initial : Window
     {
+        Class.CRUD crud = new Class.CRUD();
+
         public Initial()
         {
             InitializeComponent();
@@ -14,7 +16,21 @@ namespace ControleAmbientes.View
 
         private void login_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.userLoggin = true;
+            Class.Variables.userLoggin = crud.LoginUser(txtLogin.Text, txtPassword.Password) ? true : false;
+
+            if (Class.Variables.userLoggin)
+            {
+                MessageBox.Show("Login efetuado com Sucesso.", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Information);
+                Class.Views.viewSelect.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                MessageBox.Show("Falha no Login/Senha.", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            txtLogin.Clear();
+            txtPassword.Clear();
+
         }
     }
 }
