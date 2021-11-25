@@ -14,32 +14,6 @@ namespace ControleAmbientes.Class
         //String padrão do MySql
         string path = "Server=localhost;Database=controleambientesdb;Uid=root;Pwd=Niaih2so44#";
 
-        private string _server, _database, _user, _password;
-
-        public string Server
-        {
-            get => _server;
-            set => _server = value;
-        }
-
-        public string Database
-        {
-            get => _database;
-            set => _database = value;
-        }
-
-        public string User
-        {
-            get => _user;
-            set => _user = value;
-        }
-
-        public string Password
-        {
-            get => _password;
-            set => _password = value;
-        }
-
         /// <summary>
         /// Salva Dados da Tela de Configuração
         /// Esse método cria sempre uma nova inserção deletando
@@ -143,7 +117,6 @@ namespace ControleAmbientes.Class
 
             try
             {
-
                 connect.Open();
 
                 MySqlCommand comand = new MySqlCommand(QuerySql, connect);
@@ -225,7 +198,12 @@ namespace ControleAmbientes.Class
             }
         }
 
-
+        /// <summary>
+        /// Metodo publico realiza Login na aplicação
+        /// </summary>
+        /// <param name="c_LogginUsers"></param>
+        /// <param name="c_PasswUsers"></param>
+        /// <returns></returns>
         public bool LoginUser(string c_LogginUsers, string c_PasswUsers)
         {
             string retorno = ""; bool resultado = false;
@@ -254,6 +232,62 @@ namespace ControleAmbientes.Class
 
             return resultado;
         }
+
+        /// <summary>
+        /// Metodo publico inseri usuário no banco
+        /// </summary>
+        /// <param name="c_EmailUsers"></param>
+        /// <param name="c_NameUsers"></param>
+        /// <param name="c_LogginUsers"></param>
+        public void SaveUser(string c_EmailUsers, string c_NameUsers, string c_LogginUsers, string c_PasswUsers)
+        {
+            string QuerySql = "INSERT INTO controleambientesdb.users VALUES('" + c_EmailUsers + "','" + c_NameUsers + "', '" + c_LogginUsers + "', md5('" + c_PasswUsers + "'),'" + DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss") + "')";
+
+            MySqlConnection connect = new MySqlConnection(path);
+            MySqlCommand comand = new MySqlCommand(QuerySql, connect);
+
+            try
+            {
+                connect.Open();
+                comand.ExecuteNonQuery();
+            }
+            catch(MySql.Data.MySqlClient.MySqlException e)
+            {
+                if(e.ErrorCode == -2147467259)
+                {
+                    MessageBox.Show("Para salvar alteração de usuário já salvos, primeiro exclua-o.", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+                }            
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erro na gravação do banco: " + e.ToString(), "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally { connect.Close(); }
+        }
+
+        /// <summary>
+        /// Metodo publico deleta usuário
+        /// </summary>
+        /// <param name="c_EmailUsers"></param>
+        public void DeleteUser(string c_EmailUsers)
+        {
+            string QuerySql = "DELETE FROM controleambientesdb.users WHERE c_EmailUsers = '" + c_EmailUsers + "'";
+
+            MySqlConnection connect = new MySqlConnection(path);
+            MySqlCommand comand = new MySqlCommand(QuerySql, connect);
+
+            try
+            {
+                connect.Open();
+                comand.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erro na gravação do banco: " + e.ToString(), "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally { connect.Close(); }
+        }
+
     }
 }
 

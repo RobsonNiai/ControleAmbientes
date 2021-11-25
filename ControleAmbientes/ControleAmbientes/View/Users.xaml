@@ -13,7 +13,7 @@
         <Label Content="X" HorizontalAlignment="Left" Margin="764,0,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="red" MouseUp="Label_MouseUp" Cursor="Hand" ToolTip="Clique para fechar." Height="42" Width="31"/>
 
         <Label Content="Nome" HorizontalAlignment="Left" Margin="35,56,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="Magenta"/>
-        <TextBox x:Name="txtLogin_Copy1" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="352" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Magenta" BorderBrush="Magenta" BorderThickness="1,2,1,2" Margin="35,91,0,0"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="352" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Magenta" BorderBrush="Magenta" BorderThickness="1,2,1,2" Margin="35,91,0,0"/>
 
         <Label Content="Email" HorizontalAlignment="Left" Margin="35,130,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="Magenta"/>
         <TextBox x:Name="txtEmail" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="352" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Magenta" BorderBrush="Magenta" BorderThickness="1,2,1,2" Margin="35,165,0,0"/>
