@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Windows;
+using System.Data;
 
 namespace ControleAmbientes.Class
 {
@@ -283,9 +284,49 @@ namespace ControleAmbientes.Class
             }
             catch (Exception e)
             {
-                MessageBox.Show("Erro na gravação do banco: " + e.ToString(), "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Erro ao Deletar Usuário do banco: " + e.ToString(), "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             finally { connect.Close(); }
+        }
+
+
+        public DataSet FillDataGrid()
+        {
+            string QuerySql = "SELECT c_NameUsers, c_EmailUsers FROM controleambientesdb.users";
+
+            MySqlConnection connect = new MySqlConnection(path);
+
+            DataSet retorno = new DataSet();
+
+            try
+            {
+
+                connect.Open();
+
+                MySqlCommand comand = new MySqlCommand(QuerySql, connect);
+
+                MySqlDataAdapter adp = new MySqlDataAdapter(comand);
+
+                DataSet ds = new DataSet();
+
+                adp.Fill(ds, "LoadDataBinding");
+
+                //Class.Views.viewUsers.dataGridUsers.DataContext = ds;
+                //MySqlDataReader comandReader = comand.ExecuteReader();
+
+                retorno = ds;
+
+
+                //Class.Views.viewUsers.dataGridUsers.ItemsSource = comandReader.;
+
+                //Class.Views.viewUsers.dataGridUsers.Items.Add(comandReader["d_DataUsers"].ToString());
+
+            }
+            catch { }
+            finally { connect.Close(); }
+
+            return retorno;
+
         }
 
     }

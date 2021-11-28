@@ -27,7 +27,12 @@
         <Label Content="Confirmar Senha" HorizontalAlignment="Left" Margin="35,355,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="Magenta"/>
         <PasswordBox x:Name="txtPasswordConfirma" HorizontalAlignment="Left" Margin="35,390,0,0" VerticalAlignment="Top" Width="352" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Magenta" BorderBrush="Magenta" BorderThickness="1,2,1,2"/>
 
-        <DataGrid x:Name="dataGridUsers" HorizontalAlignment="Left" Height="339" Margin="422,87,0,0" VerticalAlignment="Top" Width="349"/>
+        <DataGrid x:Name="dataGridUsers" HorizontalAlignment="Left" Height="339" Margin="422,87,0,0" VerticalAlignment="Top" Width="349" AutoGenerateColumns="False" ItemsSource="{Binding Path=LoadDataBinding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=c_NameUsers}" Header="Nome" Width="150" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=c_EmailUsers}" Header="Email" Width="190" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
         <Label Content="Usuários Cadastrados" HorizontalAlignment="Left" Margin="422,52,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="Magenta"/>
 
         <Button x:Name="btDelete" Content="Excluir" HorizontalAlignment="Left" Margin="35,447,0,17" Width="170" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="16" Foreground="Black" Click="btDelete_Click">

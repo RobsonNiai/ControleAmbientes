@@ -973,7 +973,7 @@ namespace ControleAmbientes.View
 
                     for (int y = 0 ; y < 54 ; y++){
 
-                        count = (verifyValue[z].Equals(verifyValue[y]) && !verifyValue[z].Equals("0-1-1")) ? count + 1 : count;
+                        count = (verifyValue[z].Equals(verifyValue[y]) && int.Parse(verifyValue[z].Substring(0,1)) > 1 && !verifyValue[z].Equals("0-1-1")) ? count + 1 : count;
                     }
 
                     if(count > 1) 
