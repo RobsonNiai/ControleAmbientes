@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Data;
+using System.Windows;
 
 namespace ControleAmbientes.View
 {
@@ -77,5 +78,28 @@ namespace ControleAmbientes.View
             dataGridUsers.DataContext = crud.FillDataGrid();
 
         }
+
+        private void btLoad_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                DataRowView dataRow = (DataRowView)dataGridUsers.SelectedItem;
+                string cellValue = dataRow.Row.ItemArray[1].ToString();
+
+                string[] reLoadUser = new string[3];
+                reLoadUser[0] = cellValue;
+                crud.ReloadUsers(ref reLoadUser[0], ref reLoadUser[1], ref reLoadUser[2]);
+
+                txtName.Text = reLoadUser[1];
+                txtEmail.Text = reLoadUser[0];
+                txtLogin.Text = reLoadUser[2];
+            }
+            catch
+            {
+                MessageBox.Show("Nenhum Usuário selecionado.", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+        }
+
     }
 }

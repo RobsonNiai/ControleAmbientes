@@ -289,7 +289,11 @@ namespace ControleAmbientes.Class
             finally { connect.Close(); }
         }
 
-
+        /// <summary>
+        /// Metodo publico carrega datagrid na 
+        /// tela de usuários
+        /// </summary>
+        /// <returns></returns>
         public DataSet FillDataGrid()
         {
             string QuerySql = "SELECT c_NameUsers, c_EmailUsers FROM controleambientesdb.users";
@@ -300,32 +304,50 @@ namespace ControleAmbientes.Class
 
             try
             {
+                connect.Open();
+                MySqlCommand comand = new MySqlCommand(QuerySql, connect);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comand);
+                DataSet ds = new DataSet();
+                adp.Fill(ds, "LoadDataBinding");
+                retorno = ds;
+
+            }
+            catch(Exception e) 
+            {
+                MessageBox.Show("Erro ao Carregar Usuários cadastrado no banco: " + e.ToString(), "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally { connect.Close(); }
+
+            return retorno;
+
+        }
+
+        public void ReloadUsers(ref string c_EmailUsers, ref string c_NameUsers, ref string c_LogginUsers)
+        {
+            string QuerySql = "SELECT c_NameUsers, c_LogginUsers FROM controleambientesdb.users Where c_EmailUsers = '" + c_EmailUsers + "'";
+
+            MySqlConnection connect = new MySqlConnection(path);
+
+            try
+            {
 
                 connect.Open();
 
                 MySqlCommand comand = new MySqlCommand(QuerySql, connect);
+                MySqlDataReader comandReader = comand.ExecuteReader();
 
-                MySqlDataAdapter adp = new MySqlDataAdapter(comand);
+                comandReader.Read();
 
-                DataSet ds = new DataSet();
+                c_NameUsers = comandReader["c_NameUsers"].ToString();
+                c_LogginUsers = comandReader["c_NameUsers"].ToString();
 
-                adp.Fill(ds, "LoadDataBinding");
-
-                //Class.Views.viewUsers.dataGridUsers.DataContext = ds;
-                //MySqlDataReader comandReader = comand.ExecuteReader();
-
-                retorno = ds;
-
-
-                //Class.Views.viewUsers.dataGridUsers.ItemsSource = comandReader.;
-
-                //Class.Views.viewUsers.dataGridUsers.Items.Add(comandReader["d_DataUsers"].ToString());
 
             }
-            catch { }
+            catch(Exception e)
+            {
+                MessageBox.Show("Erro ao Carregar Usuários cadastrado no banco: " + e.ToString(), "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
             finally { connect.Close(); }
-
-            return retorno;
 
         }
 
