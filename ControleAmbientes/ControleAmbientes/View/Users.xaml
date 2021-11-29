@@ -7,7 +7,7 @@
         xmlns:UserControls="clr-namespace:ControleAmbientes.UserControls" x:Class="ControleAmbientes.View.Users"
         mc:Ignorable="d"
          Height="500" Width="800" ResizeMode="NoResize" ScrollViewer.VerticalScrollBarVisibility="Disabled" WindowStyle="None" WindowStartupLocation="CenterScreen">
-    <Grid Height="500" Width="800" Background="AliceBlue" Margin="2,1,2,1">
+    <Grid Height="500" Width="800" Background="AliceBlue" Margin="2,1,2,1" IsVisibleChanged="Grid_IsVisibleChanged">
         <Label Content="Controle de Usuários" HorizontalAlignment="Left" Margin="228,4,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="22" Foreground="Magenta" Height="38" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="318"/>
 
         <Label Content="X" HorizontalAlignment="Left" Margin="764,0,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="red" MouseUp="Label_MouseUp" Cursor="Hand" ToolTip="Clique para fechar." Height="42" Width="31"/>

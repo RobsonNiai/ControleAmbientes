@@ -14,6 +14,15 @@ namespace ControleAmbientes.View
         public Users()
         {
             InitializeComponent();
+        }
+
+        private void Grid_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            txtName.Text = "";
+            txtEmail.Text = "";
+            txtLogin.Text = "";
+            txtPassword.Password = "";
+            txtPasswordConfirma.Password = "";
 
             dataGridUsers.DataContext = crud.FillDataGrid();
         }
@@ -28,12 +37,6 @@ namespace ControleAmbientes.View
             if (txtEmail.Text.Equals("") || txtName.Text.Equals("") || txtLogin.Text.Equals(""))
             {
                 MessageBox.Show("Todos os campos devem ser preenchidos.", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            if (!txtPassword.Password.Equals(txtPasswordConfirma.Password) || txtPassword.Password.Equals("") || txtPasswordConfirma.Password.Equals(""))
-            {
-                MessageBox.Show("Falha no cadastro da Senha.", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 

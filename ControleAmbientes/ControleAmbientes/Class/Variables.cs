@@ -8,6 +8,7 @@ namespace ControleAmbientes.Class
         static public bool userLoggin;
         static public bool[] btSelect = new bool[32];
         static public bool[] btSelectAction = new bool[32];
+        static public bool[] btSelectTransition = new bool[32];
 
         static public int[] typeIO_DB = new int[54];
         static public int[] actionCol_DB = new int[54];
@@ -19,6 +20,5 @@ namespace ControleAmbientes.Class
 
         public static List<string> enableButton = new List<string>(54);
 
-        
     }
 }

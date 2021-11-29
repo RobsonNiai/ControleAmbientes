@@ -15,6 +15,8 @@ namespace ControleAmbientes.Class
         //String padrão do MySql
         string path = "Server=localhost;Database=controleambientesdb;Uid=root;Pwd=Niaih2so44#";
 
+        string dataFormat = "yyyy/MM/dd HH:mm:ss";
+
         /// <summary>
         /// Salva Dados da Tela de Configuração
         /// Esse método cria sempre uma nova inserção deletando
@@ -24,40 +26,11 @@ namespace ControleAmbientes.Class
         /// evitar sobrecarregamento do mesmo, assim posso compactar
         /// os dados em array e 
         /// </summary>
-
         public void SaveConfig(int n_IdUnicoConfig, DateTime d_DataConfig, string c_IpArduinoConfig, int[] comboType, int[] comboCol, int[] comboRow, int[] watts)
         {
 
             //Query para inserção de dados de configuração 
-            string QuerySql = "INSERT INTO controleambientesdb.config(n_IdUnicoConfig, d_DataConfig, c_IpArduinoConfig, " +
-                    "n_ComboTypeA0Config, n_ComboTypeA1Config, n_ComboTypeA2Config, n_ComboTypeA3Config, n_ComboTypeA4Config," +
-                    "n_ComboTypeA5Config, n_ComboTypeA6Config, n_ComboTypeA7Config, n_ComboTypeA8Config, n_ComboTypeA9Config," +
-                    "n_ComboTypeA10Config, n_ComboTypeA11Config, n_ComboTypeA12Config, n_ComboTypeA13Config, n_ComboTypeA14Config," +
-                    "n_ComboTypeA15Config, n_ComboType2Config, n_ComboType3Config, n_ComboType4Config, n_ComboType5Config, n_ComboType6Config, n_ComboType7Config," +
-                    "n_ComboType8Config, n_ComboType9Config, n_ComboType22Config, n_ComboType23Config, n_ComboType24Config, n_ComboType25Config, n_ComboType26Config, " +
-                    "n_ComboType27Config, n_ComboType28Config, n_ComboType29Config, n_ComboType30Config, n_ComboType31Config, n_ComboType32Config, n_ComboType33Config," +
-                    "n_ComboType34Config, n_ComboType35Config, n_ComboType36Config, n_ComboType37Config, n_ComboType38Config, n_ComboType39Config, n_ComboType40Config," +
-                    "n_ComboType41Config, n_ComboType42Config, n_ComboType43Config, n_ComboType44Config, n_ComboType45Config, n_ComboType46Config, n_ComboType47Config," +
-                    "n_ComboType48Config, n_ComboType49Config, n_ComboType50Config, n_ComboType51Config, n_comboColA0Config, n_comboColA1Config, n_comboColA2Config," +
-                    "n_comboColA3Config, n_comboColA4Config, n_comboColA5Config, n_comboColA6Config, n_comboColA7Config, n_comboColA8Config, n_comboColA9Config," +
-                    "n_comboColA10Config, n_comboColA11Config, n_comboColA12Config, n_comboColA13Config, n_comboColA14Config, n_comboColA15Config, n_comboCol2Config," +
-                    "n_comboCol3Config, n_comboCol4Config, n_comboCol5Config, n_comboCol6Config, n_comboCol7Config, n_comboCol8Config, n_comboCol9Config, n_comboCol22Config," +
-                    "n_comboCol23Config, n_comboCol24Config, n_comboCol25Config, n_comboCol26Config, n_comboCol27Config, n_comboCol28Config, n_comboCol29Config, n_comboCol30Config," +
-                    "n_comboCol31Config, n_comboCol32Config, n_comboCol33Config, n_comboCol34Config, n_comboCol35Config, n_comboCol36Config, n_comboCol37Config, n_comboCol38Config," +
-                    "n_comboCol39Config, n_comboCol40Config, n_comboCol41Config, n_comboCol42Config, n_comboCol43Config, n_comboCol44Config, n_comboCol45Config, n_comboCol46Config," +
-                    "n_comboCol47Config, n_comboCol48Config, n_comboCol49Config, n_comboCol50Config, n_comboCol51Config, n_comboRowA0Config, n_comboRowA1Config, n_comboRowA2Config," +
-                    "n_comboRowA3Config, n_comboRowA4Config, n_comboRowA5Config, n_comboRowA6Config, n_comboRowA7Config, n_comboRowA8Config, n_comboRowA9Config, n_comboRowA10Config," +
-                    "n_comboRowA11Config, n_comboRowA12Config, n_comboRowA13Config, n_comboRowA14Config, n_comboRowA15Config, n_comboRow2Config, n_comboRow3Config, n_comboRow4Config," +
-                    "n_comboRow5Config, n_comboRow6Config, n_comboRow7Config, n_comboRow8Config, n_comboRow9Config, n_comboRow22Config, n_comboRow23Config, n_comboRow24Config, n_comboRow25Config," +
-                    "n_comboRow26Config, n_comboRow27Config, n_comboRow28Config, n_comboRow29Config, n_comboRow30Config, n_comboRow31Config, n_comboRow32Config, n_comboRow33Config, n_comboRow34Config," +
-                    "n_comboRow35Config, n_comboRow36Config, n_comboRow37Config, n_comboRow38Config, n_comboRow39Config, n_comboRow40Config, n_comboRow41Config, n_comboRow42Config, n_comboRow43Config," +
-                    "n_comboRow44Config, n_comboRow45Config, n_comboRow46Config, n_comboRow47Config, n_comboRow48Config, n_comboRow49Config, n_comboRow50Config, n_comboRow51Config, n_txtWats_A0Config," +
-                    "n_txtWats_A1Config, n_txtWats_A2Config, n_txtWats_A3Config, n_txtWats_A4Config, n_txtWats_A5Config, n_txtWats_A6Config, n_txtWats_A7Config, n_txtWats_A8Config, n_txtWats_A9Config," +
-                    "n_txtWats_A10Config, n_txtWats_A11Config, n_txtWats_A12Config, n_txtWats_A13Config, n_txtWats_A14Config, n_txtWats_A15Config, n_txtWats_2Config, n_txtWats_3Config, n_txtWats_4Config," +
-                    "n_txtWats_5Config, n_txtWats_6Config, n_txtWats_7Config, n_txtWats_8Config, n_txtWats_9Config, n_txtWats_22Config, n_txtWats_23Config, n_txtWats_24Config, n_txtWats_25Config, n_txtWats_26Config," +
-                    "n_txtWats_27Config, n_txtWats_28Config, n_txtWats_29Config, n_txtWats_30Config, n_txtWats_31Config, n_txtWats_32Config, n_txtWats_33Config, n_txtWats_34Config, n_txtWats_35Config, n_txtWats_36Config," +
-                    "n_txtWats_37Config, n_txtWats_38Config, n_txtWats_39Config, n_txtWats_40Config, n_txtWats_41Config, n_txtWats_42Config, n_txtWats_43Config, n_txtWats_44Config, n_txtWats_45Config, n_txtWats_46Config," +
-                    "n_txtWats_47Config, n_txtWats_48Config, n_txtWats_49Config, n_txtWats_50Config, n_txtWats_51Config) Values (" + n_IdUnicoConfig + ",'" + d_DataConfig.ToString("yyyy/MM/dd HH:mm:ss") + "','" + c_IpArduinoConfig +
+            string QuerySql = "INSERT INTO controleambientesdb.config Values (" + n_IdUnicoConfig + ",'" + d_DataConfig.ToString(dataFormat) + "','" + c_IpArduinoConfig +
                     "'," + comboType[0] + "," + comboType[1] + "," + comboType[2] + "," + comboType[3] + "," + comboType[4] + "," + comboType[5] + "," + comboType[6] + "," + comboType[7] + "," + comboType[8] + "," + comboType[9] +
                     "," + comboType[10] + "," + comboType[11] + "," + comboType[12] + "," + comboType[13] + "," + comboType[14] + "," + comboType[15] + "," + comboType[16] + "," + comboType[17] + "," + comboType[18] + "," + comboType[19] +
                     "," + comboType[20] + "," + comboType[21] + "," + comboType[22] + "," + comboType[23] + "," + comboType[24] + "," + comboType[25] + "," + comboType[26] + "," + comboType[27] + "," + comboType[28] + "," + comboType[29] +
@@ -126,6 +99,7 @@ namespace ControleAmbientes.Class
                 comandReader.Read();
 
                 d_DataConfig = DateTime.Parse(comandReader["d_DataConfig"].ToString());
+
                 c_IpArduinoConfig = comandReader["c_IpArduinoConfig"].ToString();
 
                 comboType[0] = int.Parse(comandReader["n_ComboTypeA0Config"].ToString()); comboType[1] = int.Parse(comandReader["n_ComboTypeA1Config"].ToString()); comboType[2] = int.Parse(comandReader["n_ComboTypeA2Config"].ToString()); comboType[3] = int.Parse(comandReader["n_ComboTypeA3Config"].ToString());
@@ -187,11 +161,15 @@ namespace ControleAmbientes.Class
                 watts[44] = int.Parse(comandReader["n_txtWats_42Config"].ToString()); watts[45] = int.Parse(comandReader["n_txtWats_43Config"].ToString()); watts[46] = int.Parse(comandReader["n_txtWats_44Config"].ToString()); watts[47] = int.Parse(comandReader["n_txtWats_45Config"].ToString());
                 watts[48] = int.Parse(comandReader["n_txtWats_46Config"].ToString()); watts[49] = int.Parse(comandReader["n_txtWats_47Config"].ToString()); watts[50] = int.Parse(comandReader["n_txtWats_48Config"].ToString()); watts[51] = int.Parse(comandReader["n_txtWats_49Config"].ToString());
                 watts[52] = int.Parse(comandReader["n_txtWats_50Config"].ToString()); watts[53] = int.Parse(comandReader["n_txtWats_51Config"].ToString());
-
             }
             catch (Exception e)
             {
-                MessageBox.Show("Erro na consulta do banco: " + e.ToString(), "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+                //Verifica o date time para garantir que o banco não esteja em branco e quebre na primeira
+                //vez que for utilizado, ou seja, sem nenhuma configuração salva
+                if (d_DataConfig != DateTime.Parse("01/01/0001 00:00:00"))
+                {
+                    MessageBox.Show("Erro na consulta do banco: " + e.ToString(), "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
             finally
             {
@@ -242,7 +220,7 @@ namespace ControleAmbientes.Class
         /// <param name="c_LogginUsers"></param>
         public void SaveUser(string c_EmailUsers, string c_NameUsers, string c_LogginUsers, string c_PasswUsers)
         {
-            string QuerySql = "INSERT INTO controleambientesdb.users VALUES('" + c_EmailUsers + "','" + c_NameUsers + "', '" + c_LogginUsers + "', md5('" + c_PasswUsers + "'),'" + DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss") + "')";
+            string QuerySql = "INSERT INTO controleambientesdb.users VALUES('" + c_EmailUsers + "','" + c_NameUsers + "', '" + c_LogginUsers + "', md5('" + c_PasswUsers + "'),'" + DateTime.Now.ToString(dataFormat) + "')";
 
             MySqlConnection connect = new MySqlConnection(path);
             MySqlCommand comand = new MySqlCommand(QuerySql, connect);
@@ -252,12 +230,12 @@ namespace ControleAmbientes.Class
                 connect.Open();
                 comand.ExecuteNonQuery();
             }
-            catch(MySql.Data.MySqlClient.MySqlException e)
+            catch (MySql.Data.MySqlClient.MySqlException e)
             {
-                if(e.ErrorCode == -2147467259)
+                if (e.ErrorCode == -2147467259)
                 {
                     MessageBox.Show("Para salvar alteração de usuário já salvos, primeiro exclua-o.", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
-                }            
+                }
             }
             catch (Exception e)
             {
@@ -312,7 +290,7 @@ namespace ControleAmbientes.Class
                 retorno = ds;
 
             }
-            catch(Exception e) 
+            catch (Exception e)
             {
                 MessageBox.Show("Erro ao Carregar Usuários cadastrado no banco: " + e.ToString(), "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -322,6 +300,13 @@ namespace ControleAmbientes.Class
 
         }
 
+        /// <summary>
+        /// Metodo publico reload usuario cadastrado
+        /// para realizar devidas correções 
+        /// </summary>
+        /// <param name="c_EmailUsers"></param>
+        /// <param name="c_NameUsers"></param>
+        /// <param name="c_LogginUsers"></param>
         public void ReloadUsers(ref string c_EmailUsers, ref string c_NameUsers, ref string c_LogginUsers)
         {
             string QuerySql = "SELECT c_NameUsers, c_LogginUsers FROM controleambientesdb.users Where c_EmailUsers = '" + c_EmailUsers + "'";
@@ -343,7 +328,7 @@ namespace ControleAmbientes.Class
 
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show("Erro ao Carregar Usuários cadastrado no banco: " + e.ToString(), "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -351,6 +336,32 @@ namespace ControleAmbientes.Class
 
         }
 
+        /// <summary>
+        /// Metodo publico captura dados de ação das saidas mantendo assim
+        /// um histórico de consumo pra consulta posterior
+        /// </summary>
+        /// <param name="Event"></param>
+        /// <param name="Action"></param>
+        /// <param name="Wats"></param>
+        public void InsertActions(string Event, string Action, int Wats)
+        {
+            string QuerySql = "INSERT INTO controleambientesdb.dataevent VALUES (null, '" + DateTime.Now.ToString(dataFormat) + "','" + Event + "','" + Action + "', " + Wats + ")";
+
+            MySqlConnection connect = new MySqlConnection(path);
+            MySqlCommand comand = new MySqlCommand(QuerySql, connect);
+
+            try
+            {
+                connect.Open();
+                comand.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erro na gravação do banco: " + e.ToString(), "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally { connect.Close(); }
+        }
     }
+
 }
 
