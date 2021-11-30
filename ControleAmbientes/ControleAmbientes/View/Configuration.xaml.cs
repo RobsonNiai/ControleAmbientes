@@ -1014,6 +1014,7 @@ namespace ControleAmbientes.View
 
         private void btSendArduino_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("Dados enviados com Sucesso", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         public void updateGlobalVar()

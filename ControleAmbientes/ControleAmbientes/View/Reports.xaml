@@ -10,8 +10,27 @@
     <Grid>
 
         <UserControls:MainMenu HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top"/>
-        <Label Content="Relatorios" HorizontalAlignment="Left" Margin="132,202,0,0" VerticalAlignment="Top"/>
         <UserControls:CronoDateTime HorizontalAlignment="Left" Margin="0,764,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="dataGridData" HorizontalAlignment="Center" Height="507" Margin="0,140,0,0" VerticalAlignment="Top" Width="748" AutoGenerateColumns="False" ItemsSource="{Binding LoadDataBinding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding n_IdEvent}" Header="Registro" MaxWidth="100" IsReadOnly="True" MinWidth="190"/>
+                <DataGridTextColumn Binding="{Binding d_DataEvent}" Header="Data/Hora Evento" MaxWidth="190" IsReadOnly="True" MinWidth="190"/>
+                <DataGridTextColumn Binding="{Binding c_ObjectEvent}" Header="Objeto Evento" MaxWidth="150" IsReadOnly="True" MinWidth="150"/>
+                <DataGridTextColumn Binding="{Binding c_Event}" Header="Evento" MaxWidth="150" IsReadOnly="True" MinWidth="150"/>
+                <DataGridTextColumn Binding="{Binding n_WattsEvent}" Header="Consumo (Watts)" MaxWidth="150" IsReadOnly="True" MinWidth="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btFiltrar" Content="Filtrar Consulta" HorizontalAlignment="Left" Margin="583,674,0,100" Width="150" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="14" Foreground="Black" Click="btFiltrar_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF78FF63" Offset="0"/>
+                    <GradientStop Color="#FF78FF63" Offset="1"/>
+                    <GradientStop Color="#7F34D604" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <DatePicker x:Name="dataInicial" HorizontalAlignment="Left" Height="26" Margin="268,674,0,0" VerticalAlignment="Top" Width="152" ToolTip="Selecione uma data inicial" SelectedDateFormat="Short"/>
+        <DatePicker x:Name="dataFinal" HorizontalAlignment="Left" Height="26" Margin="426,674,0,0" VerticalAlignment="Top" Width="152" ToolTip="Selecione uma data final" SelectedDateFormat="Short"/>
 
     </Grid>
 </Window>

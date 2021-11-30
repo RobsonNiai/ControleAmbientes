@@ -361,6 +361,41 @@ namespace ControleAmbientes.Class
             }
             finally { connect.Close(); }
         }
+
+        /// <summary>
+        /// Metodo publico carrega dados capturados dos eventos
+        /// </summary>
+        /// <param name="dateStart"></param>
+        /// <param name="dateEnd"></param>
+        /// <returns></returns>
+        public DataSet FillDataGridData(string dateStart, string dateEnd)
+        {
+            string QuerySql = "SELECT * FROM controleambientesdb.dataevent where d_DataEvent >= '" + dateStart + "' and d_DataEvent <= '" + dateEnd + "'";
+
+            MySqlConnection connect = new MySqlConnection(path);
+
+            DataSet retorno = new DataSet();
+
+            try
+            {
+                connect.Open();
+                MySqlCommand comand = new MySqlCommand(QuerySql, connect);
+                MySqlDataAdapter adp = new MySqlDataAdapter(comand);
+                DataSet ds = new DataSet();
+                adp.Fill(ds, "LoadDataBinding");
+                retorno = ds;
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erro ao Carregar Usuários cadastrado no banco: " + e.ToString(), "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally { connect.Close(); }
+
+            return retorno;
+
+        }
+
     }
 
 }
