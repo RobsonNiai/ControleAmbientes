@@ -1,5 +1,5 @@
 /* Deleta estrutura para testes */
-drop database controleambientesdb;
+/*drop database controleambientesdb;*/
 
 /* Comando cria banco de dados */
 create Database controleambientesdb;
@@ -19,7 +19,7 @@ create table controleambientesdb.dataevent(
 	n_IdEvent int not null auto_increment,
     d_DataEvent datetime not null,
     c_ObjectEvent char(10) not null,
-    c_Event char(10) not null,
+    c_Event char(20) not null,
     n_WattsEvent SMALLINT,
     primary key (n_IdEvent)
 );

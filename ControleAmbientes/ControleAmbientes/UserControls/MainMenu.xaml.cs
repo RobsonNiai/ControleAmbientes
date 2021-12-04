@@ -92,7 +92,7 @@ namespace ControleAmbientes.UserControls
             Uri fileUri_D = new Uri("/Img/btUserColor.png", UriKind.Relative);
             btUsers.Source = new BitmapImage(fileUri_D);
 
-            Uri fileUri_E = new Uri("/Img/HeaderYellow.png", UriKind.Relative);
+            Uri fileUri_E = new Uri("/Img/HeaderGreen.png", UriKind.Relative);
             header.Source = new BitmapImage(fileUri_E);
         }
 

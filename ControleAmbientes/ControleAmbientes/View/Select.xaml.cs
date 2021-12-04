@@ -14,6 +14,8 @@ namespace ControleAmbientes.View
         Uri fileUriOFF = new Uri("/Img/btOFF.png", UriKind.Relative);
         Class.CRUD crud = new Class.CRUD();
 
+        bool firstRead = false;
+
         DispatcherTimer timerUpdateValues = new DispatcherTimer();
 
         public Select()
@@ -28,6 +30,13 @@ namespace ControleAmbientes.View
         {
             update();
             updateTransition();
+
+            if (!firstRead)
+            {
+                Class.Views.viewConfiguration.setListPot();
+                firstRead = true;
+            }
+            
         }
 
         private void Grid_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
@@ -217,13 +226,17 @@ namespace ControleAmbientes.View
 
         private void updateTransition()
         {
+
+            string enable = "Habilitado";
+            string disable = "Desabilitado";
+
             #region Coluna 1
 
             //C1L1 Registro da Ação
             if (Class.Variables.btSelect[0] != Class.Variables.btSelectTransition[0])
             {
-                if (Class.Variables.btSelect[0]) { crud.InsertActions("IO_C1L1", "Enable", Class.Variables.watts_DB[0]); }
-                if (!Class.Variables.btSelect[0]) { crud.InsertActions("IO_C1L1", "Disable", Class.Variables.watts_DB[0]); }
+                if (Class.Variables.btSelect[0]) { crud.InsertActions("IO_C1L1", enable, Class.Variables.poten[0]); }
+                if (!Class.Variables.btSelect[0]) { crud.InsertActions("IO_C1L1", disable, Class.Variables.poten[0]); }
 
                 Class.Variables.btSelectTransition[0] = Class.Variables.btSelect[0];
             }
@@ -231,8 +244,8 @@ namespace ControleAmbientes.View
             //C1L2 Registro da Ação
             if (Class.Variables.btSelect[1] != Class.Variables.btSelectTransition[1])
             {
-                if (Class.Variables.btSelect[1]) { crud.InsertActions("IO_C1L2", "Enable", Class.Variables.watts_DB[1]); }
-                if (!Class.Variables.btSelect[1]) { crud.InsertActions("IO_C1L2", "Disable", Class.Variables.watts_DB[1]); }
+                if (Class.Variables.btSelect[1]) { crud.InsertActions("IO_C1L2", enable, Class.Variables.poten[1]); }
+                if (!Class.Variables.btSelect[1]) { crud.InsertActions("IO_C1L2", disable, Class.Variables.poten[1]); }
 
                 Class.Variables.btSelectTransition[1] = Class.Variables.btSelect[1];
             }
@@ -240,8 +253,8 @@ namespace ControleAmbientes.View
             //C1L3 Registro da Ação
             if (Class.Variables.btSelect[2] != Class.Variables.btSelectTransition[2])
             {
-                if (Class.Variables.btSelect[2]) { crud.InsertActions("IO_C1L3", "Enable", Class.Variables.watts_DB[2]); }
-                if (!Class.Variables.btSelect[2]) { crud.InsertActions("IO_C1L3", "Disable", Class.Variables.watts_DB[2]); }
+                if (Class.Variables.btSelect[2]) { crud.InsertActions("IO_C1L3", enable, Class.Variables.poten[2]); }
+                if (!Class.Variables.btSelect[2]) { crud.InsertActions("IO_C1L3", disable, Class.Variables.poten[2]); }
 
                 Class.Variables.btSelectTransition[2] = Class.Variables.btSelect[2];
             }
@@ -249,8 +262,8 @@ namespace ControleAmbientes.View
             //C1L4 Registro da Ação
             if (Class.Variables.btSelect[3] != Class.Variables.btSelectTransition[3])
             {
-                if (Class.Variables.btSelect[3]) { crud.InsertActions("IO_C1L4", "Enable", Class.Variables.watts_DB[3]); }
-                if (!Class.Variables.btSelect[3]) { crud.InsertActions("IO_C1L4", "Disable", Class.Variables.watts_DB[3]); }
+                if (Class.Variables.btSelect[3]) { crud.InsertActions("IO_C1L4", enable, Class.Variables.poten[3]); }
+                if (!Class.Variables.btSelect[3]) { crud.InsertActions("IO_C1L4", disable, Class.Variables.poten[3]); }
 
                 Class.Variables.btSelectTransition[3] = Class.Variables.btSelect[3];
             }
@@ -258,8 +271,8 @@ namespace ControleAmbientes.View
             //C1L5 Registro da Ação
             if (Class.Variables.btSelect[4] != Class.Variables.btSelectTransition[4])
             {
-                if (Class.Variables.btSelect[4]) { crud.InsertActions("IO_C1L5", "Enable", Class.Variables.watts_DB[4]); }
-                if (!Class.Variables.btSelect[4]) { crud.InsertActions("IO_C1L5", "Disable", Class.Variables.watts_DB[4]); }
+                if (Class.Variables.btSelect[4]) { crud.InsertActions("IO_C1L5", enable, Class.Variables.poten[4]); }
+                if (!Class.Variables.btSelect[4]) { crud.InsertActions("IO_C1L5", disable, Class.Variables.poten[4]); }
 
                 Class.Variables.btSelectTransition[4] = Class.Variables.btSelect[4];
             }
@@ -267,8 +280,8 @@ namespace ControleAmbientes.View
             //C1L6 Registro da Ação
             if (Class.Variables.btSelect[5] != Class.Variables.btSelectTransition[5])
             {
-                if (Class.Variables.btSelect[5]) { crud.InsertActions("IO_C1L6", "Enable", Class.Variables.watts_DB[5]); }
-                if (!Class.Variables.btSelect[5]) { crud.InsertActions("IO_C1L6", "Disable", Class.Variables.watts_DB[5]); }
+                if (Class.Variables.btSelect[5]) { crud.InsertActions("IO_C1L6", enable, Class.Variables.poten[5]); }
+                if (!Class.Variables.btSelect[5]) { crud.InsertActions("IO_C1L6", disable, Class.Variables.poten[5]); }
 
                 Class.Variables.btSelectTransition[5] = Class.Variables.btSelect[5];
             }
@@ -276,8 +289,8 @@ namespace ControleAmbientes.View
             //C1L7 Registro da Ação
             if (Class.Variables.btSelect[6] != Class.Variables.btSelectTransition[6])
             {
-                if (Class.Variables.btSelect[6]) { crud.InsertActions("IO_C1L7", "Enable", Class.Variables.watts_DB[6]); }
-                if (!Class.Variables.btSelect[6]) { crud.InsertActions("IO_C1L7", "Disable", Class.Variables.watts_DB[6]); }
+                if (Class.Variables.btSelect[6]) { crud.InsertActions("IO_C1L7", enable, Class.Variables.poten[6]); }
+                if (!Class.Variables.btSelect[6]) { crud.InsertActions("IO_C1L7", disable, Class.Variables.poten[6]); }
 
                 Class.Variables.btSelectTransition[6] = Class.Variables.btSelect[6];
             }
@@ -285,8 +298,8 @@ namespace ControleAmbientes.View
             //C1L8 Registro da Ação
             if (Class.Variables.btSelect[7] != Class.Variables.btSelectTransition[7])
             {
-                if (Class.Variables.btSelect[7]) { crud.InsertActions("IO_C1L8", "Enable", Class.Variables.watts_DB[7]); }
-                if (!Class.Variables.btSelect[7]) { crud.InsertActions("IO_C1L8", "Disable", Class.Variables.watts_DB[7]); }
+                if (Class.Variables.btSelect[7]) { crud.InsertActions("IO_C1L8", enable, Class.Variables.poten[7]); }
+                if (!Class.Variables.btSelect[7]) { crud.InsertActions("IO_C1L8", disable, Class.Variables.poten[7]); }
 
                 Class.Variables.btSelectTransition[7] = Class.Variables.btSelect[7];
             }
@@ -298,8 +311,8 @@ namespace ControleAmbientes.View
             //C2L1 Registro da Ação
             if (Class.Variables.btSelect[8] != Class.Variables.btSelectTransition[8])
             {
-                if (Class.Variables.btSelect[8]) { crud.InsertActions("IO_C2L1", "Enable", Class.Variables.watts_DB[8]); }
-                if (!Class.Variables.btSelect[8]) { crud.InsertActions("IO_C2L1", "Disable", Class.Variables.watts_DB[8]); }
+                if (Class.Variables.btSelect[8]) { crud.InsertActions("IO_C2L1", enable, Class.Variables.poten[8]); }
+                if (!Class.Variables.btSelect[8]) { crud.InsertActions("IO_C2L1", disable, Class.Variables.poten[8]); }
 
                 Class.Variables.btSelectTransition[8] = Class.Variables.btSelect[8];
             }
@@ -307,8 +320,8 @@ namespace ControleAmbientes.View
             //C2L2 Registro da Ação
             if (Class.Variables.btSelect[9] != Class.Variables.btSelectTransition[9])
             {
-                if (Class.Variables.btSelect[9]) { crud.InsertActions("IO_C2L2", "Enable", Class.Variables.watts_DB[9]); }
-                if (!Class.Variables.btSelect[9]) { crud.InsertActions("IO_C2L2", "Disable", Class.Variables.watts_DB[9]); }
+                if (Class.Variables.btSelect[9]) { crud.InsertActions("IO_C2L2", enable, Class.Variables.poten[9]); }
+                if (!Class.Variables.btSelect[9]) { crud.InsertActions("IO_C2L2", disable, Class.Variables.poten[9]); }
 
                 Class.Variables.btSelectTransition[9] = Class.Variables.btSelect[9];
             }
@@ -316,8 +329,8 @@ namespace ControleAmbientes.View
             //C2L3 Registro da Ação
             if (Class.Variables.btSelect[10] != Class.Variables.btSelectTransition[10])
             {
-                if (Class.Variables.btSelect[10]) { crud.InsertActions("IO_C2L3", "Enable", Class.Variables.watts_DB[10]); }
-                if (!Class.Variables.btSelect[10]) { crud.InsertActions("IO_C2L3", "Disable", Class.Variables.watts_DB[10]); }
+                if (Class.Variables.btSelect[10]) { crud.InsertActions("IO_C2L3", enable, Class.Variables.poten[10]); }
+                if (!Class.Variables.btSelect[10]) { crud.InsertActions("IO_C2L3", disable, Class.Variables.poten[10]); }
 
                 Class.Variables.btSelectTransition[10] = Class.Variables.btSelect[10];
             }
@@ -325,8 +338,8 @@ namespace ControleAmbientes.View
             //C2L4 Registro da Ação
             if (Class.Variables.btSelect[11] != Class.Variables.btSelectTransition[11])
             {
-                if (Class.Variables.btSelect[11]) { crud.InsertActions("IO_C2L4", "Enable", Class.Variables.watts_DB[11]); }
-                if (!Class.Variables.btSelect[11]) { crud.InsertActions("IO_C2L4", "Disable", Class.Variables.watts_DB[11]); }
+                if (Class.Variables.btSelect[11]) { crud.InsertActions("IO_C2L4", enable, Class.Variables.poten[11]); }
+                if (!Class.Variables.btSelect[11]) { crud.InsertActions("IO_C2L4", disable, Class.Variables.poten[11]); }
 
                 Class.Variables.btSelectTransition[11] = Class.Variables.btSelect[11];
             }
@@ -334,8 +347,8 @@ namespace ControleAmbientes.View
             //C2L5 Registro da Ação
             if (Class.Variables.btSelect[12] != Class.Variables.btSelectTransition[12])
             {
-                if (Class.Variables.btSelect[12]) { crud.InsertActions("IO_C2L5", "Enable", Class.Variables.watts_DB[12]); }
-                if (!Class.Variables.btSelect[12]) { crud.InsertActions("IO_C2L5", "Disable", Class.Variables.watts_DB[12]); }
+                if (Class.Variables.btSelect[12]) { crud.InsertActions("IO_C2L5", enable, Class.Variables.poten[12]); }
+                if (!Class.Variables.btSelect[12]) { crud.InsertActions("IO_C2L5", disable, Class.Variables.poten[12]); }
 
                 Class.Variables.btSelectTransition[12] = Class.Variables.btSelect[12];
             }
@@ -343,8 +356,8 @@ namespace ControleAmbientes.View
             //C2L6 Registro da Ação
             if (Class.Variables.btSelect[13] != Class.Variables.btSelectTransition[13])
             {
-                if (Class.Variables.btSelect[13]) { crud.InsertActions("IO_C2L6", "Enable", Class.Variables.watts_DB[13]); }
-                if (!Class.Variables.btSelect[13]) { crud.InsertActions("IO_C2L6", "Disable", Class.Variables.watts_DB[13]); }
+                if (Class.Variables.btSelect[13]) { crud.InsertActions("IO_C2L6", enable, Class.Variables.poten[13]); }
+                if (!Class.Variables.btSelect[13]) { crud.InsertActions("IO_C2L6", disable, Class.Variables.poten[13]); }
 
                 Class.Variables.btSelectTransition[13] = Class.Variables.btSelect[13];
             }
@@ -352,8 +365,8 @@ namespace ControleAmbientes.View
             //C2L7 Registro da Ação
             if (Class.Variables.btSelect[14] != Class.Variables.btSelectTransition[14])
             {
-                if (Class.Variables.btSelect[14]) { crud.InsertActions("IO_C2L7", "Enable", Class.Variables.watts_DB[14]); }
-                if (!Class.Variables.btSelect[14]) { crud.InsertActions("IO_C2L7", "Disable", Class.Variables.watts_DB[14]); }
+                if (Class.Variables.btSelect[14]) { crud.InsertActions("IO_C2L7", enable, Class.Variables.poten[14]); }
+                if (!Class.Variables.btSelect[14]) { crud.InsertActions("IO_C2L7", disable, Class.Variables.poten[14]); }
 
                 Class.Variables.btSelectTransition[14] = Class.Variables.btSelect[14];
             }
@@ -361,8 +374,8 @@ namespace ControleAmbientes.View
             //C2L8 Registro da Ação
             if (Class.Variables.btSelect[15] != Class.Variables.btSelectTransition[15])
             {
-                if (Class.Variables.btSelect[15]) { crud.InsertActions("IO_C2L8", "Enable", Class.Variables.watts_DB[15]); }
-                if (!Class.Variables.btSelect[15]) { crud.InsertActions("IO_C2L8", "Disable", Class.Variables.watts_DB[15]); }
+                if (Class.Variables.btSelect[15]) { crud.InsertActions("IO_C2L8", enable, Class.Variables.poten[15]); }
+                if (!Class.Variables.btSelect[15]) { crud.InsertActions("IO_C2L8", disable, Class.Variables.poten[15]); }
 
                 Class.Variables.btSelectTransition[15] = Class.Variables.btSelect[15];
             }
@@ -374,8 +387,8 @@ namespace ControleAmbientes.View
             //C3L1 Registro da Ação
             if (Class.Variables.btSelect[16] != Class.Variables.btSelectTransition[16])
             {
-                if (Class.Variables.btSelect[16]) { crud.InsertActions("IO_C3L1", "Enable", Class.Variables.watts_DB[16]); }
-                if (!Class.Variables.btSelect[16]) { crud.InsertActions("IO_C3L1", "Disable", Class.Variables.watts_DB[16]); }
+                if (Class.Variables.btSelect[16]) { crud.InsertActions("IO_C3L1", enable, Class.Variables.poten[16]); }
+                if (!Class.Variables.btSelect[16]) { crud.InsertActions("IO_C3L1", disable, Class.Variables.poten[16]); }
 
                 Class.Variables.btSelectTransition[16] = Class.Variables.btSelect[16];
             }
@@ -383,8 +396,8 @@ namespace ControleAmbientes.View
             //C3L2 Registro da Ação
             if (Class.Variables.btSelect[17] != Class.Variables.btSelectTransition[17])
             {
-                if (Class.Variables.btSelect[17]) { crud.InsertActions("IO_C3L2", "Enable", Class.Variables.watts_DB[17]); }
-                if (!Class.Variables.btSelect[17]) { crud.InsertActions("IO_C3L2", "Disable", Class.Variables.watts_DB[17]); }
+                if (Class.Variables.btSelect[17]) { crud.InsertActions("IO_C3L2", enable, Class.Variables.poten[17]); }
+                if (!Class.Variables.btSelect[17]) { crud.InsertActions("IO_C3L2", disable, Class.Variables.poten[17]); }
 
                 Class.Variables.btSelectTransition[17] = Class.Variables.btSelect[17];
             }
@@ -392,8 +405,8 @@ namespace ControleAmbientes.View
             //C3L3 Registro da Ação
             if (Class.Variables.btSelect[18] != Class.Variables.btSelectTransition[18])
             {
-                if (Class.Variables.btSelect[18]) { crud.InsertActions("IO_C3L3", "Enable", Class.Variables.watts_DB[18]); }
-                if (!Class.Variables.btSelect[18]) { crud.InsertActions("IO_C3L3", "Disable", Class.Variables.watts_DB[18]); }
+                if (Class.Variables.btSelect[18]) { crud.InsertActions("IO_C3L3", enable, Class.Variables.poten[18]); }
+                if (!Class.Variables.btSelect[18]) { crud.InsertActions("IO_C3L3", disable, Class.Variables.poten[18]); }
 
                 Class.Variables.btSelectTransition[18] = Class.Variables.btSelect[18];
             }
@@ -401,8 +414,8 @@ namespace ControleAmbientes.View
             //C3L4 Registro da Ação
             if (Class.Variables.btSelect[19] != Class.Variables.btSelectTransition[19])
             {
-                if (Class.Variables.btSelect[19]) { crud.InsertActions("IO_C3L4", "Enable", Class.Variables.watts_DB[19]); }
-                if (!Class.Variables.btSelect[19]) { crud.InsertActions("IO_C3L4", "Disable", Class.Variables.watts_DB[19]); }
+                if (Class.Variables.btSelect[19]) { crud.InsertActions("IO_C3L4", enable, Class.Variables.poten[19]); }
+                if (!Class.Variables.btSelect[19]) { crud.InsertActions("IO_C3L4", disable, Class.Variables.poten[19]); }
 
                 Class.Variables.btSelectTransition[19] = Class.Variables.btSelect[19];
             }
@@ -410,8 +423,8 @@ namespace ControleAmbientes.View
             //C3L5 Registro da Ação
             if (Class.Variables.btSelect[20] != Class.Variables.btSelectTransition[20])
             {
-                if (Class.Variables.btSelect[20]) { crud.InsertActions("IO_C3L5", "Enable", Class.Variables.watts_DB[20]); }
-                if (!Class.Variables.btSelect[20]) { crud.InsertActions("IO_C3L5", "Disable", Class.Variables.watts_DB[20]); }
+                if (Class.Variables.btSelect[20]) { crud.InsertActions("IO_C3L5", enable, Class.Variables.poten[20]); }
+                if (!Class.Variables.btSelect[20]) { crud.InsertActions("IO_C3L5", disable, Class.Variables.poten[20]); }
 
                 Class.Variables.btSelectTransition[20] = Class.Variables.btSelect[20];
             }
@@ -419,8 +432,8 @@ namespace ControleAmbientes.View
             //C3L6 Registro da Ação
             if (Class.Variables.btSelect[21] != Class.Variables.btSelectTransition[21])
             {
-                if (Class.Variables.btSelect[21]) { crud.InsertActions("IO_C3L6", "Enable", Class.Variables.watts_DB[21]); }
-                if (!Class.Variables.btSelect[21]) { crud.InsertActions("IO_C3L6", "Disable", Class.Variables.watts_DB[21]); }
+                if (Class.Variables.btSelect[21]) { crud.InsertActions("IO_C3L6", enable, Class.Variables.poten[21]); }
+                if (!Class.Variables.btSelect[21]) { crud.InsertActions("IO_C3L6", disable, Class.Variables.poten[21]); }
 
                 Class.Variables.btSelectTransition[21] = Class.Variables.btSelect[21];
             }
@@ -428,8 +441,8 @@ namespace ControleAmbientes.View
             //C3L7 Registro da Ação
             if (Class.Variables.btSelect[22] != Class.Variables.btSelectTransition[22])
             {
-                if (Class.Variables.btSelect[22]) { crud.InsertActions("IO_C3L7", "Enable", Class.Variables.watts_DB[22]); }
-                if (!Class.Variables.btSelect[22]) { crud.InsertActions("IO_C3L7", "Disable", Class.Variables.watts_DB[22]); }
+                if (Class.Variables.btSelect[22]) { crud.InsertActions("IO_C3L7", enable, Class.Variables.poten[22]); }
+                if (!Class.Variables.btSelect[22]) { crud.InsertActions("IO_C3L7", disable, Class.Variables.poten[22]); }
 
                 Class.Variables.btSelectTransition[22] = Class.Variables.btSelect[22];
             }
@@ -437,8 +450,8 @@ namespace ControleAmbientes.View
             //C3L8 Registro da Ação
             if (Class.Variables.btSelect[23] != Class.Variables.btSelectTransition[23])
             {
-                if (Class.Variables.btSelect[23]) { crud.InsertActions("IO_C3L8", "Enable", Class.Variables.watts_DB[23]); }
-                if (!Class.Variables.btSelect[23]) { crud.InsertActions("IO_C3L8", "Disable", Class.Variables.watts_DB[23]); }
+                if (Class.Variables.btSelect[23]) { crud.InsertActions("IO_C3L8", enable, Class.Variables.poten[23]); }
+                if (!Class.Variables.btSelect[23]) { crud.InsertActions("IO_C3L8", disable, Class.Variables.poten[23]); }
 
                 Class.Variables.btSelectTransition[23] = Class.Variables.btSelect[23];
             }
@@ -450,8 +463,8 @@ namespace ControleAmbientes.View
             //C4L1 Registro da Ação
             if (Class.Variables.btSelect[24] != Class.Variables.btSelectTransition[24])
             {
-                if (Class.Variables.btSelect[24]) { crud.InsertActions("IO_C4L1", "Enable", Class.Variables.watts_DB[24]); }
-                if (!Class.Variables.btSelect[24]) { crud.InsertActions("IO_C4L1", "Disable", Class.Variables.watts_DB[24]); }
+                if (Class.Variables.btSelect[24]) { crud.InsertActions("IO_C4L1", enable, Class.Variables.poten[24]); }
+                if (!Class.Variables.btSelect[24]) { crud.InsertActions("IO_C4L1", disable, Class.Variables.poten[24]); }
 
                 Class.Variables.btSelectTransition[24] = Class.Variables.btSelect[24];
             }
@@ -459,8 +472,8 @@ namespace ControleAmbientes.View
             //C4L2 Registro da Ação
             if (Class.Variables.btSelect[25] != Class.Variables.btSelectTransition[25])
             {
-                if (Class.Variables.btSelect[25]) { crud.InsertActions("IO_C4L2", "Enable", Class.Variables.watts_DB[25]); }
-                if (!Class.Variables.btSelect[25]) { crud.InsertActions("IO_C4L2", "Disable", Class.Variables.watts_DB[25]); }
+                if (Class.Variables.btSelect[25]) { crud.InsertActions("IO_C4L2", enable, Class.Variables.poten[25]); }
+                if (!Class.Variables.btSelect[25]) { crud.InsertActions("IO_C4L2", disable, Class.Variables.poten[25]); }
 
                 Class.Variables.btSelectTransition[25] = Class.Variables.btSelect[25];
             }
@@ -468,8 +481,8 @@ namespace ControleAmbientes.View
             //C4L3 Registro da Ação
             if (Class.Variables.btSelect[26] != Class.Variables.btSelectTransition[26])
             {
-                if (Class.Variables.btSelect[26]) { crud.InsertActions("IO_C4L3", "Enable", Class.Variables.watts_DB[26]); }
-                if (!Class.Variables.btSelect[26]) { crud.InsertActions("IO_C4L3", "Disable", Class.Variables.watts_DB[26]); }
+                if (Class.Variables.btSelect[26]) { crud.InsertActions("IO_C4L3", enable, Class.Variables.poten[26]); }
+                if (!Class.Variables.btSelect[26]) { crud.InsertActions("IO_C4L3", disable, Class.Variables.poten[26]); }
 
                 Class.Variables.btSelectTransition[26] = Class.Variables.btSelect[26];
             }
@@ -477,8 +490,8 @@ namespace ControleAmbientes.View
             //C4L4 Registro da Ação
             if (Class.Variables.btSelect[27] != Class.Variables.btSelectTransition[27])
             {
-                if (Class.Variables.btSelect[27]) { crud.InsertActions("IO_C4L4", "Enable", Class.Variables.watts_DB[27]); }
-                if (!Class.Variables.btSelect[27]) { crud.InsertActions("IO_C4L4", "Disable", Class.Variables.watts_DB[27]); }
+                if (Class.Variables.btSelect[27]) { crud.InsertActions("IO_C4L4", enable, Class.Variables.poten[27]); }
+                if (!Class.Variables.btSelect[27]) { crud.InsertActions("IO_C4L4", disable, Class.Variables.poten[27]); }
 
                 Class.Variables.btSelectTransition[27] = Class.Variables.btSelect[27];
             }
@@ -486,8 +499,8 @@ namespace ControleAmbientes.View
             //C4L5 Registro da Ação
             if (Class.Variables.btSelect[28] != Class.Variables.btSelectTransition[28])
             {
-                if (Class.Variables.btSelect[28]) { crud.InsertActions("IO_C4L5", "Enable", Class.Variables.watts_DB[28]); }
-                if (!Class.Variables.btSelect[28]) { crud.InsertActions("IO_C4L5", "Disable", Class.Variables.watts_DB[28]); }
+                if (Class.Variables.btSelect[28]) { crud.InsertActions("IO_C4L5", enable, Class.Variables.poten[28]); }
+                if (!Class.Variables.btSelect[28]) { crud.InsertActions("IO_C4L5", disable, Class.Variables.poten[28]); }
 
                 Class.Variables.btSelectTransition[28] = Class.Variables.btSelect[28];
             }
@@ -495,8 +508,8 @@ namespace ControleAmbientes.View
             //C4L6 Registro da Ação
             if (Class.Variables.btSelect[29] != Class.Variables.btSelectTransition[29])
             {
-                if (Class.Variables.btSelect[29]) { crud.InsertActions("IO_C4L6", "Enable", Class.Variables.watts_DB[29]); }
-                if (!Class.Variables.btSelect[29]) { crud.InsertActions("IO_C4L6", "Disable", Class.Variables.watts_DB[29]); }
+                if (Class.Variables.btSelect[29]) { crud.InsertActions("IO_C4L6", enable, Class.Variables.poten[29]); }
+                if (!Class.Variables.btSelect[29]) { crud.InsertActions("IO_C4L6", disable, Class.Variables.poten[29]); }
 
                 Class.Variables.btSelectTransition[29] = Class.Variables.btSelect[29];
             }
@@ -504,8 +517,8 @@ namespace ControleAmbientes.View
             //C4L7 Registro da Ação
             if (Class.Variables.btSelect[30] != Class.Variables.btSelectTransition[30])
             {
-                if (Class.Variables.btSelect[30]) { crud.InsertActions("IO_C4L7", "Enable", Class.Variables.watts_DB[30]); }
-                if (!Class.Variables.btSelect[30]) { crud.InsertActions("IO_C4L7", "Disable", Class.Variables.watts_DB[30]); }
+                if (Class.Variables.btSelect[30]) { crud.InsertActions("IO_C4L7", enable, Class.Variables.poten[30]); }
+                if (!Class.Variables.btSelect[30]) { crud.InsertActions("IO_C4L7", disable, Class.Variables.poten[30]); }
 
                 Class.Variables.btSelectTransition[30] = Class.Variables.btSelect[30];
             }
@@ -513,8 +526,8 @@ namespace ControleAmbientes.View
             //C4L8 Registro da Ação
             if (Class.Variables.btSelect[31] != Class.Variables.btSelectTransition[31])
             {
-                if (Class.Variables.btSelect[31]) { crud.InsertActions("IO_C4L8", "Enable", Class.Variables.watts_DB[31]); }
-                if (!Class.Variables.btSelect[31]) { crud.InsertActions("IO_C4L8", "Disable", Class.Variables.watts_DB[31]); }
+                if (Class.Variables.btSelect[31]) { crud.InsertActions("IO_C4L8", enable, Class.Variables.poten[31]); }
+                if (!Class.Variables.btSelect[31]) { crud.InsertActions("IO_C4L8", disable, Class.Variables.poten[31]); }
 
                 Class.Variables.btSelectTransition[31] = Class.Variables.btSelect[31];
             }

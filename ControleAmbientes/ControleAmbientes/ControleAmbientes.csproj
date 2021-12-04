@@ -22,6 +22,7 @@
     <None Remove="Img\btSelectGray.png" />
     <None Remove="Img\btUserColor.png" />
     <None Remove="Img\btUserGray.png" />
+    <None Remove="Img\HeaderGreen.png" />
     <None Remove="Img\HeaderWhite.png" />
     <None Remove="Img\HeaderYellow.png" />
     <None Remove="Img\IconeMaster.png" />
@@ -70,6 +71,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Img\btUserGray.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Img\HeaderGreen.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Img\HeaderWhite.png">

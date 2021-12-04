@@ -1003,6 +1003,8 @@ namespace ControleAmbientes.View
 
                 MessageBox.Show("Dados Salvos com Sucesso", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Information);
 
+                setListPot();
+
             }
                 
         }
@@ -1170,10 +1172,10 @@ namespace ControleAmbientes.View
             Class.Variables.actionCol_DB[37] = comboCol35.SelectedIndex;
             Class.Variables.actionCol_DB[38] = comboCol36.SelectedIndex;
             Class.Variables.actionCol_DB[39] = comboCol37.SelectedIndex;
-            Class.Variables.actionCol_DB[30] = comboCol38.SelectedIndex;
-            Class.Variables.actionCol_DB[31] = comboCol39.SelectedIndex;
-            Class.Variables.actionCol_DB[32] = comboCol40.SelectedIndex;
-            Class.Variables.actionCol_DB[33] = comboCol41.SelectedIndex;
+            Class.Variables.actionCol_DB[40] = comboCol38.SelectedIndex;
+            Class.Variables.actionCol_DB[41] = comboCol39.SelectedIndex;
+            Class.Variables.actionCol_DB[42] = comboCol40.SelectedIndex;
+            Class.Variables.actionCol_DB[43] = comboCol41.SelectedIndex;
 
             Class.Variables.actionRow_DB[34] = comboRow32.SelectedIndex;
             Class.Variables.actionRow_DB[35] = comboRow33.SelectedIndex;
@@ -1339,7 +1341,7 @@ namespace ControleAmbientes.View
         }
 
         /// <summary>
-        /// Método privado utilizado para atualizar tela de botões, com base
+        /// Método publico utilizado para atualizar tela de botões, com base
         /// nas seleções dos combobox eu concateno formando um numero único 
         /// para identificar quais botões serão habilitados em função de saidas
         /// casdastradas.
@@ -1402,9 +1404,119 @@ namespace ControleAmbientes.View
                 Class.Variables.enableButtonSelect[51] = comboType49.SelectedIndex.ToString() + comboCol49.SelectedIndex.ToString() + comboRow49.SelectedIndex.ToString();
                 Class.Variables.enableButtonSelect[52] = comboType50.SelectedIndex.ToString() + comboCol50.SelectedIndex.ToString() + comboRow50.SelectedIndex.ToString();
                 Class.Variables.enableButtonSelect[53] = comboType51.SelectedIndex.ToString() + comboCol51.SelectedIndex.ToString() + comboRow51.SelectedIndex.ToString();
+
             }
             catch {; }
 
+        }
+
+        /// <summary>
+        /// Metodo publico cria lista com as cargas para lincar na base de dados
+        /// quando os botões sofrerem ações
+        /// </summary>
+       public void setListPot()
+        {
+            try
+            {
+                Class.Variables.watts.Clear();
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[0], txtWats_A0.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[1], txtWats_A1.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[2], txtWats_A2.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[3], txtWats_A3.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[4], txtWats_A4.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[5], txtWats_A5.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[6], txtWats_A6.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[7], txtWats_A7.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[8], txtWats_A8.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[9], txtWats_A9.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[10], txtWats_A10.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[11], txtWats_A11.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[12], txtWats_A12.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[13], txtWats_A13.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[14], txtWats_A14.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[15], txtWats_A15.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[16], txtWats_2.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[17], txtWats_3.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[18], txtWats_4.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[19], txtWats_5.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[20], txtWats_6.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[21], txtWats_7.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[22], txtWats_8.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[23], txtWats_9.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[24], txtWats_22.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[25], txtWats_23.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[26], txtWats_24.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[27], txtWats_25.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[28], txtWats_26.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[29], txtWats_27.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[30], txtWats_28.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[31], txtWats_29.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[32], txtWats_30.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[33], txtWats_31.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[34], txtWats_32.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[35], txtWats_33.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[36], txtWats_34.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[37], txtWats_35.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[38], txtWats_36.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[39], txtWats_37.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[40], txtWats_38.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[41], txtWats_39.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[42], txtWats_40.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[43], txtWats_41.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[44], txtWats_42.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[45], txtWats_43.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[46], txtWats_44.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[47], txtWats_45.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[48], txtWats_46.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[49], txtWats_47.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[50], txtWats_48.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[51], txtWats_49.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[52], txtWats_50.Text));
+                Class.Variables.watts.Add(new Class.Watts(Class.Variables.enableButtonSelect[53], txtWats_51.Text));
+            }
+            catch {; }
+            finally
+            {
+                for (int p = 0; p <= 53; p++)
+                {
+                    Class.Variables.poten[0] = (Class.Variables.watts[p].ID == "200" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[0];
+                    Class.Variables.poten[1] = (Class.Variables.watts[p].ID == "201" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[1];
+                    Class.Variables.poten[2] = (Class.Variables.watts[p].ID == "202" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[2];
+                    Class.Variables.poten[3] = (Class.Variables.watts[p].ID == "203" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[3];
+                    Class.Variables.poten[4] = (Class.Variables.watts[p].ID == "204" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[4];
+                    Class.Variables.poten[5] = (Class.Variables.watts[p].ID == "205" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[5];
+                    Class.Variables.poten[6] = (Class.Variables.watts[p].ID == "206" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[6];
+                    Class.Variables.poten[7] = (Class.Variables.watts[p].ID == "207" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[7];
+
+                    Class.Variables.poten[8] = (Class.Variables.watts[p].ID == "210" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[8];
+                    Class.Variables.poten[9] = (Class.Variables.watts[p].ID == "211" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[9];
+                    Class.Variables.poten[10] = (Class.Variables.watts[p].ID == "212" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[10];
+                    Class.Variables.poten[11] = (Class.Variables.watts[p].ID == "213" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[11];
+                    Class.Variables.poten[12] = (Class.Variables.watts[p].ID == "214" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[12];
+                    Class.Variables.poten[13] = (Class.Variables.watts[p].ID == "215" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[13];
+                    Class.Variables.poten[14] = (Class.Variables.watts[p].ID == "216" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[14];
+                    Class.Variables.poten[15] = (Class.Variables.watts[p].ID == "217" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[15];
+
+                    Class.Variables.poten[16] = (Class.Variables.watts[p].ID == "220" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[16];
+                    Class.Variables.poten[17] = (Class.Variables.watts[p].ID == "221" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[17];
+                    Class.Variables.poten[18] = (Class.Variables.watts[p].ID == "222" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[18];
+                    Class.Variables.poten[19] = (Class.Variables.watts[p].ID == "223" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[19];
+                    Class.Variables.poten[20] = (Class.Variables.watts[p].ID == "224" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[20];
+                    Class.Variables.poten[21] = (Class.Variables.watts[p].ID == "225" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[21];
+                    Class.Variables.poten[22] = (Class.Variables.watts[p].ID == "226" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[22];
+                    Class.Variables.poten[23] = (Class.Variables.watts[p].ID == "227" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[23];
+
+                    Class.Variables.poten[24] = (Class.Variables.watts[p].ID == "230" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[24];
+                    Class.Variables.poten[25] = (Class.Variables.watts[p].ID == "231" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[25];
+                    Class.Variables.poten[26] = (Class.Variables.watts[p].ID == "232" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[26];
+                    Class.Variables.poten[27] = (Class.Variables.watts[p].ID == "233" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[27];
+                    Class.Variables.poten[28] = (Class.Variables.watts[p].ID == "234" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[28];
+                    Class.Variables.poten[29] = (Class.Variables.watts[p].ID == "235" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[29];
+                    Class.Variables.poten[30] = (Class.Variables.watts[p].ID == "236" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[30];
+                    Class.Variables.poten[31] = (Class.Variables.watts[p].ID == "237" && Class.Variables.watts[p].POT != "") ? int.Parse(Class.Variables.watts[p].POT) : Class.Variables.poten[31];
+
+                }
+            }
         }
 
     }
