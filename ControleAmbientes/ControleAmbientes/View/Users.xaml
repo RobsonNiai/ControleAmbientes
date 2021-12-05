@@ -12,6 +12,8 @@
 
         <Label Content="X" HorizontalAlignment="Left" Margin="764,0,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="28" Foreground="red" MouseUp="Label_MouseUp" Cursor="Hand" ToolTip="Clique para fechar." Height="42" Width="31"/>
 
+        <CheckBox x:Name="seletorAdm" Content="Administrador" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="30" Margin="236,56,0,0" VerticalAlignment="Top" Width="151" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="Magenta" FlowDirection="RightToLeft"/>
+        
         <Label Content="Nome" HorizontalAlignment="Left" Margin="35,56,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="Magenta"/>
         <TextBox x:Name="txtName" HorizontalAlignment="Left" TextWrapping="NoWrap" VerticalAlignment="Top" Width="352" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Magenta" BorderBrush="Magenta" BorderThickness="1,2,1,2" Margin="35,91,0,0" ToolTip="Insira seu nome"/>
 
@@ -28,7 +30,7 @@
         <PasswordBox x:Name="txtPasswordConfirma" HorizontalAlignment="Left" Margin="35,390,0,0" VerticalAlignment="Top" Width="352" Height="38" FontFamily="Arial Rounded MT Bold" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Magenta" BorderBrush="Magenta" BorderThickness="1,2,1,2" ToolTip="Confirme sua senha"/>
 
         <DataGrid x:Name="dataGridUsers" HorizontalAlignment="Left" Height="339" Margin="422,87,0,0" VerticalAlignment="Top" Width="349" AutoGenerateColumns="False" ItemsSource="{Binding Path=LoadDataBinding}" HorizontalScrollBarVisibility="Hidden">
-            <DataGrid.Columns>                
+            <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=c_EmailUsers}" Header="Email" MaxWidth="190" IsReadOnly="True" MinWidth="190"/>
                 <DataGridTextColumn Binding="{Binding Path=c_NameUsers}" Header="Nome" MaxWidth="150" IsReadOnly="True" MinWidth="150"/>
             </DataGrid.Columns>
@@ -62,6 +64,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        
 
     </Grid>
 </Window>

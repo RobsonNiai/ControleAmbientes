@@ -71,10 +71,14 @@ namespace ControleAmbientes.UserControls
         //Botão Tela Usuarios
         private void btUsers_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if (Class.Variables.userLoggin)
+            if (Class.Variables.userLoggin && Class.Variables.admin)
             {
                 Views.viewUsers.Visibility = Visibility.Visible;
                 Views.viewUsers.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Somente Administradores podem acessar essa aba.", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Stop);
             }
         }
 

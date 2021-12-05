@@ -1,5 +1,5 @@
 /* Deleta estrutura para testes */
-/*drop database controleambientesdb;*/
+drop database controleambientesdb;
 
 /* Comando cria banco de dados */
 create Database controleambientesdb;
@@ -10,6 +10,7 @@ create table controleambientesdb.users(
     c_NameUsers char(255) not null,
     c_LogginUsers char(255) not null,
     c_PasswUsers char(255) not null,
+    b_Admin boolean,
     d_DataUsers datetime not null,
     primary key (c_EmailUsers)
 );
@@ -249,6 +250,6 @@ create table controleambientesdb.config(
 );
 
 /* Inseri usuário padrão na aplicação */
-insert Into controleambientesdb.users(c_EmailUsers, c_NameUsers, c_LogginUsers, c_PasswUsers, d_DataUsers) Values ('adm@adm.com.br', 'adm', 'adm', md5('adm'), now());  
+insert Into controleambientesdb.users(c_EmailUsers, c_NameUsers, c_LogginUsers, c_PasswUsers, b_Admin, d_DataUsers) Values ('adm@adm.com.br', 'adm', 'adm', md5('adm'), true, now());  
 
 

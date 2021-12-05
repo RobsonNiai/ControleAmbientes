@@ -183,7 +183,7 @@ namespace ControleAmbientes.Class
         /// <param name="c_LogginUsers"></param>
         /// <param name="c_PasswUsers"></param>
         /// <returns></returns>
-        public bool LoginUser(string c_LogginUsers, string c_PasswUsers)
+        public bool LoginUser(string c_LogginUsers, string c_PasswUsers, ref bool b_Admin)
         {
             string retorno = ""; bool resultado = false;
 
@@ -202,6 +202,7 @@ namespace ControleAmbientes.Class
                 comandReader.Read();
 
                 retorno = comandReader["c_EmailUsers"].ToString();
+                b_Admin = bool.Parse(comandReader["b_Admin"].ToString());
 
             }
             catch { }
@@ -218,9 +219,10 @@ namespace ControleAmbientes.Class
         /// <param name="c_EmailUsers"></param>
         /// <param name="c_NameUsers"></param>
         /// <param name="c_LogginUsers"></param>
-        public void SaveUser(string c_EmailUsers, string c_NameUsers, string c_LogginUsers, string c_PasswUsers)
+        /// <param name="b_Admin"></param>
+        public void SaveUser(string c_EmailUsers, string c_NameUsers, string c_LogginUsers, string c_PasswUsers, bool b_Admin)
         {
-            string QuerySql = "INSERT INTO controleambientesdb.users VALUES('" + c_EmailUsers + "','" + c_NameUsers + "', '" + c_LogginUsers + "', md5('" + c_PasswUsers + "'),'" + DateTime.Now.ToString(dataFormat) + "')";
+            string QuerySql = "INSERT INTO controleambientesdb.users VALUES('" + c_EmailUsers + "','" + c_NameUsers + "', '" + c_LogginUsers + "', md5('" + c_PasswUsers + "')," + b_Admin + " ,'" + DateTime.Now.ToString(dataFormat) + "')";
 
             MySqlConnection connect = new MySqlConnection(path);
             MySqlCommand comand = new MySqlCommand(QuerySql, connect);
@@ -307,9 +309,10 @@ namespace ControleAmbientes.Class
         /// <param name="c_EmailUsers"></param>
         /// <param name="c_NameUsers"></param>
         /// <param name="c_LogginUsers"></param>
-        public void ReloadUsers(ref string c_EmailUsers, ref string c_NameUsers, ref string c_LogginUsers)
+        /// <param name="b_Admin"></param>
+        public void ReloadUsers(ref string c_EmailUsers, ref string c_NameUsers, ref string c_LogginUsers, ref bool b_Admin)
         {
-            string QuerySql = "SELECT c_NameUsers, c_LogginUsers FROM controleambientesdb.users Where c_EmailUsers = '" + c_EmailUsers + "'";
+            string QuerySql = "SELECT c_NameUsers, c_LogginUsers, b_Admin FROM controleambientesdb.users Where c_EmailUsers = '" + c_EmailUsers + "'";
 
             MySqlConnection connect = new MySqlConnection(path);
 
@@ -325,6 +328,7 @@ namespace ControleAmbientes.Class
 
                 c_NameUsers = comandReader["c_NameUsers"].ToString();
                 c_LogginUsers = comandReader["c_NameUsers"].ToString();
+                b_Admin = bool.Parse(comandReader["b_Admin"].ToString());
 
 
             }

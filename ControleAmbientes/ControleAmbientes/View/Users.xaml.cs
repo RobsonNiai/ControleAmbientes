@@ -23,6 +23,7 @@ namespace ControleAmbientes.View
             txtLogin.Text = "";
             txtPassword.Password = "";
             txtPasswordConfirma.Password = "";
+            seletorAdm.IsChecked = false;
 
             dataGridUsers.DataContext = crud.FillDataGrid();
         }
@@ -76,7 +77,7 @@ namespace ControleAmbientes.View
                 return;
             }
 
-            crud.SaveUser(txtEmail.Text, txtName.Text, txtLogin.Text, txtPasswordConfirma.Password.ToString());
+            crud.SaveUser(txtEmail.Text, txtName.Text, txtLogin.Text, txtPasswordConfirma.Password.ToString(), seletorAdm.IsChecked.Value);
 
             dataGridUsers.DataContext = crud.FillDataGrid();
 
@@ -90,12 +91,14 @@ namespace ControleAmbientes.View
                 string cellValue = dataRow.Row.ItemArray[1].ToString();
 
                 string[] reLoadUser = new string[3];
+                bool reLoadUserAdmin = false;
                 reLoadUser[0] = cellValue;
-                crud.ReloadUsers(ref reLoadUser[0], ref reLoadUser[1], ref reLoadUser[2]);
+                crud.ReloadUsers(ref reLoadUser[0], ref reLoadUser[1], ref reLoadUser[2], ref reLoadUserAdmin);
 
                 txtName.Text = reLoadUser[1];
                 txtEmail.Text = reLoadUser[0];
                 txtLogin.Text = reLoadUser[2];
+                seletorAdm.IsChecked = reLoadUserAdmin;
             }
             catch
             {

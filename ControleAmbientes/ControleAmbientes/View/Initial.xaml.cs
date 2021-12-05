@@ -16,7 +16,7 @@ namespace ControleAmbientes.View
 
         private void login_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.userLoggin = crud.LoginUser(txtLogin.Text, txtPassword.Password) ? true : false;
+            Class.Variables.userLoggin = crud.LoginUser(txtLogin.Text, txtPassword.Password, ref Class.Variables.admin) ? true : false;
 
             if (Class.Variables.userLoggin)
             {

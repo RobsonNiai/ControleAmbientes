@@ -954,59 +954,67 @@ namespace ControleAmbientes.View
 
         private void btSalveData_Click(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show("Definir esses dados como padrão?", "! ! ! Atenção ! ! !", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if (Class.Variables.admin)
             {
-                //Update variaveis globais estaticas
-                updateGlobalVar();
-
-                //Atualiza variaveis globais seletoras
-                enableButtonSelect();
-
-                //Lista que faz uma pre verificação de dados em conflito
-                List<String> verifyValue = new List<String>(54);
-                verifyValue.Clear(); verifyValue.AddRange(Class.Variables.enableButtonSelect);
-
-                //Código de proteção que interrompe o ciclo de salvamento por inconsistência
-                for (int z = 0 ; z < 54 ; z++)
+                if (MessageBox.Show("Definir esses dados como padrão?", "! ! ! Atenção ! ! !", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
-                    int count = 0;
+                    //Update variaveis globais estaticas
+                    updateGlobalVar();
 
-                    for (int y = 0 ; y < 54 ; y++){
+                    //Atualiza variaveis globais seletoras
+                    enableButtonSelect();
 
-                        count = (verifyValue[z].Equals(verifyValue[y]) && int.Parse(verifyValue[z].Substring(0,1)) > 1 && !verifyValue[z].Equals("0-1-1")) ? count + 1 : count;
-                    }
+                    //Lista que faz uma pre verificação de dados em conflito
+                    List<String> verifyValue = new List<String>(54);
+                    verifyValue.Clear(); verifyValue.AddRange(Class.Variables.enableButtonSelect);
 
-                    if(count > 1) 
+                    //Código de proteção que interrompe o ciclo de salvamento por inconsistência
+                    for (int z = 0; z < 54; z++)
                     {
-                        string mensagem = "! ! ! Dados em conflito ! ! ! \n NÃO podemos ter 2 IO Tipo Saída. \n Com o mesmo tipo de ação.";
+                        int count = 0;
 
-                        MessageBox.Show(mensagem, "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
-                        return;
+                        for (int y = 0; y < 54; y++)
+                        {
+
+                            count = (verifyValue[z].Equals(verifyValue[y]) && int.Parse(verifyValue[z].Substring(0, 1)) > 1 && !verifyValue[z].Equals("0-1-1")) ? count + 1 : count;
+                        }
+
+                        if (count > 1)
+                        {
+                            string mensagem = "! ! ! Dados em conflito ! ! ! \n NÃO podemos ter 2 IO Tipo Saída. \n Com o mesmo tipo de ação.";
+
+                            MessageBox.Show(mensagem, "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+                            return;
+                        }
+
                     }
+
+                    //Limpa os dados da Lista utilizada
+                    Class.Variables.enableButton.Clear();
+
+                    //Adicona valores novos a Lista Limpa 
+                    Class.Variables.enableButton.AddRange(Class.Variables.enableButtonSelect);
+
+                    //Concatena valores dos octetos para formar o IP do arduino
+                    string ip_Arduino = txtFirstOcteto.Text + "." + txtSecondOcteto.Text + "." + txtThirdOcteto.Text + "." + txtFourthOcteto.Text;
+
+                    Class.Variables.d_DateTime = System.DateTime.Now;
+
+                    //Salva dados no banco, aqui eu utilizo apenas 1 registro pois não quero ter mais de uma configuração, mas poderia ter controle de alterações apenas
+                    //mudando o valor 1 para uma valor sequencial.
+                    crud.SaveConfig(1, Class.Variables.d_DateTime, ip_Arduino, Class.Variables.typeIO_DB, Class.Variables.actionCol_DB, Class.Variables.actionRow_DB, Class.Variables.watts_DB);
+
+                    MessageBox.Show("Dados Salvos com Sucesso", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    setListPot();
 
                 }
-
-                //Limpa os dados da Lista utilizada
-                Class.Variables.enableButton.Clear();
-
-                //Adicona valores novos a Lista Limpa 
-                Class.Variables.enableButton.AddRange(Class.Variables.enableButtonSelect);
-
-                //Concatena valores dos octetos para formar o IP do arduino
-                string ip_Arduino = txtFirstOcteto.Text + "." + txtSecondOcteto.Text + "." + txtThirdOcteto.Text + "." + txtFourthOcteto.Text;
-
-                Class.Variables.d_DateTime = System.DateTime.Now;
-
-                //Salva dados no banco, aqui eu utilizo apenas 1 registro pois não quero ter mais de uma configuração, mas poderia ter controle de alterações apenas
-                //mudando o valor 1 para uma valor sequencial.
-                crud.SaveConfig(1, Class.Variables.d_DateTime, ip_Arduino, Class.Variables.typeIO_DB, Class.Variables.actionCol_DB, Class.Variables.actionRow_DB, Class.Variables.watts_DB);
-
-                MessageBox.Show("Dados Salvos com Sucesso", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                setListPot();
-
             }
-                
+            else
+            {
+                MessageBox.Show("Função destinada somente a Administradores.", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Stop);
+            }
+            
         }
 
         private void btUploadData_Click(object sender, RoutedEventArgs e)
