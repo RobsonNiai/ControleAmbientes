@@ -11,16 +11,16 @@
 
         <UserControls:MainMenu HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top"/>
         <UserControls:CronoDateTime HorizontalAlignment="Left" Margin="0,764,0,0" VerticalAlignment="Top"/>
-        <DataGrid x:Name="dataGridData" HorizontalAlignment="Center" Height="507" Margin="0,140,0,0" VerticalAlignment="Top" Width="760" AutoGenerateColumns="False" ItemsSource="{Binding LoadDataBinding}" HorizontalScrollBarVisibility="Hidden">
+        <DataGrid x:Name="dataGridData" HorizontalAlignment="Center" Height="507" Margin="0,140,0,0" VerticalAlignment="Top" Width="760" AutoGenerateColumns="False" ItemsSource="{Binding LoadDataBinding}" HorizontalScrollBarVisibility="Hidden" IsReadOnly="True" CanUserSortColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding n_IdEvent}" Header="Registro" MaxWidth="100" IsReadOnly="True" MinWidth="190"/>
-                <DataGridTextColumn Binding="{Binding d_DataEvent}" Header="Data/Hora Evento" MaxWidth="190" IsReadOnly="True" MinWidth="190" HeaderStringFormat="dd/MM/yyyy hh:mm:ss"/>
-                <DataGridTextColumn Binding="{Binding c_ObjectEvent}" Header="Objeto Evento" MaxWidth="150" IsReadOnly="True" MinWidth="150"/>
-                <DataGridTextColumn Binding="{Binding c_Event}" Header="Evento" MaxWidth="150" IsReadOnly="True" MinWidth="150"/>
-                <DataGridTextColumn Binding="{Binding n_WattsEvent}" Header="Consumo (Watts)" MaxWidth="150" IsReadOnly="True" MinWidth="150"/>
+                <DataGridTextColumn Binding="{Binding n_IdEvent}" Header="Registro" MaxWidth="100" IsReadOnly="True" MinWidth="190" CanUserReorder="False"/>
+                <DataGridTextColumn Binding="{Binding d_DataEvent, StringFormat='dd/MM/yyyy HH:mm:ss'}" Header="Data/Hora Evento" MaxWidth="190" IsReadOnly="True" MinWidth="190" CanUserReorder="False"/>
+                <DataGridTextColumn Binding="{Binding c_ObjectEvent}" Header="Objeto Evento" MaxWidth="150" IsReadOnly="True" MinWidth="150" CanUserReorder="False"/>
+                <DataGridTextColumn Binding="{Binding c_Event}" Header="Evento" MaxWidth="150" IsReadOnly="True" MinWidth="150" CanUserReorder="False"/>
+                <DataGridTextColumn Binding="{Binding n_WattsEvent}" Header="Potência (Watts)" MaxWidth="150" IsReadOnly="True" MinWidth="150" CanUserReorder="False"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btFiltrar" Content="Filtrar Consulta" HorizontalAlignment="Left" Margin="583,674,0,100" Width="150" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="14" Foreground="Black" Click="btFiltrar_Click">
+        <Button x:Name="btFiltrar" Content="Filtrar Consulta" HorizontalAlignment="Left" Margin="583,674,0,100" Width="128" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="14" Foreground="Black" Click="btFiltrar_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF78FF63" Offset="0"/>
@@ -32,6 +32,17 @@
         <DatePicker x:Name="dataInicial" HorizontalAlignment="Left" Height="26" Margin="268,674,0,0" VerticalAlignment="Top" Width="152" ToolTip="Selecione uma data inicial" SelectedDateFormat="Short"/>
         <DatePicker x:Name="dataFinal" HorizontalAlignment="Left" Height="26" Margin="426,674,0,0" VerticalAlignment="Top" Width="152" ToolTip="Selecione uma data final" SelectedDateFormat="Short"/>
         <Label Content="Relatório de Acionamentos" HorizontalAlignment="Left" Margin="1029,61,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="18" Foreground="#FF9900FF" Height="33" Width="248"/>
+        <Button x:Name="btCalcular" Content="Calcular Consumo" HorizontalAlignment="Left" Margin="716,674,0,100" Width="129" BorderBrush="{x:Null}" FontWeight="Normal" FontSize="14" Foreground="Black" Click="btCalcular_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF63FFBF" Offset="0"/>
+                    <GradientStop Color="#FF63FFBF" Offset="1"/>
+                    <GradientStop Color="#7F04D6B9" Offset="0.5"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Tarifa R$" HorizontalAlignment="Left" Margin="876,674,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="12" Foreground="#FF9900FF" Height="26" Width="66"/>
+        <TextBox x:Name="tarifa" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="947,674,0,0" Text="0,00" TextWrapping="Wrap" FontFamily="Arial Rounded MT Bold" FontSize="16" Foreground="#FF9900FF" Height="26" Width="73"  VerticalAlignment="Top" PreviewTextInput="tarifa_PreviewTextInput"/>
 
     </Grid>
 </Window>
