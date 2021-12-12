@@ -13,8 +13,6 @@ namespace ControleAmbientes.View
         Uri fileUriOn = new Uri("/Img/btON.png", UriKind.Relative);
         Uri fileUriOFF = new Uri("/Img/btOFF.png", UriKind.Relative);
         Class.CRUD crud = new Class.CRUD();
-       
-        ModbusTCP.Master MBmaster = new ModbusTCP.Master();
 
         bool firstRead = false;
 
@@ -36,8 +34,8 @@ namespace ControleAmbientes.View
             if (!firstRead)
             {
                 Class.Views.viewConfiguration.setListPot();
+                Class.Views.viewConfiguration.updateActionModbus();
                 firstRead = true;
-                MBmaster.connect(Class.Variables.c_IpArduinoConfig, 502, false);
             }
 
         }
@@ -542,42 +540,106 @@ namespace ControleAmbientes.View
 
         private void btC1L1_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[0] = !Class.Variables.btSelect[0];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[0] = !Class.Variables.btSelect[0];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[0], Class.Variables.btSelect[0]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC1L2_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[1] = !Class.Variables.btSelect[1];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[1] = !Class.Variables.btSelect[1];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[1], Class.Variables.btSelect[1]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC1L3_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[2] = !Class.Variables.btSelect[2];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[2] = !Class.Variables.btSelect[2];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[2], Class.Variables.btSelect[2]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC1L4_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[3] = !Class.Variables.btSelect[3];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[3] = !Class.Variables.btSelect[3];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[3], Class.Variables.btSelect[3]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC1L5_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[4] = !Class.Variables.btSelect[4];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[4] = !Class.Variables.btSelect[4];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[4], Class.Variables.btSelect[4]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC1L6_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[5] = !Class.Variables.btSelect[5];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[5] = !Class.Variables.btSelect[5];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[5], Class.Variables.btSelect[5]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC1L7_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[6] = !Class.Variables.btSelect[6];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[6] = !Class.Variables.btSelect[6];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[6], Class.Variables.btSelect[6]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC1L8_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[7] = !Class.Variables.btSelect[7];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[7] = !Class.Variables.btSelect[7];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[7], Class.Variables.btSelect[7]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
 
@@ -587,42 +649,106 @@ namespace ControleAmbientes.View
 
         private void btC2L1_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[8] = !Class.Variables.btSelect[8];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[8] = !Class.Variables.btSelect[8];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[8], Class.Variables.btSelect[8]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC2L2_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[9] = !Class.Variables.btSelect[9];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[9] = !Class.Variables.btSelect[9];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[9], Class.Variables.btSelect[9]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC2L3_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[10] = !Class.Variables.btSelect[10];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[10] = !Class.Variables.btSelect[10];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[10], Class.Variables.btSelect[10]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC2L4_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[11] = !Class.Variables.btSelect[11];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[11] = !Class.Variables.btSelect[11];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[11], Class.Variables.btSelect[11]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC2L5_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[12] = !Class.Variables.btSelect[12];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[12] = !Class.Variables.btSelect[12];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[12], Class.Variables.btSelect[12]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC2L6_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[13] = !Class.Variables.btSelect[13];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[13] = !Class.Variables.btSelect[13];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[13], Class.Variables.btSelect[13]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC2L7_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[14] = !Class.Variables.btSelect[14];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[14] = !Class.Variables.btSelect[14];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[14], Class.Variables.btSelect[14]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC2L8_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[15] = !Class.Variables.btSelect[15];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[15] = !Class.Variables.btSelect[15];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[15], Class.Variables.btSelect[15]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         #endregion
@@ -631,42 +757,106 @@ namespace ControleAmbientes.View
 
         private void btC3L1_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[16] = !Class.Variables.btSelect[16];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[16] = !Class.Variables.btSelect[16];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[16], Class.Variables.btSelect[16]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC3L2_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[17] = !Class.Variables.btSelect[17];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[17] = !Class.Variables.btSelect[17];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[17], Class.Variables.btSelect[17]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC3L3_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[18] = !Class.Variables.btSelect[18];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[18] = !Class.Variables.btSelect[18];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[18], Class.Variables.btSelect[18]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC3L4_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[19] = !Class.Variables.btSelect[19];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[19] = !Class.Variables.btSelect[19];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[19], Class.Variables.btSelect[19]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC3L5_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[20] = !Class.Variables.btSelect[20];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[20] = !Class.Variables.btSelect[20];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[20], Class.Variables.btSelect[20]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC3L6_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[21] = !Class.Variables.btSelect[21];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[21] = !Class.Variables.btSelect[21];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[21], Class.Variables.btSelect[21]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC3L7_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[22] = !Class.Variables.btSelect[22];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[22] = !Class.Variables.btSelect[22];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[22], Class.Variables.btSelect[22]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC3L8_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[23] = !Class.Variables.btSelect[23];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[23] = !Class.Variables.btSelect[23];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[23], Class.Variables.btSelect[23]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         #endregion
@@ -675,42 +865,106 @@ namespace ControleAmbientes.View
 
         private void btC4L1_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[24] = !Class.Variables.btSelect[24];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[24] = !Class.Variables.btSelect[24];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[24], Class.Variables.btSelect[24]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC4L2_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[25] = !Class.Variables.btSelect[25];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[25] = !Class.Variables.btSelect[25];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[25], Class.Variables.btSelect[25]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC4L3_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[26] = !Class.Variables.btSelect[26];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[26] = !Class.Variables.btSelect[26];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[26], Class.Variables.btSelect[26]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC4L4_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[27] = !Class.Variables.btSelect[27];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[27] = !Class.Variables.btSelect[27];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[27], Class.Variables.btSelect[27]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC4L5_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[28] = !Class.Variables.btSelect[28];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[28] = !Class.Variables.btSelect[28];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[28], Class.Variables.btSelect[28]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC4L6_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[29] = !Class.Variables.btSelect[29];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[29] = !Class.Variables.btSelect[29];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[29], Class.Variables.btSelect[29]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC4L7_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[30] = !Class.Variables.btSelect[30];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[30] = !Class.Variables.btSelect[30];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[30], Class.Variables.btSelect[30]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void btC4L8_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Class.Variables.btSelect[31] = !Class.Variables.btSelect[31];
+            if (Class.Views.viewConfiguration.MBmaster.connected)
+            {
+                Class.Variables.btSelect[31] = !Class.Variables.btSelect[31];
+                Class.Views.viewConfiguration.actionCoilModbus(Class.Variables.modBusAddres[31], Class.Variables.btSelect[31]);
+            }
+            else
+            {
+                MessageBox.Show("Sem Conexão com o Arduino", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
 

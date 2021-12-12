@@ -15,6 +15,7 @@ namespace ControleAmbientes.View
         DispatcherTimer timerUpdateValues = new DispatcherTimer();
         Class.CRUD crud = new Class.CRUD();
 
+        public ModbusTCP.Master MBmaster = new ModbusTCP.Master();
         public Configuration()
         {
             InitializeComponent();
@@ -1007,6 +1008,7 @@ namespace ControleAmbientes.View
                     MessageBox.Show("Dados Salvos com Sucesso", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Information);
 
                     setListPot();
+                    updateActionModbus();
 
                 }
             }
@@ -1017,6 +1019,7 @@ namespace ControleAmbientes.View
             
         }
 
+
         private void btUploadData_Click(object sender, RoutedEventArgs e)
         {
             updateConfig();
@@ -1024,7 +1027,25 @@ namespace ControleAmbientes.View
 
         private void btSendArduino_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Dados enviados com Sucesso", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (!MBmaster.connected) { MBmaster.connect(Class.Variables.c_IpArduinoConfig, 502, false); }
+
+            if (MBmaster.connected) { MessageBox.Show("Conectado com Sucesso", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Information); }
+            else { MessageBox.Show("Falha na Conexão", "! ! ! Atenção ! ! !", MessageBoxButton.OK, MessageBoxImage.Information); }
+
+        }
+
+        /// <summary>
+        /// Método publico utilizado para ligar e desligar
+        /// o IO no arduino atraves da biblioteca ModBusTCP
+        /// </summary>
+        /// <param name="StartAddress"></param>
+        /// <param name="data"></param>
+        public void actionCoilModbus(ushort StartAddress, bool data)
+        {
+            ushort ID = 5;
+            byte unit = Convert.ToByte("0");
+
+            MBmaster.WriteSingleCoils(ID, unit, StartAddress, data);
         }
 
         public void updateGlobalVar()
@@ -1525,6 +1546,185 @@ namespace ControleAmbientes.View
 
                 }
             }
+        }
+
+        /// <summary>
+        /// Metodo publico responsável por setar as tabelas de ModBus TCP
+        /// ao IO do Arduino com o botão para ligar e desligar
+        /// </summary>
+        public void updateActionModbus()
+        {
+            int[] selectModBus = new int[54];
+
+            selectModBus[0] = comboTypeA0.SelectedIndex.Equals(2) ? int.Parse(comboTypeA0.SelectedIndex.ToString() + comboColA0.SelectedIndex.ToString() + comboRowA0.SelectedIndex.ToString()) : -1;
+            selectModBus[1] = comboTypeA1.SelectedIndex.Equals(2) ? int.Parse(comboTypeA1.SelectedIndex.ToString() + comboColA1.SelectedIndex.ToString() + comboRowA1.SelectedIndex.ToString()) : -1;
+            selectModBus[2] = comboTypeA2.SelectedIndex.Equals(2) ? int.Parse(comboTypeA2.SelectedIndex.ToString() + comboColA2.SelectedIndex.ToString() + comboRowA2.SelectedIndex.ToString()) : -1;
+            selectModBus[3] = comboTypeA3.SelectedIndex.Equals(2) ? int.Parse(comboTypeA3.SelectedIndex.ToString() + comboColA3.SelectedIndex.ToString() + comboRowA3.SelectedIndex.ToString()) : -1;
+            selectModBus[4] = comboTypeA4.SelectedIndex.Equals(2) ? int.Parse(comboTypeA4.SelectedIndex.ToString() + comboColA4.SelectedIndex.ToString() + comboRowA4.SelectedIndex.ToString()) : -1;
+            selectModBus[5] = comboTypeA5.SelectedIndex.Equals(2) ? int.Parse(comboTypeA5.SelectedIndex.ToString() + comboColA5.SelectedIndex.ToString() + comboRowA5.SelectedIndex.ToString()) : -1;
+            selectModBus[6] = comboTypeA6.SelectedIndex.Equals(2) ? int.Parse(comboTypeA6.SelectedIndex.ToString() + comboColA6.SelectedIndex.ToString() + comboRowA6.SelectedIndex.ToString()) : -1;
+            selectModBus[7] = comboTypeA7.SelectedIndex.Equals(2) ? int.Parse(comboTypeA7.SelectedIndex.ToString() + comboColA7.SelectedIndex.ToString() + comboRowA7.SelectedIndex.ToString()) : -1;
+            selectModBus[8] = comboTypeA8.SelectedIndex.Equals(2) ? int.Parse(comboTypeA8.SelectedIndex.ToString() + comboColA8.SelectedIndex.ToString() + comboRowA8.SelectedIndex.ToString()) : -1;
+            selectModBus[9] = comboTypeA9.SelectedIndex.Equals(2) ? int.Parse(comboTypeA9.SelectedIndex.ToString() + comboColA9.SelectedIndex.ToString() + comboRowA9.SelectedIndex.ToString()) : -1;
+            selectModBus[10] = comboTypeA10.SelectedIndex.Equals(2) ? int.Parse(comboTypeA10.SelectedIndex.ToString() + comboColA10.SelectedIndex.ToString() + comboRowA10.SelectedIndex.ToString()) : -1;
+            selectModBus[11] = comboTypeA11.SelectedIndex.Equals(2) ? int.Parse(comboTypeA11.SelectedIndex.ToString() + comboColA11.SelectedIndex.ToString() + comboRowA11.SelectedIndex.ToString()) : -1;
+            selectModBus[12] = comboTypeA12.SelectedIndex.Equals(2) ? int.Parse(comboTypeA12.SelectedIndex.ToString() + comboColA12.SelectedIndex.ToString() + comboRowA12.SelectedIndex.ToString()) : -1;
+            selectModBus[13] = comboTypeA13.SelectedIndex.Equals(2) ? int.Parse(comboTypeA13.SelectedIndex.ToString() + comboColA13.SelectedIndex.ToString() + comboRowA13.SelectedIndex.ToString()) : -1;
+            selectModBus[14] = comboTypeA14.SelectedIndex.Equals(2) ? int.Parse(comboTypeA14.SelectedIndex.ToString() + comboColA14.SelectedIndex.ToString() + comboRowA14.SelectedIndex.ToString()) : -1;
+            selectModBus[15] = comboTypeA15.SelectedIndex.Equals(2) ? int.Parse(comboTypeA15.SelectedIndex.ToString() + comboColA15.SelectedIndex.ToString() + comboRowA15.SelectedIndex.ToString()) : -1;
+            selectModBus[16] = comboType2.SelectedIndex.Equals(2) ? int.Parse(comboType2.SelectedIndex.ToString() + comboCol2.SelectedIndex.ToString() + comboRow2.SelectedIndex.ToString()) : -1;
+            selectModBus[17] = comboType3.SelectedIndex.Equals(2) ? int.Parse(comboType3.SelectedIndex.ToString() + comboCol3.SelectedIndex.ToString() + comboRow3.SelectedIndex.ToString()) : -1;
+            selectModBus[18] = comboType4.SelectedIndex.Equals(2) ? int.Parse(comboType4.SelectedIndex.ToString() + comboCol4.SelectedIndex.ToString() + comboRow4.SelectedIndex.ToString()) : -1;
+            selectModBus[19] = comboType5.SelectedIndex.Equals(2) ? int.Parse(comboType5.SelectedIndex.ToString() + comboCol5.SelectedIndex.ToString() + comboRow5.SelectedIndex.ToString()) : -1;
+            selectModBus[20] = comboType6.SelectedIndex.Equals(2) ? int.Parse(comboType6.SelectedIndex.ToString() + comboCol6.SelectedIndex.ToString() + comboRow6.SelectedIndex.ToString()) : -1;
+            selectModBus[21] = comboType7.SelectedIndex.Equals(2) ? int.Parse(comboType7.SelectedIndex.ToString() + comboCol7.SelectedIndex.ToString() + comboRow7.SelectedIndex.ToString()) : -1;
+            selectModBus[22] = comboType8.SelectedIndex.Equals(2) ? int.Parse(comboType8.SelectedIndex.ToString() + comboCol8.SelectedIndex.ToString() + comboRow8.SelectedIndex.ToString()) : -1;
+            selectModBus[23] = comboType9.SelectedIndex.Equals(2) ? int.Parse(comboType9.SelectedIndex.ToString() + comboCol9.SelectedIndex.ToString() + comboRow9.SelectedIndex.ToString()) : -1;
+            selectModBus[24] = comboType22.SelectedIndex.Equals(2) ? int.Parse(comboType22.SelectedIndex.ToString() + comboCol22.SelectedIndex.ToString() + comboRow22.SelectedIndex.ToString()) : -1;
+            selectModBus[25] = comboType23.SelectedIndex.Equals(2) ? int.Parse(comboType23.SelectedIndex.ToString() + comboCol23.SelectedIndex.ToString() + comboRow23.SelectedIndex.ToString()) : -1;
+            selectModBus[26] = comboType24.SelectedIndex.Equals(2) ? int.Parse(comboType24.SelectedIndex.ToString() + comboCol24.SelectedIndex.ToString() + comboRow24.SelectedIndex.ToString()) : -1;
+            selectModBus[27] = comboType25.SelectedIndex.Equals(2) ? int.Parse(comboType25.SelectedIndex.ToString() + comboCol25.SelectedIndex.ToString() + comboRow25.SelectedIndex.ToString()) : -1;
+            selectModBus[28] = comboType26.SelectedIndex.Equals(2) ? int.Parse(comboType26.SelectedIndex.ToString() + comboCol26.SelectedIndex.ToString() + comboRow26.SelectedIndex.ToString()) : -1;
+            selectModBus[29] = comboType27.SelectedIndex.Equals(2) ? int.Parse(comboType27.SelectedIndex.ToString() + comboCol27.SelectedIndex.ToString() + comboRow27.SelectedIndex.ToString()) : -1;
+            selectModBus[30] = comboType28.SelectedIndex.Equals(2) ? int.Parse(comboType28.SelectedIndex.ToString() + comboCol28.SelectedIndex.ToString() + comboRow28.SelectedIndex.ToString()) : -1;
+            selectModBus[31] = comboType29.SelectedIndex.Equals(2) ? int.Parse(comboType29.SelectedIndex.ToString() + comboCol29.SelectedIndex.ToString() + comboRow29.SelectedIndex.ToString()) : -1;
+            selectModBus[32] = comboType30.SelectedIndex.Equals(2) ? int.Parse(comboType30.SelectedIndex.ToString() + comboCol30.SelectedIndex.ToString() + comboRow30.SelectedIndex.ToString()) : -1;
+            selectModBus[33] = comboType31.SelectedIndex.Equals(2) ? int.Parse(comboType31.SelectedIndex.ToString() + comboCol31.SelectedIndex.ToString() + comboRow31.SelectedIndex.ToString()) : -1;
+            selectModBus[34] = comboType32.SelectedIndex.Equals(2) ? int.Parse(comboType32.SelectedIndex.ToString() + comboCol32.SelectedIndex.ToString() + comboRow32.SelectedIndex.ToString()) : -1;
+            selectModBus[35] = comboType33.SelectedIndex.Equals(2) ? int.Parse(comboType33.SelectedIndex.ToString() + comboCol33.SelectedIndex.ToString() + comboRow33.SelectedIndex.ToString()) : -1;
+            selectModBus[36] = comboType34.SelectedIndex.Equals(2) ? int.Parse(comboType34.SelectedIndex.ToString() + comboCol34.SelectedIndex.ToString() + comboRow34.SelectedIndex.ToString()) : -1;
+            selectModBus[37] = comboType35.SelectedIndex.Equals(2) ? int.Parse(comboType35.SelectedIndex.ToString() + comboCol35.SelectedIndex.ToString() + comboRow35.SelectedIndex.ToString()) : -1;
+            selectModBus[38] = comboType36.SelectedIndex.Equals(2) ? int.Parse(comboType36.SelectedIndex.ToString() + comboCol36.SelectedIndex.ToString() + comboRow36.SelectedIndex.ToString()) : -1;
+            selectModBus[39] = comboType37.SelectedIndex.Equals(2) ? int.Parse(comboType37.SelectedIndex.ToString() + comboCol37.SelectedIndex.ToString() + comboRow37.SelectedIndex.ToString()) : -1;
+            selectModBus[40] = comboType38.SelectedIndex.Equals(2) ? int.Parse(comboType38.SelectedIndex.ToString() + comboCol38.SelectedIndex.ToString() + comboRow38.SelectedIndex.ToString()) : -1;
+            selectModBus[41] = comboType39.SelectedIndex.Equals(2) ? int.Parse(comboType39.SelectedIndex.ToString() + comboCol39.SelectedIndex.ToString() + comboRow39.SelectedIndex.ToString()) : -1;
+            selectModBus[42] = comboType40.SelectedIndex.Equals(2) ? int.Parse(comboType40.SelectedIndex.ToString() + comboCol40.SelectedIndex.ToString() + comboRow40.SelectedIndex.ToString()) : -1;
+            selectModBus[43] = comboType41.SelectedIndex.Equals(2) ? int.Parse(comboType41.SelectedIndex.ToString() + comboCol41.SelectedIndex.ToString() + comboRow41.SelectedIndex.ToString()) : -1;
+            selectModBus[44] = comboType42.SelectedIndex.Equals(2) ? int.Parse(comboType42.SelectedIndex.ToString() + comboCol42.SelectedIndex.ToString() + comboRow42.SelectedIndex.ToString()) : -1;
+            selectModBus[45] = comboType43.SelectedIndex.Equals(2) ? int.Parse(comboType43.SelectedIndex.ToString() + comboCol43.SelectedIndex.ToString() + comboRow43.SelectedIndex.ToString()) : -1;
+            selectModBus[46] = comboType44.SelectedIndex.Equals(2) ? int.Parse(comboType44.SelectedIndex.ToString() + comboCol44.SelectedIndex.ToString() + comboRow44.SelectedIndex.ToString()) : -1;
+            selectModBus[47] = comboType45.SelectedIndex.Equals(2) ? int.Parse(comboType45.SelectedIndex.ToString() + comboCol45.SelectedIndex.ToString() + comboRow45.SelectedIndex.ToString()) : -1;
+            selectModBus[48] = comboType46.SelectedIndex.Equals(2) ? int.Parse(comboType46.SelectedIndex.ToString() + comboCol46.SelectedIndex.ToString() + comboRow46.SelectedIndex.ToString()) : -1;
+            selectModBus[49] = comboType47.SelectedIndex.Equals(2) ? int.Parse(comboType47.SelectedIndex.ToString() + comboCol47.SelectedIndex.ToString() + comboRow47.SelectedIndex.ToString()) : -1;
+            selectModBus[50] = comboType48.SelectedIndex.Equals(2) ? int.Parse(comboType48.SelectedIndex.ToString() + comboCol48.SelectedIndex.ToString() + comboRow48.SelectedIndex.ToString()) : -1;
+            selectModBus[51] = comboType49.SelectedIndex.Equals(2) ? int.Parse(comboType49.SelectedIndex.ToString() + comboCol49.SelectedIndex.ToString() + comboRow49.SelectedIndex.ToString()) : -1;
+            selectModBus[52] = comboType50.SelectedIndex.Equals(2) ? int.Parse(comboType50.SelectedIndex.ToString() + comboCol50.SelectedIndex.ToString() + comboRow50.SelectedIndex.ToString()) : -1;
+            selectModBus[53] = comboType51.SelectedIndex.Equals(2) ? int.Parse(comboType51.SelectedIndex.ToString() + comboCol51.SelectedIndex.ToString() + comboRow51.SelectedIndex.ToString()) : -1;
+
+            for (int x = 0; x <= 53; x++)
+            {
+                switch (selectModBus[x])
+                {
+                    #region Coluna 1
+                    case 200:
+                        Class.Variables.modBusAddres[0] = ushort.Parse(x.ToString());
+                        break;
+                    case 201:
+                        Class.Variables.modBusAddres[1] = ushort.Parse(x.ToString());
+                        break;
+                    case 202:
+                        Class.Variables.modBusAddres[2] = ushort.Parse(x.ToString());
+                        break;
+                    case 203:
+                        Class.Variables.modBusAddres[3] = ushort.Parse(x.ToString());
+                        break;
+                    case 204:
+                        Class.Variables.modBusAddres[4] = ushort.Parse(x.ToString());
+                        break;
+                    case 205:
+                        Class.Variables.modBusAddres[5] = ushort.Parse(x.ToString());
+                        break;
+                    case 206:
+                        Class.Variables.modBusAddres[6] = ushort.Parse(x.ToString());
+                        break;
+                    case 207:
+                        Class.Variables.modBusAddres[7] = ushort.Parse(x.ToString());
+                        break;
+                    #endregion
+
+                    #region Coluna 2
+                    case 210:
+                        Class.Variables.modBusAddres[8] = ushort.Parse(x.ToString());
+                        break;
+                    case 211:
+                        Class.Variables.modBusAddres[9] = ushort.Parse(x.ToString());
+                        break;
+                    case 212:
+                        Class.Variables.modBusAddres[10] = ushort.Parse(x.ToString());
+                        break;
+                    case 213:
+                        Class.Variables.modBusAddres[11] = ushort.Parse(x.ToString());
+                        break;
+                    case 214:
+                        Class.Variables.modBusAddres[12] = ushort.Parse(x.ToString());
+                        break;
+                    case 215:
+                        Class.Variables.modBusAddres[13] = ushort.Parse(x.ToString());
+                        break;
+                    case 216:
+                        Class.Variables.modBusAddres[14] = ushort.Parse(x.ToString());
+                        break;
+                    case 217:
+                        Class.Variables.modBusAddres[15] = ushort.Parse(x.ToString());
+                        break;
+                    #endregion
+
+                    #region Coluna 3
+                    case 220:
+                        Class.Variables.modBusAddres[16] = ushort.Parse(x.ToString());
+                        break;
+                    case 221:
+                        Class.Variables.modBusAddres[17] = ushort.Parse(x.ToString());
+                        break;
+                    case 222:
+                        Class.Variables.modBusAddres[18] = ushort.Parse(x.ToString());
+                        break;
+                    case 223:
+                        Class.Variables.modBusAddres[19] = ushort.Parse(x.ToString());
+                        break;
+                    case 224:
+                        Class.Variables.modBusAddres[20] = ushort.Parse(x.ToString());
+                        break;
+                    case 225:
+                        Class.Variables.modBusAddres[21] = ushort.Parse(x.ToString());
+                        break;
+                    case 226:
+                        Class.Variables.modBusAddres[22] = ushort.Parse(x.ToString());
+                        break;
+                    case 227:
+                        Class.Variables.modBusAddres[23] = ushort.Parse(x.ToString());
+                        break;
+                    #endregion
+
+                    #region Coluna 4
+                    case 230:
+                        Class.Variables.modBusAddres[24] = ushort.Parse(x.ToString());
+                        break;
+                    case 231:
+                        Class.Variables.modBusAddres[25] = ushort.Parse(x.ToString());
+                        break;
+                    case 232:
+                        Class.Variables.modBusAddres[26] = ushort.Parse(x.ToString());
+                        break;
+                    case 233:
+                        Class.Variables.modBusAddres[27] = ushort.Parse(x.ToString());
+                        break;
+                    case 234:
+                        Class.Variables.modBusAddres[28] = ushort.Parse(x.ToString());
+                        break;
+                    case 235:
+                        Class.Variables.modBusAddres[29] = ushort.Parse(x.ToString());
+                        break;
+                    case 236:
+                        Class.Variables.modBusAddres[30] = ushort.Parse(x.ToString());
+                        break;
+                    case 237:
+                        Class.Variables.modBusAddres[31] = ushort.Parse(x.ToString());
+                        break;
+                        #endregion
+                }
+            }
+
         }
 
     }

@@ -11,6 +11,7 @@ namespace ControleAmbientes.Class
         static public bool[] btSelectAction = new bool[32];
         static public bool[] btSelectTransition = new bool[32];
         static public int[] poten = new int[32];
+        static public ushort[] modBusAddres = new ushort[32];
 
         static public int[] typeIO_DB = new int[54];
         static public int[] actionCol_DB = new int[54];
