@@ -1,7 +1,6 @@
 ﻿using System.Windows.Threading;
 using System.Windows.Controls;
 
-
 namespace ControleAmbientes.UserControls
 {
     /// <summary>
@@ -11,6 +10,9 @@ namespace ControleAmbientes.UserControls
     {
 
         DispatcherTimer timerUpdateValues = new DispatcherTimer();
+
+
+
 
         public CronoDateTime()
         {
@@ -24,6 +26,7 @@ namespace ControleAmbientes.UserControls
         {
             data.Content = System.DateTime.Now.ToString("dd/MM/yy");
             hora.Content = System.DateTime.Now.ToString("hh:mm:ss");
+
         }
 
     }

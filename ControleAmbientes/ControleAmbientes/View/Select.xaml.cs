@@ -13,6 +13,8 @@ namespace ControleAmbientes.View
         Uri fileUriOn = new Uri("/Img/btON.png", UriKind.Relative);
         Uri fileUriOFF = new Uri("/Img/btOFF.png", UriKind.Relative);
         Class.CRUD crud = new Class.CRUD();
+       
+        ModbusTCP.Master MBmaster = new ModbusTCP.Master();
 
         bool firstRead = false;
 
@@ -35,8 +37,9 @@ namespace ControleAmbientes.View
             {
                 Class.Views.viewConfiguration.setListPot();
                 firstRead = true;
+                MBmaster.connect(Class.Variables.c_IpArduinoConfig, 502, false);
             }
-            
+
         }
 
         private void Grid_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
